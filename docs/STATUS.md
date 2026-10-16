@@ -1,3 +1,5 @@
+> Access update: GitHub confirms this repository is public following the student’s requested visibility change. Earlier private-repository notes below are historical.
+
 > Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. The student supplied the personal reflection, now included in SUBMISSION.md. Technical demo recording remains pending.
 
 # Current project status

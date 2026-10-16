@@ -1,9 +1,9 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording and reviewer access verification remain pending. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
-**GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (private; uploaded; reviewer access verification pending)  
+**GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
 **Separate 4–6 minute technical demonstration:** Not recorded; [script and shot list](docs/TECHNICAL_DEMO.md)
 
 ## Topic and audience
@@ -109,4 +109,4 @@ The Deno announcement was a useful example. I decided it should be included beca
 
 My main takeaway is that the specificity of the creator's input strongly affects how well an AI system reflects the creator's intentions. Broad instructions leave room for the model to apply assumptions that may differ from mine. Next, I would make the editorial policy more concrete by adding examples of material to accept or reject, especially cases with indirect relevance, and explaining the reasoning behind each example. I would then review the resulting decisions to see whether the system better reflects those intentions without accepting unrelated material.
 
-Before submission, finish [the audit](docs/FINAL_AUDIT.md), provide the technical demonstration URL, and verify reviewer access to the private repository.
+Before submission, finish [the audit](docs/FINAL_AUDIT.md), provide the technical demonstration URL, and verify the submitted demonstration link.
