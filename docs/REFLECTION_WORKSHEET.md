@@ -7,7 +7,7 @@ These prompts are not a completed personal reflection. Answer in your own words,
 3. **Architectural tradeoff:** Explain why an inspectable JSON store, deterministic validation outside the model, or retained immutable versions fits this project. What is the cost, and when would you change the design?
 4. **Next improvement:** Choose one improvement and a measurable success criterion. A labeled relevance set, broader extraction fixtures or verified transcription fallback are possible options, not your stated preference.
 
-**Student responses: not yet supplied.**
+**Completed:** The student supplied observations about overly narrow AI judgments, the Deno correction, and the importance of specific input. The English reflection is in [SUBMISSION.md](../SUBMISSION.md#personal-reflection).
 
 Evidence: [actual review](STUDENT_EDITORIAL_REVIEW.md), [policy comparison](POLICY_COMPARISON.md), [remaining disagreements](POLICY_INTERPRETATION.md), [run differences](RUN_COMPARISON.md), [claim trace](CLAIM_TRACE.md), [architecture](DESIGN.md).
 

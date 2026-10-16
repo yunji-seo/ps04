@@ -1,4 +1,4 @@
-> Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. Reflection and technical demo recording remain pending.
+> Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. The student supplied the personal reflection, now included in SUBMISSION.md. Technical demo recording remains pending.
 
 # Current project status
 
@@ -30,7 +30,7 @@ The approved drafts and referenced evidence remain unchanged. Automated checks d
 2. Check actual timing, narration, captions, citations and the remaining description details listed in the package guide.
 3. Publish three free-access Substack posts and public/unlisted YouTube videos; cross-link and verify access.
 4. Record the separate technical demonstration using [the prepared script](TECHNICAL_DEMO.md).
-5. Supply personal reflection; finish [the audit](FINAL_AUDIT.md). Yunji Seo and yunji-seo are recorded; the private repository is uploaded.
+5. Personal reflection supplied and added to SUBMISSION.md; finish [the audit](FINAL_AUDIT.md). Yunji Seo and yunji-seo are recorded; the private repository is uploaded.
 
 ## Material limitations
 

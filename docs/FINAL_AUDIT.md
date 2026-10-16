@@ -1,4 +1,4 @@
-> Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. Reflection and technical demo recording remain pending.
+> Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. The student supplied the personal reflection, now included in SUBMISSION.md. Technical demo recording remains pending.
 
 # Final requirement audit
 
@@ -28,7 +28,7 @@ October 16, 2026: **not ready for submission**.
 | Substack/YouTube publication | Not published | Six accessible URLs and cross-links required |
 | Separate 4–6 minute demo | Script prepared | Recording pending; trace actual published article before submission |
 | Setup and architecture | Complete | SETUP.md and DESIGN.md |
-| Personal reflection | Pending student | REFLECTION_WORKSHEET.md |
+| Personal reflection | Complete; student supplied content, edited into English | ../SUBMISSION.md#personal-reflection |
 | Student identity and GitHub remote | Uploaded | Yunji Seo; yunji-seo/ps04-agent-engineering-brief; private reviewer access pending |
 | Credentials excluded | Local exact-key check passed; recheck before push | Ignored .env; no configured key in 972 candidate files or exported current store records; [audit result](AUDIT_RESULT.json) |
 | URL verification | Pending publication | Check without creator login/paywall |
