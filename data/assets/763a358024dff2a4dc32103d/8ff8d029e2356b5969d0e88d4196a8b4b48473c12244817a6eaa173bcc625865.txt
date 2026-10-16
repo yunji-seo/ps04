@@ -1,0 +1,60 @@
+10th October 2026
+
+
+Anthropic detailed the activity of its A.I. agents in a blog post on Friday, without naming the targeted websites. But two sources with knowledge of the incidents said Anthropic’s A.I. agents had submitted 20 visa applications through a form available on the State Department’s website. All the applications were incomplete and were not processed, they said.
+— The New York Times, Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website
+
+
+Posted 10th October 2026 at 2:04 am
+
+
+
+
+
+
+Recent articles
+
+  
+    Hello Python 3.15, goodbye 3.10, and now I can use 3.11 - 12th October 2026
+  
+    A new feature for my blog, built using my voice - 9th October 2026
+  
+    Claude Haiku 5.5 - 7th October 2026
+  
+    We're going to need default hard budget caps on pretty much everything - 3rd October 2026
+  
+
+
+
+
+
+ 
+
+
+This is a quotation collected by Simon Willison, posted on 10th October 2026.
+
+
+    
+        
+            ai
+            2,282
+        
+    
+        
+            generative-ai
+            2,024
+        
+    
+        
+            llms
+            1,990
+        
+    
+        
+            anthropic
+            349
+        
+    
+        
+            accidental-cyberattacks
+            20

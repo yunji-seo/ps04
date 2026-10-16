@@ -1,0 +1,26 @@
+{
+  "stage": "content/write_articles",
+  "status": "failed",
+  "input_count": 3,
+  "output_count": 0,
+  "started_at": "2026-10-16T04:35:59.680Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [
+    "Draft 01 is missing the as-of date"
+  ],
+  "model_calls": 1,
+  "token_usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 1546,
+    "total_tokens": 47429
+  },
+  "finished_at": "2026-10-16T04:36:27.023Z",
+  "exit_code": 1
+}

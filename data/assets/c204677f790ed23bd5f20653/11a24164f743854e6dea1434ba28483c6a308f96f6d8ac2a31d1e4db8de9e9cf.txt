@@ -1,0 +1,183 @@
+Part 2: Evals as a deployment gate — and how to know when they drift
+
+If you can deploy a prompt change without an eval failing the build, you don’t have evals — you have a notebook. And once the gate is green, the slow leaks are still coming for you. Here’s the gate, the baseline, and the shadow-eval loop that catch both.
+
+This is Level 2 of the maturity model: evaluation. The principle is short — you don’t ship on hope, you ship on a gate, and then you watch for drift afterward. A gate protects the moment of deploy. Drift detection protects the weeks in between. You need both, and they’re built from different machinery.
+
+Most teams “do evals” the way they once “did tests” before CI: occasionally, manually, in a notebook, after something already went wrong. For LLM systems that’s not enough, because the thing most likely to silently break your product isn’t a code change — it’s a prompt tweak, a model upgrade, or a temperature nudge that looks harmless and quietly tanks quality on 8% of inputs. The fix is to treat evaluation like tests: a gate that runs in CI and fails the build on regression.
+
+A golden case is data
+
+{
+  "id": "case-0412",
+  "slice": "tier1/en",
+  "input": { "request": "...", "context": { } },
+  "expect": { "decision": "approve", "min_confidence": 0.80 },
+  "must_not": { "decision": "auto_resolve" },
+  "tags": ["edge-case", "previously-broke"]
+}
+
+Curate it like tests: cover the common cases, the known-hard cases, and every past failure you’ve fixed (regression cases never get deleted). It lives in version control next to the code, so a change to the set is a reviewable diff.
+
+The scorer
+
+Per case, run the current prompt/model and score the result. Keep scoring explicit and typed — a mix of exact assertions and tolerances.
+
+from dataclasses import dataclass
+
+@dataclass
+class CaseResult:
+    id: str; slice: str; passed: bool; checks: list
+
+def score_case(case, output) -> CaseResult:
+    exp = case.get("expect", {})
+    checks = []
+    if "decision" in exp:                                                       # symmetric .get on both sides
+        checks.append(("decision", output.get("decision") == exp["decision"]))
+    if "min_confidence" in exp:
+        checks.append(("min_conf", output.get("confidence", 0) >= exp["min_confidence"]))
+    for k, v in case.get("must_not", {}).items():
+        checks.append((f"not_{k}", output.get(k) != v))
+    assert checks, "empty expect + no must_not would vacuously pass"            # now this CAN actually fire
+    return CaseResult(case["id"], case["slice"], all(ok for _, ok in checks), checks)
+
+def test_scorer_catches_regression():                  # sensitivity: it MUST fail a wrong decision
+    case = {"id": "c1", "slice": "tier1/en", "expect": {"decision": "approve", "min_confidence": 0.8}}
+    assert     score_case(case, {"decision": "approve", "confidence": 0.9}).passed
+    assert not score_case(case, {"decision": "reject",  "confidence": 0.9}).passed
+
+The gate
+
+One command, wired into CI, that fails the build when the pass rate (or any keyed metric) drops below the bar.
+
+# .ci/eval-gate.yml  (illustrative)
+eval-gate:
+  steps:
+    - run: eval run --suite golden --gate --min-pass 0.98 --baseline artifacts/baseline.json
+  # exit code != 0 fails the pipeline → deploy blocked
+
+$ eval run --suite golden --gate --min-pass 0.98
+  cases: 240   passed: 236   failed: 4   pass-rate: 98.3%
+  gate(min-pass>=0.98): PASS
+  failures: case-0412 (decision), case-0511 (min_conf), ...
+
+Now a prompt change that improves one scenario but breaks two others can’t ship silently — the author sees it in their PR, not a customer three weeks later.
+
+Route cases to the right slice automatically
+
+As the system grows, “the golden set” becomes many sub-suites for different request types, segments, or locales. Don’t make a human pick which suite to run — tag each case with its slice and let the runner route cases to the matching slice using the same attributes the system uses at runtime. The eval for a slice runs the cases that belong to it; no manual selection, no drift between "what we test" and "what we run." And don't gate on one global pass rate: a 99% overall can hide a 70% slice, so gate per slice too.
+
+Two kinds of regression
+
+The gate above is excellent at one thing and blind to another:
+
+Cliffs — a change drops quality sharply and immediately. The pre-deploy gate catches these.
+
+Slow leaks — 0.995 → 0.99 → 0.985 over three releases, each step too small to trip the 0.98 floor. The gate waves each one through; by the time it’s obviously bad you’ve shipped it five times.
+
+You can have a green eval gate and a system that’s quietly getting worse. Gates test the inputs you thought of, at the moment you deploy. Production changes underneath you: inputs shift, the provider updates a model, a prompt tweak helps the cases you tested and hurts the ones you didn’t. Drift detection defends against the second kind. It needs different machinery.
+
+Baselines: compare to known-good, not just a floor
+
+A gate asks “above the line?” Drift asks “worse than before?” So capture a baseline — the metrics from the last known-good release — and compare every run to it.
+
+// baseline.json — captured deliberately when you bless a release as known-good
+{
+  "release": "2026-01-09",
+  "metrics": {
+    "exact_match":        { "mean": 0.942, "n": 2400, "std": 0.012 },
+    "mean_confidence":    { "mean": 0.871, "n": 2400, "std": 0.030 },
+    "human_override_rate":{ "mean": 0.060, "n": 2400 }
+  }
+}
+
+import math
+# per-metric minimum meaningful change — a 0.02 move matters for a 0.06 rate, trivial for confidence
+MIN_EFFECT = {"exact_match": 0.01, "human_override_rate": 0.02, "mean_confidence": 0.03}
+HIGHER_IS_WORSE = {"human_override_rate", "judge_disagreement_ratio", "abstention_rate"}  # for these, UP = worse
+
+def compare_to_baseline(metric, cur, base, is_proportion=True):
+    # cur/base are {"mean":.., "n":.., "std":..}. Use BOTH runs' n — not just the baseline's.
+    delta = cur["mean"] - base["mean"]
+    if is_proportion:                                   # rate metrics → two-proportion z-test
+        p  = (base["mean"]*base["n"] + cur["mean"]*cur["n"]) / (base["n"] + cur["n"])   # pooled
+        se = math.sqrt(p*(1-p) * (1/base["n"] + 1/cur["n"]))
+    else:                                               # continuous → SE of a DIFFERENCE of means
+        se = math.sqrt(base["std"]**2/base["n"] + cur["std"]**2/cur["n"])
+    z = delta/se if se else 0.0
+    worse = delta > 0 if metric in HIGHER_IS_WORSE else delta < 0   # direction is per-metric, not always "lower"
+    drifted = worse and abs(delta) >= MIN_EFFECT.get(metric, 0.02) and abs(z) > 2   # meaningful + ~2σ the bad way
+    return {"metric": metric, "delta": round(delta, 4), "z": round(z, 1), "drift": drifted}
+
+The common bug: dividing the baseline std by sqrt(n) ignores the current run's own size and variance — sample 50 live decisions against a 2,400-row baseline and you'll flag pure noise. The SE of a difference uses both; proportions get the pooled two-proportion form, not a stored std.
+
+A change can be above your floor and still meaningfully below baseline — that’s the signal the gate misses:
+
+metric         baseline  current  delta
+exact-match    0.942     0.913   -0.029  ⚠ regression vs baseline (still > floor, but flagged)
+
+Re-baseline deliberately (when you validate a new known-good), never automatically, or you let drift become the new normal.
+
+Shadow evals: grade live traffic
+
+Your golden set is finite and curated; production is infinite and surprising. A shadow eval samples real (de-identified) inputs, scores the actual decisions, and tracks the pass rate over time.
+
+SHADOW_SAMPLE_RATE = 0.05    # score 5% of live decisions out-of-band (config, not hardcoded)
+
+def maybe_shadow(decision, sample_rate=SHADOW_SAMPLE_RATE):
+    # deterministic_hash = your stable id hash; score_against = your rules/judge scoring entrypoint
+    # % 10000 (not % 100) so sub-1% rates don't silently round to zero sampling
+    if deterministic_hash(decision["decision_id"]) % 10000 < sample_rate * 10000:
+        verdict = score_against(rules_or_judge, decision)   # async, off the hot path
+        emit("shadow_eval_pass_ratio", 1.0 if verdict.ok else 0.0, slice=decision["slice"])
+        if not verdict.ok:
+            add_to_review_queue(decision)                   # candidate new golden case
+
+Failures become new golden cases — production hardens your suite exactly where reality is hardest. Use a deterministic hash of the id, not RNG, so sampling is reproducible and doesn’t make tests flaky.
+
+Early-warning signals (watch the trend, not the point)
+
+signal                         drift smell
+-----------------------------  ----------------------------------------------------------------------------
+`human_override_rate` ↑        humans reversing the agent more — quality slips before metrics fully show it
+confidence distribution shift  trending down (less sure), or up while accuracy falls (miscalibration)
+`judge_disagreement_ratio` ↑   the second model overruling the first more often
+abstention rate ↑              the system punting more than it used to
+
+When it fires — investigate, don’t auto-rollback
+
+Confirm it’s real (meaningful + ~2σ, not noise).
+
+Localize it (which slice/capability — your tagged evals + per-slice metrics tell you).
+
+Find the cause (model update? prompt change? input shift?).
+
+Fix via the normal change process, then re-baseline once validated.
+
+Anti-patterns
+
+Evals in a notebook — if it’s not in CI failing builds, it won’t run when it matters.
+
+Asserting on the model’s confidence instead of correctness — measure whether it was right.
+
+Deleting fixed-bug cases — they’re your regression suite; keep them forever.
+
+One global pass rate — a 99% overall can hide a 70% slice; gate per slice too.
+
+Floor-only gating — you’ll ship the slow leak; baseline against known-good too.
+
+RNG sampling in eval/judge paths — makes tests flaky; hash the id.
+
+Auto re-baselining — silently launders drift into the new normal.
+
+Watching points, not trends — a single bad hour is noise; a two-week slide is drift.
+
+The takeaway
+
+Make evals a gate, not a notebook: cases as versioned data, an explicit scorer, a CI command that fails the build on regression, auto-routing to slices. Then add the part the gate can’t do — baseline every run against known-good with a real significance check, shadow-eval a sample of live traffic into a pass ratio, watch override/confidence/disagreement trends, and feed production’s surprises back into the golden set. Cliffs are easy; the slow leaks sink quality, and they only show up if you’re watching for worse than before, not just below the line. Do both and “ship a prompt change” stops being a gamble and becomes a green check — the only way to move fast on an LLM system without breaking it quietly.
+
+Series: Running LLM systems in production — Level 2 of 6: Evaluation.
+
+These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.
+
+creativecommons.org/licenses/by-sa/4.0/deed.en

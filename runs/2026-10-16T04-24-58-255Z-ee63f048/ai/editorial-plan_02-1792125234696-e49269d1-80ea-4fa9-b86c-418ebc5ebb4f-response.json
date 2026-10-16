@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 125,
+    "total_tokens": 2653
+  },
+  "content": "{\"piece_id\":\"02\",\"question\":\"How strong is the evidence that AI coding agents actually perform the verification and review tasks their vendors claim, and what should developers test themselves?\",\"argument\":\"Several sources appear to address benchmarking, observability, and output validation for coding agents, which together may reveal gaps between vendor claims and independently measured behavior. Whether any available benchmark or monitoring approach is sufficient to substitute for a developer's own verification remains an open question the evidence may only partially answer.\",\"source_refs\":[\"source-7\",\"source-22\",\"source-17\",\"source-24\"]}"
+}

@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-16T20:18:45.089Z",
+  "review_passed": true,
+  "review_id": "4696f6228ecb7306980ef87f890f920a62e2400b596b383d2c339e60b18dee24",
+  "student_approval": true,
+  "production_package": true,
+  "course_instructions_unchanged": true,
+  "documentation_links": "passed",
+  "configured_key_scan": {
+    "candidate_files_scanned": 1029,
+    "matches": 0,
+    "index_access": "Store list interface only; historical index structure was not directly scanned",
+    "scope": "Exact configured Parley key; not a general secret detector"
+  },
+  "artifacts": [
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/briefs.jsonl",
+      "sha256": "7f8494e818f71dc02bf416a344a8c44deecfa8ca2006ea4169e696587938203e"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/decisions.jsonl",
+      "sha256": "2d07a97918c181f4f79b85a98c7fdb71b9eebc099fb8924bcf6f1ba825182c00"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/eligible.jsonl",
+      "sha256": "13b3a3d526ef7dde7e6c21815f74b4945f151c554c459ebafdaa34605258d453"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/01.md",
+      "sha256": "ee71560a8e9eab6d9a47f05729e01f53e04ded1b9eedd5aaa356e2fe1bf24b82"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/02.md",
+      "sha256": "a2ccf2e2976894c8b297a8cc839c6e73d02d943bd477089137c63ae176bc05f7"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/03.md",
+      "sha256": "a30ef9ced6942dcae906f3559fd12a00e4fc5f0e784009ba9fb1799ea4b4313b"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/01.md",
+      "sha256": "c867a34b53a86bb7b3dd3b7769fd28c3a60fa7ab0c4e1d69ce0ac9a7955997b5"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/02.md",
+      "sha256": "5bb7335ec2a092c8f5123f242b38a9301f36b1a1832f75a8445724857de98279"
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/03.md",
+      "sha256": "e1308d3bb3cbaf545cd53896796a8016a3aef3b7b0a08dfe6d3b487a40d63008"
+    }
+  ]
+}

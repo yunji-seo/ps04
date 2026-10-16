@@ -1,0 +1,201 @@
+[
+  {
+    "id": "01",
+    "title": "The infrastructure underneath your agent",
+    "groups": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "slides": [
+      [
+        "The infrastructure underneath your agent",
+        "What providers are rebuilding\nWhat your team still needs to verify",
+        "Agent Engineering Brief — 01"
+      ],
+      [
+        "GitHub’s changing workload",
+        "7.38 billion commits in September 2026\nLarge CI pipelines and agent fleets drive activity\nThese totals do not measure student-team gains",
+        "Source: GitHub engineering report; vendor-reported figures"
+      ],
+      [
+        "Anthropic’s internal source control",
+        "Scion serves an AI lab’s own workload\nThe account describes rapid growth in daily merges\nOffline support and public availability are absent",
+        "Source: Simon Willison relaying Anthropic’s account"
+      ],
+      [
+        "Automated code review",
+        "Codex demonstrates a first review of pull requests\nRepository permissions still matter\nThe demonstration supplies no accuracy evaluation",
+        "Source: OpenAI product video, October 12, 2026"
+      ],
+      [
+        "Permissions and oversight",
+        "The interview describes checks against granted scope\nIdentity isolation addresses multiple-agent contexts\nKnown edge cases remain",
+        "Source: Latent Space interview with Thariq Shihipar"
+      ],
+      [
+        "Throughput and judgment",
+        "GitHub says workflow controls must remain intact\nAdversarial AI review can still over-engineer\nSkilled reviewers must assess what the agent optimizes",
+        "Sources: GitHub; Simon Willison"
+      ],
+      [
+        "What should your team still check?",
+        "Provider accounts dominate the evidence\nSmall-team outcomes remain unmeasured\nChoose checks that can reveal a missed defect",
+        "Editorial inference; limitations of this evidence set"
+      ]
+    ]
+  },
+  {
+    "id": "02",
+    "title": "What AI agent verification actually proves",
+    "groups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "slides": [
+      [
+        "What AI agent verification actually proves",
+        "A completion signal leaves several questions open",
+        "Agent Engineering Brief — 02"
+      ],
+      [
+        "Completion signals",
+        "Some loops report success without checking results\nAn older research case illustrates a silent task failure\nThis does not describe every current agent workflow",
+        "Source: Stack Overflow; older research discussed in a recent article"
+      ],
+      [
+        "Independent result checks",
+        "Does the intended row, file or branch exist?\nRead state outside the agent’s self-report\nVerify the work product",
+        "Source: Stack Overflow contributor’s guidance"
+      ],
+      [
+        "Decision notes",
+        "Record alternatives considered and rejected\nUse the notes to identify a mistaken choice\nCombine explanation with independent result checks",
+        "Source: Latent Space interview; combined use is editorial inference"
+      ],
+      [
+        "ReviewBench’s evidence",
+        "219 pull requests across 19 languages\nGitHub reports 96.6% agreement in an internal audit\nOffline performance still needs live validation",
+        "Source: GitHub’s ReviewBench announcement; vendor claims"
+      ],
+      [
+        "Production feedback",
+        "Datadog’s CPO argues for continuous monitoring\nPre-deployment tests cannot cover every behavior\nThis is an industry perspective, not a controlled study",
+        "Source: Stack Overflow interview with Datadog’s CPO"
+      ],
+      [
+        "What external state can you read?",
+        "Choose evidence that checks the intended outcome\nSmall-team costs of combining checks remain unknown",
+        "Editorial inference; limitations of this evidence set"
+      ]
+    ]
+  },
+  {
+    "id": "03",
+    "title": "A small-team adoption plan",
+    "groups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "slides": [
+      [
+        "A small-team adoption plan",
+        "Who checks the result?\nWhat does that checking cost?",
+        "Agent Engineering Brief — 03"
+      ],
+      [
+        "Technical judgment",
+        "People define the task and evaluate generated code\nDomain knowledge helps expose missing assumptions\nVendor guidance does not establish measured benefits",
+        "Sources: GitHub skills guidance; Latent Space interview"
+      ],
+      [
+        "Controls matched to risk",
+        "A prototype and a payment service need different checks\nThe field guide proposes a staged maturity model\nIts checklist is guidance, not a universal minimum",
+        "Source: Stack Overflow production field guide"
+      ],
+      [
+        "A concrete security cost",
+        "GitHub reports roughly 30% prevention before exposure\nIts new classifier could expand prevention\nThe announced private preview consumes AI credits",
+        "Source: GitHub Secret Protection announcement; vendor claims"
+      ],
+      [
+        "Deno and Cloudflare’s roadmap",
+        "The teams announced a plan to combine runtime work\nExisting self-hosting differs from the promised integration\nDelivery and small-team economics remain unverified",
+        "Source: Cloudflare announcement, October 9, 2026"
+      ],
+      [
+        "Missing perspectives",
+        "No selected source measures student-team outcomes\nNovice maintainers and accessibility needs lack coverage\nVendor incentives shape much of the available evidence",
+        "Limitations of this evidence set"
+      ],
+      [
+        "One bounded task",
+        "Name the person responsible for checking the result\nMatch controls to the consequences of failure\nCompare time saved with time spent finding defects",
+        "Editorial recommendation, not a measured productivity result"
+      ]
+    ]
+  }
+]

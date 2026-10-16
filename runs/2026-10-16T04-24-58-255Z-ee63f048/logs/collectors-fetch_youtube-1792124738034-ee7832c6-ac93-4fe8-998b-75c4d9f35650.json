@@ -1,0 +1,17 @@
+{
+  "stage": "collectors/fetch_youtube",
+  "status": "completed",
+  "input_count": 2,
+  "output_count": 2,
+  "started_at": "2026-10-16T04:25:00.382Z",
+  "tools": [
+    "node v22.14.0",
+    "yt-dlp"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "finished_at": "2026-10-16T04:25:38.034Z",
+  "exit_code": 0
+}

@@ -1,0 +1,28 @@
+{
+  "stage": "processing/extract_content",
+  "status": "incomplete",
+  "input_count": 1,
+  "output_count": 0,
+  "started_at": "2026-10-15T14:10:04.836Z",
+  "tools": [
+    "node v22.14.0",
+    "yt-dlp",
+    "ffprobe"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "youtube:RQfg-zo4R-g: yt-dlp failed (1): ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests\n"
+  ],
+  "reused_count": 0,
+  "item_results": [
+    {
+      "item_id": "youtube:RQfg-zo4R-g",
+      "status": "failed",
+      "error": "yt-dlp failed (1): ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests\n"
+    }
+  ],
+  "finished_at": "2026-10-15T14:10:13.011Z",
+  "exit_code": 1
+}

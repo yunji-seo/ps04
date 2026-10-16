@@ -1,0 +1,16 @@
+{
+  "stage": "run",
+  "status": "failed",
+  "started_at": "2026-10-15T13:59:38.742Z",
+  "finished_at": "2026-10-15T14:01:26.613Z",
+  "exit_code": 1,
+  "input_count": null,
+  "output_count": null,
+  "tools": [
+    "bash"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": []
+}

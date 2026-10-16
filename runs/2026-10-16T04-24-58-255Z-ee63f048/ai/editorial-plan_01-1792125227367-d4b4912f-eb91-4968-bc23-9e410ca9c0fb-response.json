@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 122,
+    "total_tokens": 2452
+  },
+  "content": "{\"piece_id\":\"01\",\"question\":\"What has changed in how AI coding agents are being built into development infrastructure, and what do developers need to know before trusting those changes?\",\"argument\":\"Several providers appear to be redesigning core development tools—source control, secret detection, and deployment pipelines—to accommodate agent-scale workflows, which may shift where human oversight is still required. Whether these redesigns reflect shipped capabilities or announced intentions remains unclear from the available evidence.\",\"source_refs\":[\"source-24\",\"source-26\",\"source-6\",\"source-14\"]}"
+}

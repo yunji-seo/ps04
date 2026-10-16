@@ -1,0 +1,109 @@
+{
+  "run_id": "2026-10-16T04-24-58-255Z-ee63f048",
+  "as_of_date": "2026-10-16",
+  "mode": "live",
+  "status": "ready_for_production",
+  "review_current": true,
+  "counts": {
+    "discovered": 51,
+    "extracted": 51,
+    "new": 3,
+    "changed": 6,
+    "unchanged": 42,
+    "eligible": 57,
+    "excluded": 0,
+    "accepted": 26,
+    "rejected": 26,
+    "deferred": 5,
+    "articles": 3,
+    "video_scripts": 3
+  },
+  "coverage": {
+    "distinct_eligible_items": 57,
+    "by_kind": {
+      "feed": 53,
+      "youtube": 2,
+      "podcast": 2
+    },
+    "independent_publishers": [
+      "cloudflare",
+      "github",
+      "simon-willison",
+      "stackoverflow",
+      "latent-space",
+      "openai"
+    ],
+    "limitations": [],
+    "independence_status": "Publisher identities require human confirmation; shared upstream claims are not corroboration"
+  },
+  "duplicate_observations": 0,
+  "failed_or_incomplete_stages": [],
+  "recovery": null,
+  "failure_history": [
+    {
+      "stage": "run",
+      "started_at": "2026-10-16T04:24:58.125Z",
+      "errors": []
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:26:09.393Z",
+      "errors": [
+        "Brief generation failed"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-16T04:30:14.581Z",
+      "errors": [
+        "Plan 02: Include a youtube source"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:33:47.180Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "content/write_articles",
+      "started_at": "2026-10-16T04:35:59.680Z",
+      "errors": [
+        "Draft 01 is missing the as-of date"
+      ]
+    }
+  ],
+  "store_lookup_misses": 3,
+  "elapsed_seconds": 21430.233,
+  "tools": [
+    "bash",
+    "node v22.14.0",
+    "yt-dlp",
+    "ffprobe"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "known_or_estimated_cost_usd": 0,
+  "has_estimated_cost": false,
+  "unknown_cost_stages": [
+    "editorial/select_items",
+    "editorial/create_briefs",
+    "editorial/reconsider_video",
+    "editorial/create_briefs",
+    "content/write_articles",
+    "content/write_articles",
+    "content/write_video_scripts",
+    "content/write_articles",
+    "content/write_video_scripts"
+  ],
+  "student_selection_review": "docs/STUDENT_EDITORIAL_REVIEW.md",
+  "remaining_manual_actions": [
+    "Inspect the two different-day run records and their recovery history",
+    "Produce videos in Google Vids or HeyGen",
+    "Publish and cross-link three article/video pairs",
+    "Record technical demonstration",
+    "Complete personal reflection and verify submitted links"
+  ]
+}

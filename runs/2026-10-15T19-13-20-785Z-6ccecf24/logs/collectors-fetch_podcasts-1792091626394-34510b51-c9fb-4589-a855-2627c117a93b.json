@@ -1,0 +1,23 @@
+{
+  "stage": "collectors/fetch_podcasts",
+  "status": "completed",
+  "input_count": 1,
+  "output_count": 2,
+  "started_at": "2026-10-15T19:13:45.653Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "source_results": [
+    {
+      "source_id": "latent-podcast",
+      "status": "completed",
+      "count": 2
+    }
+  ],
+  "finished_at": "2026-10-15T19:13:46.394Z",
+  "exit_code": 0
+}

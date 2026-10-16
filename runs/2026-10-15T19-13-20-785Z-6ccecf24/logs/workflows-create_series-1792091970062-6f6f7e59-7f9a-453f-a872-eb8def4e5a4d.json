@@ -1,0 +1,18 @@
+{
+  "stage": "workflows/create_series",
+  "status": "failed",
+  "started_at": "2026-10-15T19:14:02.548Z",
+  "finished_at": "2026-10-15T19:19:30.063Z",
+  "exit_code": 1,
+  "input_count": null,
+  "output_count": null,
+  "tools": [
+    "bash"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "Brief generation failed"
+  ]
+}

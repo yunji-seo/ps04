@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-10-16T04-27-52-066Z-d1c2574a",
+  "started_at": "2026-10-16T04:27:52.066Z",
+  "as_of_date": "2026-10-15",
+  "mode": "replay",
+  "previous_run_id": "2026-10-16T04-24-58-255Z-ee63f048",
+  "baseline_run": "runs/2026-10-15T14-59-33-161Z-664468fb",
+  "purpose": "Controlled policy comparison on the same retained evidence, date window, order, model, batch size and selection prompt. Actual replay timestamp is started_at. This is not a new collection or publication run."
+}

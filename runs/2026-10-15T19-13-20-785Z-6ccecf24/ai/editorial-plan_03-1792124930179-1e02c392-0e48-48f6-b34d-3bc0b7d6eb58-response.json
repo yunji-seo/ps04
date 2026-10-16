@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 153,
+    "total_tokens": 2333
+  },
+  "content": "{\"piece_id\":\"03\",\"question\":\"What should developers actually do differently when adopting AI coding agents, given the infrastructure, permissions, and verification concerns raised across recent sources?\",\"argument\":\"Several sources converge on concrete workflow changes—around secret handling, agent permissions, output verification, and context-setting—that small teams can act on without large budgets, though the practical burden of implementing these safely may be underestimated in vendor-facing materials. Whether guidance aimed at individual developers adequately addresses the compounding risks that emerge when agents operate with broader permissions at scale is not yet clearly resolved.\",\"source_refs\":[\"source-7\",\"source-20\",\"source-3\",\"source-8\",\"source-17\"]}"
+}

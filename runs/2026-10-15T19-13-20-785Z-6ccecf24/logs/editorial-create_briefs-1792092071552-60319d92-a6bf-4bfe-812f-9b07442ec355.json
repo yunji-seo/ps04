@@ -1,0 +1,23 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 54,
+  "output_count": 0,
+  "started_at": "2026-10-15T19:21:11.486Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "Quotation fragment is not in retained evidence: We validate findings under a shared rubric. The source of a finding does not determine whether it is correct"
+  ],
+  "reused_response_paths": [
+    "runs/2026-10-15T19-13-20-785Z-6ccecf24/ai/editorial-create_briefs-1792091856848-6fd1624e-28f6-4ad9-94f1-b811e501c289-response.json"
+  ],
+  "finished_at": "2026-10-15T19:21:11.552Z",
+  "exit_code": 1
+}

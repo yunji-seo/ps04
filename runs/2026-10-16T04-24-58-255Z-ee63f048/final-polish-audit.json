@@ -1,0 +1,154 @@
+{
+  "editor": "AI assistant",
+  "recorded_at": "2026-10-16T04:44:54.887Z",
+  "student_approval": false,
+  "reason": "Keep interpretation bounded, correct attribution, align article and narration, and remove unsupported universal wording.",
+  "artifacts": [
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/01.md",
+      "before_hash": "a95aba656d484fc72799e1e4e8e2df6e8502db52da2f2401f47071fa535a6804",
+      "after_hash": "ee71560a8e9eab6d9a47f05729e01f53e04ded1b9eedd5aaa356e2fe1bf24b82",
+      "edits": [
+        {
+          "before": "The evidence in this set comes entirely from providers describing their own systems and workloads.",
+          "after": "The evidence relies heavily on provider accounts, including some relayed through independent commentary."
+        },
+        {
+          "before": "That question does not yet have a publicly evidenced answer.",
+          "after": "These sources do not establish how much review your own project needs."
+        }
+      ]
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/02.md",
+      "before_hash": "d2dc53ee98e8af48217251ef971b2a8774e63234b49f64836f29f0e85d91c399",
+      "after_hash": "a2ccf2e2976894c8b297a8cc839c6e73d02d943bd477089137c63ae176bc05f7",
+      "edits": [
+        {
+          "before": "According to several recent practitioner sources, often very little.",
+          "after": "The sources examined here identify workflows in which a success signal can arrive without a separate result check."
+        },
+        {
+          "before": "reading state the agent did not author [02-c1]",
+          "after": "reading state the agent did not author [02-c3]"
+        },
+        {
+          "before": "answer different questions and are most useful in combination",
+          "after": "answer different questions, so our recommendation is to use them as complementary signals"
+        },
+        {
+          "before": "That audit was conducted by engineers at GitHub and Microsoft—not by unaffiliated parties—so it establishes a documented process rather than independently verified accuracy.",
+          "after": "The post describes an internal audit of a benchmark built by GitHub and Microsoft, so it documents a review process rather than an unaffiliated external evaluation."
+        }
+      ]
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/articles/03.md",
+      "before_hash": "efb3aa911be49a14ac993430826969cb07b06d93d2d3f97ccd24c8368876f487",
+      "after_hash": "a30ef9ced6942dcae906f3559fd12a00e4fc5f0e784009ba9fb1799ea4b4313b",
+      "edits": [
+        {
+          "before": "Four recent sources—",
+          "after": "Several recent sources—"
+        },
+        {
+          "before": "GitHub's skills post frames agent use as a high-skill coordination role: \"Increasingly, great execution means defining the problem clearly, providing the right context, evaluating AI-generated code, and deciding what's ready to ship.\"",
+          "after": "GitHub’s skills post frames agent use as an active coordination role: define the problem, provide context, evaluate generated code, and decide what is ready to ship."
+        },
+        {
+          "before": "the agent reduces implementation effort; it does not remove the need for someone to own the result.",
+          "after": "delegating implementation does not remove the need for someone to own the result."
+        },
+        {
+          "before": "the classifier has not yet shipped to general availability",
+          "after": "the announcement does not establish general availability of the classifier"
+        },
+        {
+          "before": "the practical recommendation from the brief",
+          "after": "our practical recommendation"
+        },
+        {
+          "before": "The field guide, the GitHub posts, and the Anthropic interview all come from parties with commercial interests in the tools being discussed, and none of them accounts for novice maintainers, accessibility needs, or teams that cannot afford enterprise plans.",
+          "after": "The vendor sources have commercial interests, while the field guide offers prescriptive advice rather than measured student outcomes. Novice maintainers, accessibility needs, and teams without enterprise budgets remain underrepresented."
+        },
+        {
+          "before": "The guidance exists; the evidence of its effect on people like you does not yet.",
+          "after": "This evidence set offers guidance, but does not establish its effect on student teams."
+        }
+      ]
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/01.md",
+      "before_hash": "8ef3029b4859bca0d18e0030dadac7bef3f1baa994c30da39a63538236ff48a9",
+      "after_hash": "b57c9f1dec0fc0a28a53b488d5d0594f4aa57318f222396114c18970047c92de",
+      "edits": [
+        {
+          "before": "Every source here comes from a provider.",
+          "after": "The evidence relies heavily on provider accounts, some relayed through independent commentary."
+        },
+        {
+          "before": "That question does not yet have a publicly evidenced answer.",
+          "after": "These sources do not establish how much review your own project needs."
+        }
+      ]
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/02.md",
+      "before_hash": "a64ff985a4893cd457479f1528ce63ec77a56e7c1960da2632abbd96123e9c53",
+      "after_hash": "5bb7335ec2a092c8f5123f242b38a9301f36b1a1832f75a8445724857de98279",
+      "edits": [
+        {
+          "before": "According to several recent practitioner sources, often very little.",
+          "after": "The sources here describe workflows where success can be reported without a separate result check."
+        },
+        {
+          "before": "When an agent loop exits zero, the orchestrator stopped looping because the model produced a token meaning \"done.\" Nothing between that claim and the exit code checked anything.",
+          "after": "A Stack Overflow contributor describes an agent loop that turns the model’s completion signal into exit zero without checking the result. In that design, nothing independently verifies the work. Other workflows can add those checks."
+        },
+        {
+          "before": "The practical fix is to instrument the artifact, not the run. [02-c1]",
+          "after": "The contributor recommends checking the work product rather than relying on the run status. [02-c3]"
+        },
+        {
+          "before": "Many failures occur not because the model lacked the knowledge, but because it considered the correct approach and moved past it.",
+          "after": "In the interviewee’s account of evaluations he examined, some failures involved considering the correct approach and moving past it."
+        },
+        {
+          "before": "That audit was conducted by GitHub and Microsoft engineers—not unaffiliated parties—so it documents a process rather than establishing independent accuracy.",
+          "after": "The post describes an internal audit of a GitHub and Microsoft benchmark. It documents a process, not an unaffiliated external evaluation."
+        },
+        {
+          "before": "Why a green exit code from an agent loop is a self-assessment, not an observation",
+          "after": "Why an unverified agent completion signal may not establish success"
+        },
+        {
+          "before": "This is not investment advice.",
+          "after": ""
+        }
+      ]
+    },
+    {
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/video_scripts/03.md",
+      "before_hash": "657d26a922cd43caa343439a4665af58d3bd4c822c55c1ad0bf6843afc3b3567",
+      "after_hash": "e1308d3bb3cbaf545cd53896796a8016a3aef3b7b0a08dfe6d3b487a40d63008",
+      "edits": [
+        {
+          "before": "Four recent sources raise",
+          "after": "Several recent sources raise"
+        },
+        {
+          "before": "the agent reduces how much you implement, not how much you own.",
+          "after": "delegating implementation does not remove responsibility for the result."
+        },
+        {
+          "before": "a six-level maturity model",
+          "after": "a staged maturity model"
+        },
+        {
+          "before": "All sources have commercial interests in the tools discussed, and none accounts for novice maintainers, accessibility needs, or teams without enterprise budgets.",
+          "after": "The vendor sources have commercial interests, and the field guide offers advice rather than measured student outcomes. Novice maintainers, accessibility needs, and teams without enterprise budgets remain underrepresented."
+        }
+      ]
+    }
+  ]
+}

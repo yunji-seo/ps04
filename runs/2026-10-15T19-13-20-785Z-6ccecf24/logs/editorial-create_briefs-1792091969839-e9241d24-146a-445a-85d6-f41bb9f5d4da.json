@@ -1,0 +1,26 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 54,
+  "output_count": 0,
+  "started_at": "2026-10-15T19:17:36.777Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [
+    "Evidence quote does not exactly match retained text"
+  ],
+  "model_calls": 1,
+  "token_usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 8470,
+    "total_tokens": 150439
+  },
+  "finished_at": "2026-10-15T19:19:29.839Z",
+  "exit_code": 2
+}

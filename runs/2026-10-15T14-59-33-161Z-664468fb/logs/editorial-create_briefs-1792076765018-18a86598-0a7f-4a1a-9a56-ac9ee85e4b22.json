@@ -1,0 +1,18 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 44,
+  "output_count": 0,
+  "started_at": "2026-10-15T15:06:04.979Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "Coverage insufficient: need two youtube items; do not fabricate the missing evidence"
+  ],
+  "finished_at": "2026-10-15T15:06:05.017Z",
+  "exit_code": 1
+}

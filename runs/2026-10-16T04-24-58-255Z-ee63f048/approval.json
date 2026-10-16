@@ -1,0 +1,11 @@
+{
+  "decision": "approve",
+  "review_id": "4696f6228ecb7306980ef87f890f920a62e2400b596b383d2c339e60b18dee24",
+  "reviewer": "Student, through explicit approval in this conversation",
+  "reviewed_at": "2026-10-16T10:22:04.174Z",
+  "notes": "The student approved all three English articles and accompanying video scripts after clarification that this authorizes preparation of the production package. Public publishing approval is separate. This records the approval statement, not independently observed reading activity.",
+  "scope": "Production package for the three reviewed article/script pairs",
+  "authorization_source": "User message in this conversation",
+  "user_statement": "승인할게",
+  "public_publishing_authorized": false
+}

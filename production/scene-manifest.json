@@ -1,0 +1,23 @@
+[
+  {
+    "piece_id": "01",
+    "deck": "C:\\Users\\pear0\\.codex\\.chatgpt-projects\\g-p-6aac9b97dad88191b4f90d2d3d335c6c\\ps04\\production\\decks\\Agent-Engineering-Brief-01.pptx",
+    "scenes": 7,
+    "narration_unchanged": true,
+    "words": 625
+  },
+  {
+    "piece_id": "02",
+    "deck": "C:\\Users\\pear0\\.codex\\.chatgpt-projects\\g-p-6aac9b97dad88191b4f90d2d3d335c6c\\ps04\\production\\decks\\Agent-Engineering-Brief-02.pptx",
+    "scenes": 7,
+    "narration_unchanged": true,
+    "words": 644
+  },
+  {
+    "piece_id": "03",
+    "deck": "C:\\Users\\pear0\\.codex\\.chatgpt-projects\\g-p-6aac9b97dad88191b4f90d2d3d335c6c\\ps04\\production\\decks\\Agent-Engineering-Brief-03.pptx",
+    "scenes": 7,
+    "narration_unchanged": true,
+    "words": 613
+  }
+]

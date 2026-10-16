@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 114,
+    "total_tokens": 2390
+  },
+  "content": "{\"piece_id\":\"01\",\"question\":\"What has recently changed in how AI coding agents are built and deployed, and which of those changes are likely to affect day-to-day coding workflows?\",\"argument\":\"Several infrastructure and tooling shifts appear to be converging around agent-scale development, but it remains unclear which changes represent durable workflow improvements versus vendor roadmap announcements that have not yet been independently tested by small teams.\",\"source_refs\":[\"source-24\",\"source-6\",\"source-14\",\"source-17\"]}"
+}

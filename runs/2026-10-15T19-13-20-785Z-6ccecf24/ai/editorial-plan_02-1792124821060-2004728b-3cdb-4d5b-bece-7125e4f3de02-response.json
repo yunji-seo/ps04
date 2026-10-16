@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 154,
+    "total_tokens": 2151
+  },
+  "content": "{\"piece_id\":\"02\",\"question\":\"How strong is the evidence behind claims that AI coding agents measurably improve developer work, and what verification gaps should teams investigate before trusting agent output?\",\"argument\":\"Multiple sources appear to offer frameworks for evaluating agent reliability—including benchmarks, observability guidance, and output-verification warnings—but it remains unclear how well these methods transfer to small teams or novice developers with limited tooling. Examining where the evidence is methodologically solid versus where it rests on vendor framing or untested assumptions helps readers decide what to scrutinize before delegating work to an agent.\",\"source_refs\":[\"source-6\",\"source-20\",\"source-16\",\"source-23\"]}"
+}

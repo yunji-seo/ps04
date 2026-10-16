@@ -1,0 +1,21 @@
+{
+  "initiator": "assistant editor",
+  "critique": "The assistant editor questions whether the previous reason confuses lack of measured effectiveness with lack of support for any claim. Inspect the actual timestamped demo: can it support a bounded, explicitly attributed account of the demonstrated workflow, or serve as an example of the difference between a feature demonstration and measured review quality? Do not infer quality, general availability, or reliability from a demo. The student policy says lack of independent corroboration alone is not a reason to defer. Do not accept just to fill media coverage. Reassess on the merits and preserve reject/defer if no substantive distinct claim is supported. A podcast discussing other API capabilities is not automatically a duplicate of this code-review workflow; compare the actual evidence below.",
+  "before": {
+    "item_id": "youtube:IZXv6a78NDw",
+    "version_id": "1e92a0d86645fa628d990efef5499b2b0a245db607a4e49adf86bfb41338d43f",
+    "decision": "reject",
+    "reason": "This is a 142-second OpenAI promotional video for a Codex code-review feature. It demonstrates a UI workflow (GitHub PR inbox, cloud-first-pass review, private chat per PR, customizable review instructions) but makes no independently verifiable performance or accuracy claims — no measurements, no methodology, no comparison conditions. The content is entirely a product demo narrated in marketing language ('I love this'). It originates from the vendor's own YouTube channel as a release announcement. The coding-workflow consequence (AI-assisted code review is now integrated in Codex) is already covered more substantively by source-3, which also comes from an OpenAI context but contains more technical specifics and explicit uncertainty signals. Accepting this item would be accepting a promotional claim as evidence without any supporting substance, which the policy prohibits.",
+    "piece_ids": []
+  },
+  "after": {
+    "item_id": "youtube:IZXv6a78NDw",
+    "version_id": "1e92a0d86645fa628d990efef5499b2b0a245db607a4e49adf86bfb41338d43f",
+    "decision": "accept",
+    "reason": "On reassessment, the video supports a bounded, explicitly attributed claim about announced workflow mechanics: OpenAI's Codex code-review feature (generally available for GitHub, preview for GitLab per 1:31–1:34) demonstrates automatic cloud-first-pass review triggered by repository-permission configuration (0:40–0:49), a per-PR private chat for questions about changes and risks (0:63–0:70), and customizable review instruction formats (0:80–0:90). These are demonstrable workflow steps, not quality assertions. Per policy, an announcement may be accepted as evidence of announced intentions without establishing promised capabilities exist. The prior rejection conflated absence of measured effectiveness with absence of any supportable claim. The video is also distinct from the related podcasts: the Anthropic/Latent Space episode covers Claude Code harness architecture and multi-agent permissions; the DevDay episode covers Computer Use agents and the Decisions API — neither covers this Codex PR inbox workflow. The item serves an editorial function: illustrating concretely what a vendor feature demo does and does not establish, which is directly useful to the audience evaluating adoption decisions. Limitations must be clearly stated: no accuracy measurements, no methodology, no comparison conditions, no independent corroboration of claimed effectiveness; vendor-originated; the title claim ('code review is no longer the bottleneck') is a vendor assertion only.",
+    "piece_ids": [
+      "01"
+    ]
+  },
+  "student_override": false
+}

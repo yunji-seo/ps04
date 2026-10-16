@@ -1,0 +1,26 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 54,
+  "output_count": 0,
+  "started_at": "2026-10-16T04:28:44.406Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [
+    "Generated brief has the wrong piece ID"
+  ],
+  "model_calls": 6,
+  "token_usage": {
+    "prompt_tokens": 18,
+    "completion_tokens": 2973,
+    "total_tokens": 61591
+  },
+  "finished_at": "2026-10-16T04:29:23.765Z",
+  "exit_code": 1
+}

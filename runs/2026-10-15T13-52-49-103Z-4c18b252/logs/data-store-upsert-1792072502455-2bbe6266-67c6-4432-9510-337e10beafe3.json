@@ -1,0 +1,16 @@
+{
+  "stage": "data/store/upsert",
+  "status": "completed",
+  "input_count": 44,
+  "output_count": 44,
+  "started_at": "2026-10-15T13:55:02.373Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "finished_at": "2026-10-15T13:55:02.455Z",
+  "exit_code": 0
+}

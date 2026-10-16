@@ -1,0 +1,61 @@
+{
+  "run_id": "2026-10-16T04-24-58-255Z-ee63f048",
+  "mode": "live",
+  "review_id": "4696f6228ecb7306980ef87f890f920a62e2400b596b383d2c339e60b18dee24",
+  "assets": [
+    {
+      "piece_id": "01",
+      "kind": "articles",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/articles/01.md"
+    },
+    {
+      "piece_id": "01",
+      "kind": "video_scripts",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/video_scripts/01.md"
+    },
+    {
+      "piece_id": "01",
+      "kind": "source_notes",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/sources/01.md"
+    },
+    {
+      "piece_id": "02",
+      "kind": "articles",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/articles/02.md"
+    },
+    {
+      "piece_id": "02",
+      "kind": "video_scripts",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/video_scripts/02.md"
+    },
+    {
+      "piece_id": "02",
+      "kind": "source_notes",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/sources/02.md"
+    },
+    {
+      "piece_id": "03",
+      "kind": "articles",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/articles/03.md"
+    },
+    {
+      "piece_id": "03",
+      "kind": "video_scripts",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/video_scripts/03.md"
+    },
+    {
+      "piece_id": "03",
+      "kind": "source_notes",
+      "path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/sources/03.md"
+    }
+  ],
+  "publication_links_path": "runs/2026-10-16T04-24-58-255Z-ee63f048/package/publication_links.json",
+  "remaining_manual_actions": [
+    "Produce each video using Google Vids or HeyGen",
+    "Review rendered videos for factual and timing consistency",
+    "Publish three accessible Substack articles and three public or unlisted YouTube videos",
+    "Add reciprocal links and source references",
+    "Disclose AI-generated presentation",
+    "Verify each submitted URL and update publication_links.json"
+  ]
+}

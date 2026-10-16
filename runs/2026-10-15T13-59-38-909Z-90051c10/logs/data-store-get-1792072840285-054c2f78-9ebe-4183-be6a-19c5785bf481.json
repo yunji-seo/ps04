@@ -1,0 +1,19 @@
+{
+  "stage": "data/store/get",
+  "status": "failed",
+  "input_count": 0,
+  "output_count": 0,
+  "started_at": "2026-10-15T14:00:40.276Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "Requested item or version not found"
+  ],
+  "outcome": "not_found",
+  "finished_at": "2026-10-15T14:00:40.285Z",
+  "exit_code": 1
+}

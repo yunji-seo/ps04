@@ -1,0 +1,18 @@
+{
+  "stage": "workflows/create_series",
+  "status": "completed",
+  "started_at": "2026-10-16T04:36:43.804Z",
+  "finished_at": "2026-10-16T04:39:18.789Z",
+  "exit_code": 0,
+  "input_count": null,
+  "output_count": null,
+  "tools": [
+    "bash"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [
+    "Content recovery from preserved briefs; original failures remain in receipts"
+  ]
+}

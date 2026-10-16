@@ -1,0 +1,13 @@
+{
+  "publication_name": "Agent Engineering Brief",
+  "topic": "Practical adoption and verification of AI coding agents",
+  "audience": "Student developers and small software teams who know basic programming and Git but need help evaluating coding-agent claims",
+  "central_question": "Which recent advances in AI coding agents are useful enough to adopt, and what should developers still verify themselves?",
+  "language": "English",
+  "scope": "Coding workflows, verification, maintainability, agent permissions, and evidence of developer benefit",
+  "exclusions": "Investment advice, general AI news without a coding-workflow consequence, rankings without methods, and promotional claims presented as established results",
+  "editorial_voice": "Practical, curious, skeptical of unsupported claims, and clear about uncertainty",
+  "return_value": "A recurring evidence-based assessment of what to try, how to evaluate it, and what remains unresolved",
+  "provider": "mit-parley",
+  "provider_configuration_status": "Private local key configured. Authenticated model list and bounded claude-sonnet-4-6 generation verified on 2026-10-15. See docs/PARLEY_SETUP.md"
+}

@@ -1,0 +1,38 @@
+{
+  "fingerprint": "1b85c9bf7e440e588e35a39f93df44a450ab8e76055191790f7e028b9ca51cbb",
+  "plans": [
+    {
+      "piece_id": "01",
+      "question": "What has changed in how AI coding agents are being built into development infrastructure, and what do developers need to know before trusting those changes?",
+      "argument": "Several providers appear to be redesigning core development tools—source control, secret detection, and deployment pipelines—to accommodate agent-scale workflows, which may shift where human oversight is still required. Whether these redesigns reflect shipped capabilities or announced intentions remains unclear from the available evidence.",
+      "source_refs": [
+        "source-24",
+        "source-26",
+        "source-6",
+        "source-14"
+      ]
+    },
+    {
+      "piece_id": "02",
+      "question": "How strong is the evidence that AI coding agents actually perform the verification and review tasks their vendors claim, and what should developers test themselves?",
+      "argument": "Several sources appear to address benchmarking, observability, and output validation for coding agents, which together may reveal gaps between vendor claims and independently measured behavior. Whether any available benchmark or monitoring approach is sufficient to substitute for a developer's own verification remains an open question the evidence may only partially answer.",
+      "source_refs": [
+        "source-7",
+        "source-22",
+        "source-17",
+        "source-24"
+      ]
+    },
+    {
+      "piece_id": "03",
+      "question": "What are the practical consequences for student developers and small teams of adopting AI coding agents today, given the infrastructure changes and verification gaps described in earlier pieces?",
+      "argument": "Several sources appear to address the skills, permissions, operational overhead, and platform dependencies that shape whether agent adoption is realistic for teams without dedicated infrastructure budgets. Whether the concrete adoption steps described by vendors match the constraints faced by small teams or beginners remains an open question the evidence may only partially answer.",
+      "source_refs": [
+        "source-4",
+        "source-8",
+        "source-19",
+        "source-24"
+      ]
+    }
+  ]
+}

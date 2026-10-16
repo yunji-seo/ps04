@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 111,
+    "total_tokens": 2564
+  },
+  "content": "{\"piece_id\":\"02\",\"question\":\"How strong is the current evidence that AI coding agents improve developer productivity, and what methodological gaps should student developers watch for when evaluating those claims?\",\"argument\":\"Published benchmarks and vendor demonstrations offer some structured evidence, but the methods behind productivity claims vary widely and several important perspectives—including small-team failures and maintainability costs—appear largely absent from the available record.\",\"source_refs\":[\"source-7\",\"source-25\",\"source-22\",\"source-20\"]}"
+}

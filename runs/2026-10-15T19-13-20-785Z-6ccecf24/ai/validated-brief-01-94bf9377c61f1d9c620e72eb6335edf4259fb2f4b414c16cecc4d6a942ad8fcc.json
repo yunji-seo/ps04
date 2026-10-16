@@ -1,0 +1,140 @@
+{
+  "piece_id": "01",
+  "title": "The Infrastructure Beneath the Agent: How Coding Workflows Are Being Rebuilt at Scale",
+  "question": "What has recently changed in how AI coding agents are being built and deployed at scale?",
+  "argument": "Three independent sources published between late September and mid-October 2026 describe coordinated but distinct infrastructure shifts—agent-aware version control, harness extensibility, and observability tooling—that together suggest the underlying plumbing for coding agents is being restructured, not merely improved. Whether these changes meaningfully benefit small teams or primarily address challenges faced by large organizations running thousands of concurrent agents remains unclear from the available materials.",
+  "synthesis": "GitHub's engineering blog (source-5) and Simon Willison's commentary on Anthropic's internal tooling (source-13) independently describe version-control systems being redesigned around agent workloads—not as a joint announcement, but as parallel responses to the same pressure: agents commit, push, and check out code far more frequently than humans. GitHub reports a 12-month increase from roughly 218 billion to 473 billion monthly Git events and describes separating storage from compute to handle write throughput that scales with agent fleets. Anthropic's internal Scion system, described by Willison citing an Anthropic engineering post, addresses an even more extreme variant of the same problem: 25 million code checkouts per day and a main branch history of nearly 100 GB. These are not the same system or the same organization, but they converge on the same architectural response—decoupling durability from read/write scaling. The Latent Space podcast (source-22) adds a third, complementary angle: the Claude Code harness itself is being extended with mods, forked sub-agents, and artifact-based dashboards to give teams more control over how agents operate within a session. This is not infrastructure in the version-control sense, but it is infrastructure in the sense of the scaffolding that shapes what agents can do and how their work is reviewed. The Stack Overflow podcast (source-15) contributes a fourth perspective—from a vendor with commercial interest in observability tooling—describing how agent workloads are exposing rate limits, non-deterministic behavior, and security gaps that existing monitoring was not designed to catch. Taken together, these sources suggest a transition that is real but unevenly distributed: the infrastructure changes described by GitHub and Anthropic are in production at very large scale, while the harness and observability changes described by sources 22 and 15 are still being developed or are in early adoption. An alternative explanation for the scale numbers is that a small number of extremely active repositories or CI pipelines account for most of the growth, meaning the median developer's workflow may be less affected than the headline figures imply. The GitHub post explicitly acknowledges this, noting that the busiest repository saw roughly a billion requests in a single month. The Anthropic migration to Scion is described as completed but was driven by a team of seven people over five months and is specific to Anthropic's internal environment; it is not a tool available to outside developers. Small teams should therefore treat these developments as signals about the direction of the ecosystem rather than as immediate adoption decisions.",
+  "limitations": "The GitHub blog post (source-5) is published by GitHub, which has a product and business interest in framing agent-scale growth as a reason to trust GitHub's infrastructure investments. The benchmark figure of 35x write throughput improvement is described as coming from internal benchmarks only, not independent measurement.\n\nSimon Willison's post (source-13) is commentary on an Anthropic engineering post, not a primary source. Willison's inference that 'the introduction of Fable/Mythos class models is a key factor in the increased coding velocity' is explicitly labeled as his guess, not a finding from the Anthropic post.\n\nThe Latent Space podcast (source-22) features a speaker employed by Anthropic discussing Anthropic products. Claims about Claude Mods, artifact capabilities, and harness behavior are source claims from a vendor representative, not independently evaluated.\n\nThe Stack Overflow podcast (source-15) features the Chief Product Officer of Datadog, an observability vendor with a commercial interest in expanding the perceived scope of agent monitoring. Claims about customer statistics are not independently verifiable from this source.\n\nNone of the sources represent the perspective of small teams, student developers, or developers who attempted these workflows and found them unhelpful or too costly. The viewpoints of maintainers, novices, or teams without budget for enterprise tooling are absent.",
+  "claims": [
+    {
+      "claim_id": "01-c1",
+      "statement": "GitHub reports that total Git activity on its platform more than doubled between September 2025 and August 2026, growing from approximately 218 billion to 473 billion events per month, and that commits in September 2026 alone were more than five times the count from a year earlier.",
+      "type": "reported_fact",
+      "evidence": [
+        {
+          "item_id": "feed:github:24d39f28f1664a92f8c76c40",
+          "version_id": "c0fec60856ba680f34b34b7c4960559d3e262f911f108fa81d8560d43ad099c7",
+          "locator": {
+            "type": "text",
+            "quote": " workloads show the scale we’re building for. The gap between a typical repository and the busiest ones is wider than most people expect. Here’s a rough picture of the monthly repository activity distribution on GitHub from August 2026:\n\nRepository activity climbs sharply at the far end of the distribution. The busiest repository on GitHub saw roughly a billion requests in August.\n\nBeyond these highest-volume workloads, total Git activity on GitHub is also growing rapidly: between September 2025 and August 2026, it increased to more than 2x its previous level, from 218.2 billion events per month to 473.3 billion.\n\nIn September alone, developers and agents made 7.38 billion commits on GitHub, more than five times as many as a year earlier.\n\nThe repositories at the top of this curve show what agentic development looks like at its leading edge: large engineering teams running busy CI"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "01-c2",
+      "statement": "GitHub's engineering team describes its current architecture as hitting a ceiling at high agent-driven write volumes because adding read replicas increases write latency, and is rebuilding the system to separate durable storage from compute workers so each can scale independently.",
+      "type": "reported_fact",
+      "evidence": [
+        {
+          "item_id": "feed:github:24d39f28f1664a92f8c76c40",
+          "version_id": "c0fec60856ba680f34b34b7c4960559d3e262f911f108fa81d8560d43ad099c7",
+          "locator": {
+            "type": "text",
+            "quote": " repositories today.\n\nHowever, the mechanism we use for durability is the same one we use for scale. The copies on disk are the source of truth, so adding read capacity means adding another durable replica. Every replica participates in every write, so a push is only as fast as the slowest replica in its set. The net effect: adding replicas to absorb read load makes writes slower.\n\nFor most repositories, this tradeoff works well. At the highest activity levels, it becomes a ceiling: adding read replicas adds overhead to writes, losing a replica reduces read capacity, and losing quorum stops writes entirely. To meet agent-first demands, we need to separate durability from scale without losing what teams rely on today.\n\nBuilt for the busiest, better for everyone\n\nWe’re rebuilding the infrastructure while GitHub keeps running. There’s no maintenance window where the world’s code stops"
+          }
+        },
+        {
+          "item_id": "feed:github:24d39f28f1664a92f8c76c40",
+          "version_id": "c0fec60856ba680f34b34b7c4960559d3e262f911f108fa81d8560d43ad099c7",
+          "locator": {
+            "type": "text",
+            "quote": " path. Compaction and garbage collection are among the heaviest work a repository does, and today they run on the same hosts that answer live Git requests. In the new architecture, separate workers handle maintenance directly against durable storage. A busy repository can be optimized continuously in the background without slowing pushes and fetches.\n\nDecouple storage from compute\n\nToday, complete repository copies on local disks serve both as durable storage and as the layer that answers Git requests. Separating the two lets us scale each one independently.\n\nScale reads without adding durable copies. In the new architecture, read capacity comes from lightweight workers that cache data to serve requests. The authoritative copy of the repository lives in a durable storage layer underneath. That way, the platform can absorb large read spikes from CI fan-out, agent fleets, and large clones"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "01-c3",
+      "statement": "Anthropic built and migrated to an internal version-control system called Scion, distinct from Git, in response to its code-change rate growing from roughly 2,500 merged changes per day in May 2026 to over 30,000 per day by September 2026; the migration was completed by a team of seven in five months.",
+      "type": "reported_fact",
+      "evidence": [
+        {
+          "item_id": "feed:simon-willison:fdc555784f18363338e2980b",
+          "version_id": "51dbfe47fdb19fd2a1fc4dedec37d846efb7f503da9c10e7c2edc69f162ed976",
+          "locator": {
+            "type": "text",
+            "quote": "Redesigning source control at Anthropic (via) Interesting piece from Anthropic describing why and how they built their own custom alternative to Git, based on the dramatic increase in rate of changes to their code after the past six months.\n\nIn May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day.\n\nThey included a chart showing those changes. I had Claude modify their chart (code here) to add markers for the public releases of each of their models in 2026:\n\nThis shows public release dates, not the date when models became available for Anthropic's internal use. My guess is that the introduction of Fable/Mythos class models is a key factor in the increased coding velocity.\n\"Antique\" is their new code review system. The source control system is called Scion, and sounds to me like a reinvention of centralized source control"
+          }
+        },
+        {
+          "item_id": "feed:simon-willison:fdc555784f18363338e2980b",
+          "version_id": "51dbfe47fdb19fd2a1fc4dedec37d846efb7f503da9c10e7c2edc69f162ed976",
+          "locator": {
+            "type": "text",
+            "quote": " along the lines of Subversion.\n(Update: Anthropic credit Google's Piper and Meta's Sapling as \"prior art\" - it looks like the core concept of \"derived data\" was heavily inspired by Mononoke, the server component of Sapling.)\nThey had some pretty extreme requirements:\n\nThe history of our main branch alone is almost 100 GB, and a compressed working copy is over 25 GB. We perform on the order of 25 million code checkouts per day for CI, before counting developer environments, agent sandboxes, and research jobs. Fetched naively, that would be over 600 PB of git traffic per day.\n\nThe new system was built by a team of seven people, and the migration from Git was completed in five months.\nWhen asked on Hacker News about the lack of offline support, Scion engineer Nick G replied:\n\nSince Claude is by far the heaviest user of Scion and is necessarily online, this just wasn't important to do.\n\nAs"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "01-c4",
+      "statement": "An Anthropic engineer described the Claude Code harness as moving from a command-line tool toward a more extensible system with 'mods' that allow users to customize the agent loop and surface UI, and described a planned architectural split between cloud-based inference, local execution, and artifact-based display—though these features were described as still in development at the time of the recording.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "item_id": "podcast:latent-space:b4c0eaf0034db9d3d987ed69",
+          "version_id": "da4c971ed7898c15212f53583ee6c5611cb70df6fe1bb13a4335cba320559712",
+          "locator": {
+            "type": "segment",
+            "segment_id": "s-00110"
+          }
+        },
+        {
+          "item_id": "podcast:latent-space:b4c0eaf0034db9d3d987ed69",
+          "version_id": "da4c971ed7898c15212f53583ee6c5611cb70df6fe1bb13a4335cba320559712",
+          "locator": {
+            "type": "segment",
+            "segment_id": "s-00026"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "01-c5",
+      "statement": "The Datadog CPO described agent workloads as exposing infrastructure limits—particularly API rate limits—that were designed for human or programmatic access, and argued that the feedback loop between production observability and the software build phase needs to tighten significantly for AI agent deployments; these claims reflect a vendor's perspective and were not independently measured.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "item_id": "feed:stackoverflow:425cbd44d7ef5cc67868c4f7",
+          "version_id": "06de20515b6fbc7e46b2222b4d8ad444ff2f5b84b28229ece20b942063b08336",
+          "locator": {
+            "type": "text",
+            "quote": " Increase the speed and scale at data access. So still, a lot of things remain the same. But then there are these new primitives as we've been discussing as well.\n\nRyan: Yeah, yeah. With AI agents, I feel like you can automate more failures.\n\nYanbing: You know, certainly there is token limit, but it is often just the regular rate limit. You know, a lot of the software, they were designed for human or programmatic access. And, you know, agents are exposing lots of rate limiting. You know, we also constantly receive demand from our customers of raising rate limit in our system. I think this is something that's old, but is new in a different way.\n\nRyan: You know, when you think about observing agents outside of the standard failures, you could have incorrect tool calls, you could have PII exposures, you can have all these things that are kind of outside of most, you know, network systems"
+          }
+        },
+        {
+          "item_id": "feed:stackoverflow:425cbd44d7ef5cc67868c4f7",
+          "version_id": "06de20515b6fbc7e46b2222b4d8ad444ff2f5b84b28229ece20b942063b08336",
+          "locator": {
+            "type": "text",
+            "quote": " feedback loop, but you deploy, you trust in production fairly, you observe everything and you go back and you fix bugs or fixed issues as they arise. But for AI agent, I think there is an argument for much more continuous monitoring, because a lot of the things that can be verified in a traditional system simply cannot be exhaustively verified in a AI agent system. So, I think that feedback loop is much, much more important. In traditional software, it tends to be bug fixing or understanding production load, or sometimes understanding customer behaviors and how you improve your product. But in the world of AI, all of those things applies, but there is more of a... No matter how much we test, how much we evaluate during that build phase, the real world always surprise us in many, many different ways. So I do think that continuous feedback loop and that rapid iteration is becoming much"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "01-c6",
+      "statement": "Both GitHub's infrastructure post and Simon Willison's commentary on Anthropic's Scion system independently describe version-control architectures being redesigned around agent commit and checkout frequency rather than human usage patterns, suggesting that the agent-driven write load is a real and shared architectural constraint—not a single organization's edge case—though the specific scale thresholds at which these constraints appear are far beyond what most small teams currently encounter.",
+      "type": "inference",
+      "evidence": [
+        {
+          "item_id": "feed:github:24d39f28f1664a92f8c76c40",
+          "version_id": "c0fec60856ba680f34b34b7c4960559d3e262f911f108fa81d8560d43ad099c7",
+          "locator": {
+            "type": "text",
+            "quote": " pipelines alongside growing fleets of agents. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. We’re investing deeply in Git infrastructure to meet the demands of agentic software development and give teams a foundation built for their most ambitious workloads.\n\nBuilding for this scale means addressing several architectural challenges:\n\nCommit turnaround becomes a bottleneck per agent. An agent in a tight loop commits or checkpoints after nearly every action. Its speed is bounded by how fast a single push completes, so latency that a human would never notice becomes the limiting factor.\n\nWrite throughput demand is increasing by orders of magnitude. Pushes grew 4.9x year over year, from 0.69 billion to 3.35 billion per month. Thousands of agents working on their own branches in one repository"
+          }
+        },
+        {
+          "item_id": "feed:simon-willison:fdc555784f18363338e2980b",
+          "version_id": "51dbfe47fdb19fd2a1fc4dedec37d846efb7f503da9c10e7c2edc69f162ed976",
+          "locator": {
+            "type": "text",
+            "quote": " along the lines of Subversion.\n(Update: Anthropic credit Google's Piper and Meta's Sapling as \"prior art\" - it looks like the core concept of \"derived data\" was heavily inspired by Mononoke, the server component of Sapling.)\nThey had some pretty extreme requirements:\n\nThe history of our main branch alone is almost 100 GB, and a compressed working copy is over 25 GB. We perform on the order of 25 million code checkouts per day for CI, before counting developer environments, agent sandboxes, and research jobs. Fetched naively, that would be over 600 PB of git traffic per day.\n\nThe new system was built by a team of seven people, and the migration from Git was completed in five months.\nWhen asked on Hacker News about the lack of offline support, Scion engineer Nick G replied:\n\nSince Claude is by far the heaviest user of Scion and is necessarily online, this just wasn't important to do.\n\nAs"
+          }
+        }
+      ]
+    }
+  ]
+}

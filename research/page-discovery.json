@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-10-15T13:41:55.034Z",
+  "results": [
+    {
+      "url": "https://www.latent.space/p/thariq",
+      "links": [
+        {
+          "text": "",
+          "href": "/feed",
+          "type": "application/rss+xml"
+        }
+      ],
+      "audio": [
+        "https://api.substack.com/api/v1/audio/upload/c63d4f50-ca5f-459a-b368-281f73e3765e/src"
+      ],
+      "dates": [
+        "Sep 29, 2026",
+        "14 hrs ago",
+        "Oct 13",
+        "Oct 10",
+        "Oct 8",
+        "Oct 2",
+        "Sep 30",
+        "Sep 25"
+      ]
+    },
+    {
+      "url": "https://www.latent.space/p/devday-2026",
+      "links": [
+        {
+          "text": "",
+          "href": "/feed",
+          "type": "application/rss+xml"
+        },
+        {
+          "text": "the first Computer Use track at AIE",
+          "href": "https://www.youtube.com/watch?v=1UmZHb_E_SM&list=PLEz0frWjePik&pp=sAgC",
+          "type": null
+        }
+      ],
+      "audio": [
+        "https://api.substack.com/api/v1/audio/upload/bf1dd45c-cca3-4c2c-8bd6-b825ecb451ab/src"
+      ],
+      "dates": [
+        "Sep 30, 2026",
+        "14 hrs ago",
+        "Oct 13",
+        "Oct 10",
+        "Oct 8",
+        "Oct 2",
+        "Sep 29",
+        "Sep 25"
+      ]
+    },
+    {
+      "url": "https://github.blog/",
+      "links": [
+        {
+          "text": "",
+          "href": "https://github.blog/feed/",
+          "type": "application/rss+xml"
+        },
+        {
+          "text": "",
+          "href": "https://github.blog/comments/feed/",
+          "type": "application/rss+xml"
+        },
+        {
+          "text": "View GitHub on YouTube",
+          "href": "https://www.youtube.com/github",
+          "type": null
+        },
+        {
+          "text": "Two decades of Git: A conversation with creator Linus Torvalds",
+          "href": "https://www.youtube.com/watch?v=b5Ho2_Si6hY",
+          "type": null
+        },
+        {
+          "text": "View all playlists",
+          "href": "https://www.youtube.com/@GitHub/playlists",
+          "type": null
+        },
+        {
+          "text": "Explore GitHub Universe 2025",
+          "href": "https://www.youtube.com/playlist?list=PL0lo9MOBetEFKNlPHNouEmVeYeyoyGTXC",
+          "type": null
+        },
+        {
+          "text": "Learn about GitHub Copilot",
+          "href": "https://www.youtube.com/playlist?list=PL0lo9MOBetEHEHi9h0k_lPn0XZdEeYZDS",
+          "type": null
+        },
+        {
+          "text": "Stay informed with The Download",
+          "href": "https://www.youtube.com/playlist?list=PL0lo9MOBetEE0goMLEl97vO7slruNVj43",
+          "type": null
+        },
+        {
+          "text": "",
+          "href": "https://www.youtube.com/playlist?list=PL0lo9MOBetEHvO-spzKBAITkkTqv4RvNl",
+          "type": null
+        },
+        {
+          "text": "Explore GitHub Copilot CLI for Beginners",
+          "href": "https://www.youtube.com/playlist?list=PL0lo9MOBetEHvO-spzKBAITkkTqv4RvNl",
+          "type": null
+        },
+        {
+          "text": "YouTube icon\n\t\t\t\t\t\t\n\t\t\t\t\t\n\n\t\t\t\t\tGitHub on YouTube",
+          "href": "https://www.youtube.com/github",
+          "type": null
+        }
+      ],
+      "audio": [],
+      "dates": [
+        "2026-10-14",
+        "2026-10-13",
+        "2026-10-12",
+        "2026-10-09",
+        "2026-10-14",
+        "2026-10-08",
+        "2026-10-07",
+        "2026-10-14",
+        "2023-03-09",
+        "2026-10-14",
+        "2026-10-14",
+        "2026-10-14",
+        "2026-10-13",
+        "2026-10-13",
+        "2026-10-06",
+        "2026-09-25",
+        "2026-09-23",
+        "2026-09-02",
+        "2026-08-24",
+        "2026-10-01",
+        "2026-09-29",
+        "2026-09-23",
+        "2026-09-09",
+        "2026-08-20",
+        "2026-08-13"
+      ]
+    },
+    {
+      "url": "https://simonwillison.net/",
+      "links": [
+        {
+          "text": "Ben Affleck",
+          "href": "https://www.youtube.com/watch?v=HzraLR2VkNM&t=2259s",
+          "type": null
+        }
+      ],
+      "audio": [],
+      "dates": []
+    },
+    {
+      "url": "https://martinfowler.com/rachels-ramblings/code-review.html",
+      "links": [
+        {
+          "text": "",
+          "href": "/feed.atom",
+          "type": null
+        },
+        {
+          "text": "RSS",
+          "href": "/feed.atom",
+          "type": null
+        },
+        {
+          "text": "RSS",
+          "href": "/feed.atom",
+          "type": null
+        }
+      ],
+      "audio": [],
+      "dates": [
+        "02 September 2026"
+      ]
+    }
+  ]
+}

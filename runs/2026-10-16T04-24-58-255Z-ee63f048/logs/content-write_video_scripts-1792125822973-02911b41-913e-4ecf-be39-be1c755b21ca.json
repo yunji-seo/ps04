@@ -1,0 +1,24 @@
+{
+  "stage": "content/write_video_scripts",
+  "status": "completed",
+  "input_count": 3,
+  "output_count": 3,
+  "started_at": "2026-10-16T04:41:38.080Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [],
+  "model_calls": 7,
+  "token_usage": {
+    "prompt_tokens": 21,
+    "completion_tokens": 15128,
+    "total_tokens": 102254
+  },
+  "finished_at": "2026-10-16T04:43:42.973Z",
+  "exit_code": 0
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "processing/extract_content",
+  "status": "completed",
+  "input_count": 1,
+  "output_count": 1,
+  "started_at": "2026-10-15T19:12:12.973Z",
+  "tools": [
+    "node v22.14.0",
+    "yt-dlp",
+    "ffprobe"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "reused_count": 0,
+  "item_results": [
+    {
+      "item_id": "youtube:KT6p0MNXoCE",
+      "status": "completed",
+      "version_id": "17c43b8bc8447bbb2a4a4c6762829005f780fd0ec91b3aedd690c1b668de2597"
+    }
+  ],
+  "finished_at": "2026-10-15T19:12:21.516Z",
+  "exit_code": 0
+}

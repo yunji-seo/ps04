@@ -1,0 +1,26 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 57,
+  "output_count": 0,
+  "started_at": "2026-10-16T04:30:14.581Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [
+    "Plan 02: Include a youtube source"
+  ],
+  "model_calls": 4,
+  "token_usage": {
+    "prompt_tokens": 12,
+    "completion_tokens": 447,
+    "total_tokens": 9957
+  },
+  "finished_at": "2026-10-16T04:30:22.691Z",
+  "exit_code": 1
+}

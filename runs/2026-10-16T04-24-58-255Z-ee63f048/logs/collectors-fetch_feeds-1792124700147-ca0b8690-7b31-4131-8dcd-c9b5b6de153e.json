@@ -1,0 +1,38 @@
+{
+  "stage": "collectors/fetch_feeds",
+  "status": "completed",
+  "input_count": 4,
+  "output_count": 47,
+  "started_at": "2026-10-16T04:24:59.394Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "source_results": [
+    {
+      "source_id": "simon-feed",
+      "status": "completed",
+      "count": 15
+    },
+    {
+      "source_id": "github-feed",
+      "status": "completed",
+      "count": 10
+    },
+    {
+      "source_id": "cloudflare-feed",
+      "status": "completed",
+      "count": 10
+    },
+    {
+      "source_id": "stackoverflow-feed",
+      "status": "completed",
+      "count": 12
+    }
+  ],
+  "finished_at": "2026-10-16T04:25:00.147Z",
+  "exit_code": 0
+}

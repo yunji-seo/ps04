@@ -1,0 +1,33 @@
+{
+  "stage": "editorial/select_items",
+  "status": "completed",
+  "input_count": 44,
+  "output_count": 44,
+  "started_at": "2026-10-15T15:04:24.534Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [],
+  "reused_response_count": 6,
+  "reused_response_paths": [
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076376780-bd26dd82-feae-4c75-9b24-609d1801ec2a-response.json",
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076394561-5bcc3fdb-0d1a-45bd-b8f9-90b2175f2bbd-response.json",
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076415241-6d6dac8c-6c09-4430-993c-55a4889c58aa-response.json",
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076440341-5e488dc2-89c7-4246-820e-d9cb1ff1e8e6-response.json",
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076464628-769039b0-a63c-4a29-bdc6-d2242f8dc305-response.json",
+    "runs/2026-10-15T14-59-33-161Z-664468fb/ai/editorial-select_items-1792076491499-63ec6e3f-8815-4279-b7bd-3336bc6ca9e7-response.json"
+  ],
+  "model_calls": 5,
+  "token_usage": {
+    "prompt_tokens": 15,
+    "completion_tokens": 5958,
+    "total_tokens": 167613
+  },
+  "finished_at": "2026-10-15T15:06:04.197Z",
+  "exit_code": 0
+}

@@ -1,0 +1,25 @@
+{
+  "stage": "content/write_articles",
+  "status": "completed",
+  "input_count": 3,
+  "output_count": 3,
+  "started_at": "2026-10-16T04:36:43.992Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [],
+  "reused_response_count": 1,
+  "model_calls": 2,
+  "token_usage": {
+    "prompt_tokens": 6,
+    "completion_tokens": 2668,
+    "total_tokens": 101755
+  },
+  "finished_at": "2026-10-16T04:37:34.221Z",
+  "exit_code": 0
+}

@@ -1,0 +1,16 @@
+{
+  "stage": "data/store/list",
+  "status": "completed",
+  "input_count": 0,
+  "output_count": 44,
+  "started_at": "2026-10-15T13:55:02.721Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "finished_at": "2026-10-15T13:55:02.745Z",
+  "exit_code": 0
+}

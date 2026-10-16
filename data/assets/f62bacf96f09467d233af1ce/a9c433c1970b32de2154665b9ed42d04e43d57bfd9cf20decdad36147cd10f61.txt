@@ -1,0 +1,65 @@
+Why your platform team shouldn't build an AI context layer (even though they probably could)
+
+Most engineering teams capable of building an internal AI knowledge system think they should. But six months later, it's a platform team's full-time job. Building an in-house AI context layer costs more money and energy than you think.
+
+Most engineering teams capable of building an internal AI knowledge system think they should. Stand up a vector database, wire in a few connectors, point a RAG pipeline at your docs—easy, right?
+
+Six months later, it's a platform team's full-time job.
+
+That's not because anyone underestimated the database work, but because "vector database" and "governed knowledge pipeline" are two different classes of problem. One is a weekend project, but the other is a trust, compliance, and continuous-maintenance challenge that compounds with every new source, every stale doc, and every agent you plug in.
+
+A production-grade pipeline breaks into five stages:
+
+The stage that looks easiest might be the hardest
+
+Every stage above looks tractable on its own. You might be thinking that a strong team could build all five, and you’re probably right. The trap lies in underestimating what it costs to keep that pipeline up and running. None of these are one-and-done costs; they compound with the sophistication of your AI stack.
+
+Capture: Because raw documents aren't enough
+
+Writing a connector isn't the hard part. That’s keeping it current as vendor APIs evolve. And bear in mind that even a perfect connector only gets you a copy of the source. After all, agents can't skim content the way humans can: if you feed one a raw Slack thread, it will often retrieve the right document but the wrong section.
+
+That's why capture needs to produce something more durable than a stored copy: a knowledge node, or a living record that carries the substance of what's known, where it came from, who owns it, and how much to trust it. If the source tool disappears tomorrow, the knowledge stays put.
+
+Validate: Where trust actually gets built
+
+This is the layer most build-it-yourself pipelines skip, but it's the one that matters most. Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. Some knowledge is authoritative; some is a reversed decision nobody labeled accordingly. Without a way to tell the difference, agents will surface both with equal confidence.
+
+Validation works in two modes: implicit trust, which is automatic, and explicit trust, which is a human-in-the-loop fallback for when the stakes are too high for guesswork.
+
+Every knowledge node carries a trust score built from multiple signals: factors like authorship, usage, recency, source, and whether it conflicts with other knowledge. Most content earns trust automatically, in the form of a merged PR from a principal engineer or a finalized policy with a named owner.
+
+Trust also decays, however. A node that was accurate six months ago may not be today, so a node that falls below a confidence threshold surfaces a lightweight one-tap revalidation request to its owner.
+
+Implicit vs. explicit trust
+
+The health metric that matters here is, How many times did we interrupt a human today? Every interruption is a signal that the automatic layer isn't working well enough yet.
+
+Organize: Knowledge in the right spaces
+
+Not all knowledge merits the same audience. A decision made by one engineer about their own service, for instance, shouldn't carry the same weight—or reach the same people—as a company-wide architectural commitment. We solve the problem of organization with scopes solves this by giving knowledge context, defined by what information is in scope and who can work within that scope. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the right spaces instead of pooling into one undifferentiated room that everyone has to wade through.
+
+Knowledge starts personal and private by default: the context a developer keeps re-explaining to their AI tools every session about who should and shouldn’t have access is instead inherited through scopes. Scopes organize knowledge into the relevant context and apply those inherited permissions from ingestion when retrieving and composing an answer. Agents inherit the same permission boundary as a human operating in that same context, so a developer's personal knowledge never leaks to their team without their permission, and a team's knowledge never leaks to the wider org unless someone explicitly chooses to share it.
+
+Govern: The control surface enterprise buyers actually need
+
+Governance for AI has to work as an automated system that plugs into the tools enterprise IT and security teams already use. Buyers signing off on a company-wide AI rollout have their own requirements: they need to set permissions in bulk rather than one person at a time, they need proof of who accessed what to feed into their existing security monitoring, and they need visibility into how the system is being used without having to log into yet another dashboard.
+
+Govern has to satisfy both audiences at once: the person browsing a settings page and the automated systems checking in behind the scenes.
+
+As agents take on more consequential work like answering support queries or informing product decisions, the ability to trace any AI output back to a specific piece of validated content, approved by a named reviewer on a specific date, becomes a compliance requirement instead of a nice-to-have.
+
+Deliver: Getting trusted knowledge to where work happens
+
+Validated, organized, governed knowledge that nobody encounters might as well be locked in a filing cabinet. Delivery has two modes: explicit, where a user asks and gets the best available answer with a trust score and provenance trail attached, and proactive, where the system surfaces relevant knowledge before anyone asks (for instance, an engineer opens a new service and the system already knows a similar team hit this exact bottleneck six months ago).
+
+The Model Context Protocol (MCP) makes this composable instead of bespoke. You have one standardized interface instead of every agent building its own retrieval integration, so you’re constantly querying the current, validated state of the graph rather than a stale snapshot.
+
+So, build or buy?
+
+The answer to that question hinges on what your engineering org is actually for. If knowledge infrastructure is your competitive advantage, then owning that pipeline is a legitimate play. But for most product companies and developer platforms, the pipeline just needs to work reliably without consuming engineering cycles that should go toward what customers actually pay for.
+
+Connector maintenance, trust-model tuning, SME workflows that scale with headcount, governance requirements that show up the moment an auditor asks for a trail…as we mentioned, none of these are one-time expenditures, and they compound as your AI stack gets more sophisticated. The build vs. buy decision for knowledge infrastructure boils down to a question of organizational focus. Building a vector database is easily achievable. Building a governed, trusted knowledge pipeline? Not so much.
+
+The Stack Internal platform is built to absorb those costs: capture that runs on a stable connector framework instead of a fleet of bespoke integrations, validation that earns trust automatically before it ever asks a human, organization that scopes knowledge correctly without manual filing, governance with audit and guardrails as foundation, and delivery that’s MCP-native by default.
+
+Interested in seeing how Stack Internal handles the full pipeline? Learn more about Stack Internal here.

@@ -1,0 +1,214 @@
+{
+  "run_id": "2026-10-15T19-13-20-785Z-6ccecf24",
+  "as_of_date": "2026-10-15",
+  "mode": "live",
+  "status": "awaiting_review_after_recovery",
+  "review_current": true,
+  "counts": {
+    "discovered": 51,
+    "extracted": 51,
+    "new": 9,
+    "changed": 2,
+    "unchanged": 40,
+    "eligible": 54,
+    "excluded": 0,
+    "accepted": 23,
+    "rejected": 27,
+    "deferred": 4,
+    "articles": 3,
+    "video_scripts": 3
+  },
+  "coverage": {
+    "distinct_eligible_items": 54,
+    "by_kind": {
+      "feed": 50,
+      "youtube": 2,
+      "podcast": 2
+    },
+    "independent_publishers": [
+      "cloudflare",
+      "github",
+      "simon-willison",
+      "stackoverflow",
+      "latent-space",
+      "openai"
+    ],
+    "limitations": [],
+    "independence_status": "Publisher identities require human confirmation; shared upstream claims are not corroboration"
+  },
+  "duplicate_observations": 0,
+  "failed_or_incomplete_stages": [
+    {
+      "stage": "run",
+      "status": "failed",
+      "errors": []
+    }
+  ],
+  "recovery": {
+    "automated_outputs_recovered": true,
+    "original_entrypoint_status": "failed",
+    "recovered_at": "2026-10-16T04:38:50.530Z",
+    "note": "Original entrypoint failure is preserved; subsequent stage recovery produced drafts, scripts, and passing checks. This is not an uninterrupted successful entrypoint execution."
+  },
+  "failure_history": [
+    {
+      "stage": "run",
+      "started_at": "2026-10-15T19:13:20.654Z",
+      "errors": []
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-15T19:14:02.548Z",
+      "errors": [
+        "Brief generation failed"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-15T19:17:36.777Z",
+      "errors": [
+        "Evidence quote does not exactly match retained text"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-15T19:21:11.486Z",
+      "errors": [
+        "Quotation fragment is not in retained evidence: We validate findings under a shared rubric. The source of a finding does not determine whether it is correct"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-15T19:22:57.101Z",
+      "errors": [
+        "Quotation fragment is not in retained evidence: We validate findings under a shared rubric. The source of a finding does not determine whether it is correct"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-15T19:23:08.930Z",
+      "errors": [
+        "Each brief needs three publishers and a multi-publisher inference"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-15T19:27:24.368Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-15T19:27:24.518Z",
+      "errors": [
+        "Plan uses a source not accepted for this piece"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:24:45.978Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-16T04:24:46.260Z",
+      "errors": [
+        "Plan must select 3–5 distinct sources"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:26:56.449Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-16T04:26:56.652Z",
+      "errors": [
+        "Plan 03: Select at least three different publisher_id values"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:28:44.240Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-16T04:28:44.406Z",
+      "errors": [
+        "Generated brief has the wrong piece ID"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:30:57.079Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "editorial/create_briefs",
+      "started_at": "2026-10-16T04:30:57.227Z",
+      "errors": [
+        "Each brief needs three publishers and a multi-publisher inference"
+      ]
+    },
+    {
+      "stage": "workflows/create_series",
+      "started_at": "2026-10-16T04:33:02.618Z",
+      "errors": [
+        "Resumed from preserved decisions; original failures remain in earlier receipts"
+      ]
+    },
+    {
+      "stage": "content/write_articles",
+      "started_at": "2026-10-16T04:34:07.147Z",
+      "errors": [
+        "Draft 01 is missing the as-of date"
+      ]
+    }
+  ],
+  "store_lookup_misses": 9,
+  "elapsed_seconds": 51181.091,
+  "tools": [
+    "bash",
+    "node v22.14.0",
+    "yt-dlp",
+    "ffprobe"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "known_or_estimated_cost_usd": 0,
+  "has_estimated_cost": false,
+  "unknown_cost_stages": [
+    "editorial/select_items",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "editorial/create_briefs",
+    "content/write_articles",
+    "content/write_articles",
+    "content/write_video_scripts"
+  ],
+  "student_selection_review": "docs/STUDENT_EDITORIAL_REVIEW.md",
+  "remaining_manual_actions": [
+    "Supply actual student approval of reviewed content",
+    "Inspect the two different-day run records and their recovery history",
+    "Produce videos in Google Vids or HeyGen",
+    "Publish and cross-link three article/video pairs",
+    "Record technical demonstration",
+    "Complete personal reflection and verify submitted links"
+  ]
+}

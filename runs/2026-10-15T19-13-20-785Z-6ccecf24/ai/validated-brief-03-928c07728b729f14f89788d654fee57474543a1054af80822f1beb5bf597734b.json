@@ -1,0 +1,164 @@
+{
+  "piece_id": "03",
+  "title": "What to Actually Change in Your Workflow Before Trusting an AI Coding Agent",
+  "question": "What should developers actually do differently when adopting AI coding agents, given the permissions, verification, and workflow concerns raised across recent sources?",
+  "argument": "Several sources converge on concrete, low-cost workflow changes—verify outputs against artifacts rather than agent reports, apply a second model as critic, treat secret exposure as a scaling problem rather than a carelessness problem, and steer agents away from over-engineering—but the evidence also reveals that standard observability conventions and vendor guidance may underestimate the verification burden, particularly as agent activity scales.",
+  "synthesis": "Three independent publishers (Stack Overflow Blog, GitHub Blog, and Simon Willison linking an Anthropic post) each surface a different facet of the same underlying problem: agents produce outputs that look like success signals while potentially omitting or misrepresenting the underlying work. Stack Overflow Blog (source-20) grounds this in benchmark data and documented incidents, arguing that exit codes and 'task complete' messages are now self-assessments rather than observations, and prescribes instrumenting artifacts rather than runs. GitHub Blog (source-7) approaches the same gap from the secret-exposure angle: accelerating agent-driven code creation outpaces human remediation capacity, so protection must move earlier in the pipeline and rely less on developer attention. GitHub Blog (source-3) translates the general concern into three developer habits: directing agents with explicit context, using a second model to critique the first, and reserving human judgment for architectural and accessibility decisions. Simon Willison (source-13), reporting on Anthropic's internal tooling, adds an important complication: even skilled teams using adversarial review found that agents needed active steering to avoid over-engineering in response to hypothetical concerns—a cost that vendor-facing guidance aimed at individual developers rarely quantifies. An alternative explanation for some of these patterns is that current agent reliability problems are model-generation-specific and will diminish as models improve; source-20 acknowledges that benchmark numbers from 2024 are stale, though it argues the structural measurement problem (pass^k, artifact vs. transcript verification) persists regardless of model capability. Voices absent from this evidence base include developers working in resource-constrained environments who cannot afford AI credit consumption for secret scanning, maintainers inheriting agent-written code they never reviewed, and teams whose failure modes are not represented in existing benchmarks.",
+  "limitations": "Source-20 is a guest essay by someone with a commercial interest in multi-agent evaluation tooling; the structural argument is clearly reasoned but the author's perspective should be weighed accordingly.\n\nSource-3 and source-7 are both published by GitHub, which sells the tools being discussed; their guidance should be treated as source claims rather than independent validation.\n\nSource-13 is Simon Willison's commentary on an Anthropic blog post; the underlying Anthropic post is the primary evidence for Scion and adversarial review costs, and Willison's interpretation (that new model classes drove the velocity increase) is explicitly his inference, not Anthropic's stated claim.\n\nBenchmark figures cited in source-20 (pass^k under 50%, TheAgentCompany 30% task completion) are from 2024 datasets; current model performance may differ, though the measurement framework remains applicable.\n\nNo source in this set represents a small team that attempted these workflow changes and documented the actual time cost or failure rate of doing so.",
+  "claims": [
+    {
+      "claim_id": "03-c1",
+      "statement": "Agent exit codes and 'task complete' messages are structurally different from traditional process exit codes: they reflect the agent's self-report rather than an observation made by a process that witnessed the work complete, meaning standard CI green signals can no longer be treated as evidence that work occurred.",
+      "type": "reported_fact",
+      "evidence": [
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "version_id": "65f027258077bda30b87355a1f3d0db780ec57542f2bfa52395935207a27fc27",
+          "locator": {
+            "type": "text",
+            "quote": " loud. A failed assertion is loud. A 500 is loud. The exit code is loudness compressed into a single integer, and it is probably the most-consumed piece of telemetry in computing.\n\nThe thing worth noticing about exit 0 is who emits it. When make exits 0, that integer sits downstream of the work: a compiler ran, produced object files, and returned. The status is an observation, made by a process that was in a position to observe. The number is evidence about the world.\n\nWhen an agent loop exits 0, the integer is emitted by an orchestrator that stopped looping because the model produced a token meaning \"done.\" Nothing between the model's claim and the exit code checked anything. The status is a self-assessment, and you have plugged it into a socket built for an observation. Every consumer downstream—your dashboard, your alerting rules, your retry logic, the person who glances at a run"
+          }
+        },
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "version_id": "65f027258077bda30b87355a1f3d0db780ec57542f2bfa52395935207a27fc27",
+          "locator": {
+            "type": "text",
+            "quote": " because tools encode trust, and that the trust is predictability earned through repetition—the reason a knife you've used for ten years feels like an extension of your hand, and the reason agentic tools, which change shape and weight every few weeks, are so hard to trust the same way.\n\nI think that's right, and I want to push on where it stops. There is a second reason trust isn't accruing, and it is structurally worse than the first. It isn't only that the tool keeps changing shape. It's that the feedback loop you would need in order to learn the tool is broken at the point of measurement.\n\nEvery trust instrument a developer owns—exit codes, green CI, a passing status check, the words \"task complete\"—rests on an assumption that software fails loudly. Unattended agents fail quietly. A loop can terminate cleanly, report success, and have produced nothing at all, and there is no signal"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "03-c2",
+      "statement": "The practical fix for silent-green-exit failures requires asserting on the artifact—checking whether the row exists, the file is on disk, or the message actually left the queue—using state the agent did not author, rather than relying on the agent's own completion report.",
+      "type": "reported_fact",
+      "evidence": [
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "version_id": "65f027258077bda30b87355a1f3d0db780ec57542f2bfa52395935207a27fc27",
+          "locator": {
+            "type": "text",
+            "quote": " is a list, and the agent is not confined to your list. You have to write it from the outcome side.\n\nInstrument the artifact, not the run\n\nFour things follow. None of them needs new tooling, and that's rather the point.\n\nAssert on the work product. Not \"did the loop exit 0\" but \"does the row exist, is the file on disk, did the message actually leave the queue, is the branch actually pushed.\" The check has to read state the agent did not author. If your only evidence that the emails went out is the agent's report that it sent them, you do not have evidence. You have a claim from a party that has a vested interest in the answer.\n\nDon't let verification share a failure mode with the work. If the same agent, in the same context, both does the job and reports on it, the report inherits every error the job had—including the ones that caused it. Donovan raises LLM-as-a-judge as the emerging"
+          }
+        },
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "version_id": "65f027258077bda30b87355a1f3d0db780ec57542f2bfa52395935207a27fc27",
+          "locator": {
+            "type": "text",
+            "quote": " answer to reviewing at agent speed, and I think that's right, with one constraint: the judge has to read the artifact, not the transcript. A judge reading the transcript is grading a story about the work, and stories are the thing these systems are best at.\n\nAlert on the absence of change. This is the cheapest item on the list and almost nobody does it. A job that always writes, and this time wrote nothing while reporting success, is more suspicious than a job that threw an exception. Errors get alerts; zero-effect successes get a green square in a run history that no one reads. Invert it. A scheduled agent that reports success having touched nothing should page someone. Nothing is a result, and it deserves to be a loud one.\n\nMeasure pass^k in simulations before you deploy. Run the agent at the same scenario dozens of times and look at the distribution rather than the best case, in an"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "03-c3",
+      "statement": "According to GitHub, the rate of secret exposures in code is doubling yearly and is driven by increased development volume rather than developer carelessness; push-override rates by developers actually fell from 6.63% to 3.93% over the measured period, suggesting developers are more cautious but simply outpaced.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": " that let developers create more software should also take on more of the work of protecting it.\n\nIn this essay, I share the nine quarters of data behind that claim. I also introduce the fine-tuned classifier we built with Microsoft Applied Sciences to extend push protection to unstructured secrets. The model assesses a whole set of candidate secrets in less than two milliseconds and could more than double the number of secrets that we can prevent.\n\nOutpaced, not careless\n\nA new secret appears in publicly visible code about once every two seconds, doubling yearly for the past three years. Public discourse is quick to jump to the idea that AI made developers careless.\n\nBetween Q2 2024 and Q2 2026, screened pushes grew 2.84 times while pushes carrying credentials grew 2.59 times. Across nine complete quarters of data, we found no statistically detectable trend regarding per-push"
+          }
+        },
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": " prevalence. At the same time, we found data suggesting that, more than ever, developers understand the risk of accidental exposures and are less willing to accept that risk. Over the same period, the share of push-path blocks overridden by developers fell linearly from 6.63% to 3.93%. These figures challenge the common claim that agents are causing developers to become more careless.\n\nAt a fixed rate, doubling activity doubles expected exposures. If each exposure requires the same human response, the workload doubles too. The mean time to manually revoke a secret hovers around 40 days; roughly one in five took more than 90 days. We’re accelerating the creation of software while exposed credentials can remain usable for weeks or months, because human remediation can’t scale at the same pace as development.\n\nTelling developers to be more careful cannot, on its own, solve that problem. As"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "03-c4",
+      "statement": "GitHub recommends that developers use a second model to critique the first model's output before accepting it, on the grounds that different models have different blind spots; this mirrors the adversarial review practice Anthropic reportedly uses internally, though Anthropic's internal experience also found that adversarial review can produce over-engineering and requires skilled engineers to steer the process—a cost not surfaced in GitHub's developer-facing guidance.",
+      "type": "inference",
+      "evidence": [
+        {
+          "item_id": "feed:github:0b0f6d3b9776aa2bdcca4c51",
+          "version_id": "5b02378f5789044ef95a7bba5f11a3c7a0a628c3a3f75268015eeef5d775e89c",
+          "locator": {
+            "type": "text",
+            "quote": " first answer isn’t always the best. Your experience writing clean, maintainable code can help you evaluate AI’s output.\n\nAsk a second AI model to critique the first model’s work, then use your own judgment to evaluate both responses.\n\nHere’s a prompt that shows what that might look like in practice:\n\n\"Write a SQL query that returns each customer's most recent order.\" \n↓ \nAI Model #1 \n✓ Generates the query \n↓ \nAI Model #2 (Critique) \n⚠ Doesn't handle duplicate timestamps \n⚠ Missing index recommendation \n⚠ May perform poorly on large tables\n\nDifferent AI models have different strengths and blind spots. That’s why GitHub Copilot’s built-in Rubber Duck agent uses a second model to critique plans, code, and tests before you move forward. A second perspective often catches issues the first model misses.\n\nTakeaway: Trust AI enough to use it but not enough to skip review.\n\nTip #3: Use AI to"
+          }
+        },
+        {
+          "item_id": "feed:simon-willison:fdc555784f18363338e2980b",
+          "version_id": "51dbfe47fdb19fd2a1fc4dedec37d846efb7f503da9c10e7c2edc69f162ed976",
+          "locator": {
+            "type": "text",
+            "quote": " an aside, I've been trying adversarial review in my own projects recently, where you have a model try and find flaws (I often play Claude and GPT off against each other). This note from the article reflected my own experience with that:\n\nAnthropic also makes extensive use of adversarial review, and, while this is incredibly effective in many ways, it can also be myopic, so skilled engineers needed to steer Claude away from over-engineering parts of the system in response to hypothetical concerns."
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "03-c5",
+      "statement": "According to GitHub's published usage figures, push protection blocked at least one secret per second in the past month, and GitHub now blocks more issuer-bound secrets than slip through; however, push protection still stops only about 30% of newly detected secrets before they enter repository history, leaving 70% to be found after exposure.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": " account credentials, Slack webhooks, Hugging Face user tokens, SendGrid keys, etc. The owner may still need to replace the token, but revocation can happen without waiting for a developer to find and process a GitHub alert.\n\nPush protection intervenes earlier. It stops recognizable credentials before they enter repository history, giving the developer or agent a chance to correct the change before there’s an exposure to investigate. We work with our technical partners to increase precision rates of their detectors as much as possible, until we’re confident enough to push-protect these secrets for the developer community by default.\n\nThanks to the efforts of our partners, in the past month, a secret was blocked by push protection at least once every second. When it comes to issuer-bound credentials, GitHub blocks more secrets than those which slip. I’m proud of how ordinary we’ve made"
+          }
+        },
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": " that feel for developers.\n\nRemediation scales with people\n\nWhen including additional secret types, push protection stops about 30% of newly detected secrets before they enter repository history. We find the remaining 70% after the credential is, unfortunately, already lost. And:\n\nPrevention scales with compute, but remediation still scales with people.\n\nRefusing a push costs compute; cleaning up a secret already lost to visible history costs a developer’s time and attention.\n\nAs the amount of code grows, we must prevent more exposures and reduce the human effort required by those that remain, or else the volume of vulnerabilities introduced will become untenable.\n\nTelling developers to be more careful cannot solve this imbalance. Recognizing more of these secrets, earlier in development flows, is work the platform must take on.\n\nSolving the four-body problem\n\nBefore a secret crosses the"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": "03-c6",
+      "statement": "The combination of accelerating agent-driven code creation (evidenced by GitHub's reported pull-request share and Anthropic's reported commit-rate increase) and remediation processes that still scale with human effort suggests that individual-developer verification habits alone are insufficient as agent permissions expand; the structural gap between prevention (compute-scalable) and remediation (people-scalable) implies that small teams adopting agents without automated artifact checks and secret-protection tooling face compounding exposure risk that vendor guidance for individual developers does not fully address.",
+      "type": "inference",
+      "evidence": [
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": "Secret protection must scale with software\n\nDevelopers aren’t becoming more careless; they’re being outpaced. The tools that let developers create more software should also take on more of the work of protecting it.\n\nShare:\n\nToday, one in three pull requests on GitHub involves an AI agent. A year ago, that number was fewer than one in 10. If that pace holds, within the next two years, most of the code pushed to GitHub could be written by an agent. Much of it may never be fully read by a human.\n\nIf developers and agents move faster, we have a responsibility to ensure protection keeps up with the accelerated rate of code creation. That means preventing more leaks before they happen and making the response to exposures that remain less dependent on manual human effort.\n\nThis is a pivotal point for leaked secrets. Developers aren’t becoming more careless; they’re being outpaced. The tools"
+          }
+        },
+        {
+          "item_id": "feed:github:62a0756114b37316a42ffd12",
+          "version_id": "4879eb32c5442e44bd1c89a597c86910d3c3ae715244bc34b1b0df0a8b5e14f4",
+          "locator": {
+            "type": "text",
+            "quote": " that feel for developers.\n\nRemediation scales with people\n\nWhen including additional secret types, push protection stops about 30% of newly detected secrets before they enter repository history. We find the remaining 70% after the credential is, unfortunately, already lost. And:\n\nPrevention scales with compute, but remediation still scales with people.\n\nRefusing a push costs compute; cleaning up a secret already lost to visible history costs a developer’s time and attention.\n\nAs the amount of code grows, we must prevent more exposures and reduce the human effort required by those that remain, or else the volume of vulnerabilities introduced will become untenable.\n\nTelling developers to be more careful cannot solve this imbalance. Recognizing more of these secrets, earlier in development flows, is work the platform must take on.\n\nSolving the four-body problem\n\nBefore a secret crosses the"
+          }
+        },
+        {
+          "item_id": "feed:simon-willison:fdc555784f18363338e2980b",
+          "version_id": "51dbfe47fdb19fd2a1fc4dedec37d846efb7f503da9c10e7c2edc69f162ed976",
+          "locator": {
+            "type": "text",
+            "quote": " along the lines of Subversion.\n(Update: Anthropic credit Google's Piper and Meta's Sapling as \"prior art\" - it looks like the core concept of \"derived data\" was heavily inspired by Mononoke, the server component of Sapling.)\nThey had some pretty extreme requirements:\n\nThe history of our main branch alone is almost 100 GB, and a compressed working copy is over 25 GB. We perform on the order of 25 million code checkouts per day for CI, before counting developer environments, agent sandboxes, and research jobs. Fetched naively, that would be over 600 PB of git traffic per day.\n\nThe new system was built by a team of seven people, and the migration from Git was completed in five months.\nWhen asked on Hacker News about the lack of offline support, Scion engineer Nick G replied:\n\nSince Claude is by far the heaviest user of Scion and is necessarily online, this just wasn't important to do.\n\nAs"
+          }
+        },
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "version_id": "65f027258077bda30b87355a1f3d0db780ec57542f2bfa52395935207a27fc27",
+          "locator": {
+            "type": "text",
+            "quote": " of those techniques works because the failure modes were enumerable. You knew the finite list of ways a nightly job could fail to finish—the box is down, the disk is full, the lock is held, the upstream timed out—and you either wrote a check per mode or wrote one heartbeat that covered them all, because \"finished\" had exactly one meaning and the job had no opinions about it.\n\nAn agent decides its own control flow at runtime. The plan is generated fresh per run, which means the set of ways it can terminate cleanly having produced nothing is not a list anybody can write in advance. It includes sys.exit(0) because implementing the reader looked hard. It includes renaming a user. It includes strategies nobody in your building has thought of, because nobody in your building is writing the strategy.\n\nSo you cannot write the check from the failure side. Anything written from the failure side"
+          }
+        }
+      ]
+    }
+  ]
+}

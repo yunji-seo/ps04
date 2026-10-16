@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 129,
+    "total_tokens": 2813
+  },
+  "content": "{\"piece_id\":\"03\",\"question\":\"What are the practical consequences for student developers and small teams of adopting AI coding agents today, given the infrastructure changes and verification gaps described in earlier pieces?\",\"argument\":\"Several sources appear to address the skills, permissions, operational overhead, and platform dependencies that shape whether agent adoption is realistic for teams without dedicated infrastructure budgets. Whether the concrete adoption steps described by vendors match the constraints faced by small teams or beginners remains an open question the evidence may only partially answer.\",\"source_refs\":[\"source-4\",\"source-8\",\"source-19\",\"source-24\"]}"
+}

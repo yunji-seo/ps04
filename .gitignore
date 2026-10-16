@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules/
+data/media/
+test-output/
+*.tmp
+production/.build/
+production/videos/
+production/proof/

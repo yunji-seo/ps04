@@ -1,0 +1,16 @@
+{
+  "stage": "reporting/summarize_run",
+  "status": "completed",
+  "input_count": 69,
+  "output_count": 1,
+  "started_at": "2026-10-16T04:36:27.366Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "finished_at": "2026-10-16T04:36:27.500Z",
+  "exit_code": 0
+}

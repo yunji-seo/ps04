@@ -1,0 +1,1797 @@
+Post Tags
+
+Bot ManagementOutageRadar
+
+All tags
+
+Matching tags
+
+No tags found
+
+1.1.1.1
+
+2FA
+
+Abuse
+
+Access
+
+Access Control Lists (ACLs)
+
+Accessibility
+
+Account Takeover
+
+Acquisitions
+
+Addressing
+
+Advanced Certificate Manager
+
+Advanced DDoS
+
+Advertising
+
+Aegis
+
+AEO
+
+Africa
+
+Afroflare
+
+Agent Cloud
+
+Agent Development Lifecycle
+
+Agent Readiness
+
+Agents
+
+Agents Week
+
+Agents Week 2026
+
+AI
+
+AI Bots
+
+AI Gateway
+
+AI Search
+
+AI WAF
+
+AI Week
+
+AI-SPM
+
+Alertmanager
+
+Always Online
+
+AMD
+
+AMP
+
+Analytics
+
+Anonymous
+
+Anti Malware
+
+Anycast
+
+API
+
+API Gateway
+
+API Security
+
+API Shield
+
+APJC
+
+Apple
+
+Application Security
+
+Application Services
+
+Area 1 Security
+
+Argo Smart Routing
+
+ASCII
+
+Asia
+
+Athenian Project
+
+Atlassian
+
+Attacks
+
+Audit Logs
+
+Austin
+
+Australia
+
+Authentication
+
+Authy
+
+Auto Rag
+
+Automatic HTTPS
+
+Automatic Platform Optimization
+
+Automation
+
+AutoMinify
+
+Awards
+
+AWS
+
+Baidu
+
+Bandwidth Alliance
+
+Bandwidth Costs
+
+Best Practices
+
+Beta
+
+Better Internet
+
+BGP
+
+Billing
+
+Birthday Week
+
+Black Friday
+
+Blackbird
+
+Bot Fight Mode
+
+Bot Management
+
+Botnet
+
+Bots
+
+BPF
+
+Brand
+
+Brand Protection
+
+Brazil
+
+Browser Insights
+
+Browser Rendering
+
+Browser Run
+
+Bug Bounty
+
+Bugs
+
+BYOIP
+
+Cache
+
+Cache Purge
+
+Cache Reserve
+
+Cache Rules
+
+California
+
+Canada
+
+Cap'n Proto
+
+CAPTCHA
+
+Careers
+
+CASB
+
+Categories
+
+CDN
+
+CDNJS
+
+Certificate Authority
+
+Certificate Pinning
+
+Certificate Transparency
+
+Certification
+
+CFSSL
+
+Challenge Page
+
+ChatGPT
+
+China
+
+China Network
+
+Christmas
+
+Chrome
+
+CIO Week
+
+CISA
+
+Claire
+
+CLI
+
+ClickHouse
+
+Clientless
+
+Clientless Web Isolation
+
+Cloud Connector
+
+Cloud Email Security
+
+Cloudflare Access
+
+Cloudflare Apps
+
+Cloudflare Area 1
+
+Cloudflare Calls
+
+Cloudflare Email Service
+
+Cloudflare for Campaigns
+
+Cloudflare for SaaS
+
+Cloudflare for Startups
+
+Cloudflare Gateway
+
+Cloudflare History
+
+Cloudflare Images
+
+Cloudflare Media Platform
+
+Cloudflare Meetups
+
+Cloudflare Network
+
+Cloudflare One
+
+Cloudflare One Client
+
+Cloudflare One User Risk Score
+
+Cloudflare One Week
+
+Cloudflare OS
+
+Cloudflare Pages
+
+Cloudflare Polish
+
+Cloudflare Queues
+
+Cloudflare Realtime
+
+Cloudflare Stream
+
+Cloudflare Tunnel
+
+Cloudflare TV
+
+Cloudflare Workers
+
+Cloudflare Workers (PT)
+
+Cloudflare Workers KV
+
+Cloudflare Workers KV (ES)
+
+Cloudflare Zero Trust
+
+Cloudforce One
+
+Cloudy
+
+Code Orange
+
+Coinbase
+
+Colombia
+
+Community
+
+Compliance
+
+Compression
+
+Config Rules
+
+Configuration Management
+
+Congestion Control
+
+Connectivity
+
+Connectivity Cloud
+
+Consumer Services
+
+Containers
+
+Content Independence Day
+
+Content Scanning
+
+Context
+
+Core
+
+COVID-19
+
+Crawler Hints
+
+CrowdStrike
+
+Crypto Week
+
+Cryptography
+
+CSAM Reporting
+
+Customer Success
+
+Customer Zero
+
+Customers
+
+CVE
+
+CVE-2023-50387
+
+Cyber Readiness
+
+Cybersecurity
+
+D1
+
+Dashboard
+
+Data
+
+Data Catalog
+
+Data Center
+
+Data Localization
+
+Data Localization Suite
+
+Data Loss
+
+Data Loss Prevention
+
+Data Platform
+
+Data Privacy Day
+
+Data Protection
+
+Data Sovereignty
+
+Data Transfer Bucket
+
+Database
+
+DDoS
+
+DDoS Alerts
+
+DDoS Reports
+
+Debugging
+
+Deep Dive
+
+Descaler
+
+Design
+
+Deskope
+
+Developer Documentation
+
+Developer Platform
+
+Developer Spotlight
+
+Developer Week
+
+Developers
+
+Developers Storage
+
+Device Security
+
+DevOps
+
+DEX
+
+Digital Experience Monitoring
+
+Digital Forensics
+
+Disrupt
+
+Distributed
+
+Distributed Systems
+
+Distributed Web
+
+Diversity
+
+DLP
+
+DMARC
+
+DNS
+
+DNS Filtering
+
+DNS Flood
+
+DNS Security
+
+DNSSEC
+
+Dogfooding
+
+DoH
+
+Domain Rankings
+
+Domain Scoped Roles
+
+dosd
+
+Drupal
+
+Due Process
+
+Durable Execution
+
+Durable Objects
+
+Early Hints
+
+Earth Day
+
+eBPF
+
+EC2
+
+eCommerce
+
+Edge
+
+Edge Computing
+
+Edge Database
+
+Edge Rules
+
+Education
+
+Egress
+
+Elastic
+
+Election Security
+
+Elections
+
+Elliptic Curves
+
+Email
+
+Email Routing
+
+Email Security
+
+Email Workers
+
+EmDash
+
+Emissions
+
+Employee Resource Groups
+
+Encrypted SNI
+
+Encryption
+
+Engineering
+
+Enterprise
+
+Entropy
+
+EPYC
+
+Ethereum
+
+Europe
+
+European Union
+
+Events
+
+Exploit
+
+Facebook
+
+Fancy Bear
+
+Fast Fonts
+
+FCC
+
+Feature Flags
+
+FedRAMP
+
+FedRAMP High
+
+FedRAMP Moderate
+
+Firefox
+
+Firewall
+
+Firmware
+
+Florida
+
+Football
+
+Formal Methods
+
+Forrester
+
+Fortran
+
+Foundation DNS
+
+Founders' Letter
+
+France
+
+Fraud
+
+Free
+
+Freedom of Speech
+
+Front End
+
+Full Stack
+
+Full Stack Week
+
+Fun
+
+GA Week
+
+Gartner
+
+Gatebot
+
+GDPR
+
+Gen X
+
+General Availability
+
+Generative AI
+
+Geo Key Manager
+
+Germany
+
+GitHub
+
+Go
+
+Google
+
+Google Analytics
+
+Google Cloud
+
+Google Workspace
+
+Government Innovation
+
+Grace Hopper
+
+Grafana
+
+GraphQL
+
+Green
+
+Grinch
+
+Growth
+
+gRPC
+
+Guest Post
+
+Hackathon
+
+Halloween
+
+Hardware
+
+HashiCorp
+
+Hertzbleed
+
+Heuristics
+
+History
+
+Holidays
+
+Holocaust
+
+Hong Kong
+
+Hosting Con
+
+Hostnames
+
+HTTP2
+
+HTTP3
+
+HTTPS
+
+Human Rights
+
+Hurricane
+
+Hybrid Cloud
+
+Hyperdrive
+
+I'm Under Attack Mode
+
+IBM
+
+ICANN
+
+iCloud Private Relay
+
+Identity
+
+IETF
+
+IETF Standards
+
+IL4
+
+Image Optimization
+
+Image Recognition
+
+Image Resizing
+
+Image Storage
+
+Impact
+
+Impact Week
+
+Incident Report
+
+Incident Response
+
+India
+
+Indicators of Compromise
+
+Indonesian
+
+Inference
+
+Infrastructure
+
+Infrastructure as Code
+
+Insights
+
+Intel
+
+Interconnection
+
+Internal DNS
+
+Internet Performance
+
+Internet Quality
+
+Internet Regulation
+
+Internet Shutdown
+
+Internet Summit
+
+Internet Traffic
+
+Internet Trends
+
+Internship Experience
+
+Intrusion Detection
+
+Investors
+
+IoCs
+
+iOS
+
+IoT
+
+IPFS
+
+IPsec
+
+IPv4
+
+IPv6
+
+IRAP
+
+Israel
+
+Italy
+
+IWD
+
+JAMstack
+
+Japan
+
+JavaScript
+
+Jengo
+
+Jengo Policy
+
+Joomla
+
+Judeoflare
+
+Kafka
+
+Kernel
+
+Key Value
+
+Keyless SSL
+
+KeyTrap
+
+Killnet
+
+Korea
+
+Kubernetes
+
+LangChain
+
+Latency
+
+Latin America
+
+Latinflare
+
+LavaRand
+
+Lazarus group
+
+Leaked Credential Checks
+
+Legal
+
+Legal Patents Sable
+
+LGBTQIA+
+
+Life at Cloudflare
+
+Linux
+
+Lisbon
+
+Live Streaming
+
+Llama
+
+LLM
+
+Load Balancing
+
+Localization
+
+Log Push
+
+Log4J
+
+Log4Shell
+
+Logging
+
+Logs
+
+LUA
+
+Machine Learning
+
+Magecart
+
+Magic Firewall
+
+Magic Network Monitoring
+
+Magic Transit
+
+Magic WAN
+
+Magic WAN Connector
+
+Malicious JavaScript
+
+Malware
+
+Managed Components
+
+Managed Rules
+
+March of Cloudflare
+
+MASQUE
+
+MCP
+
+Meerkat
+
+MeetUp
+
+Meris
+
+Message Protocol
+
+Mexico
+
+Micro-frontends
+
+Microsoft
+
+Microsoft 365
+
+Microsoft Azure
+
+Middle East
+
+Migration Hub
+
+Milestones
+
+Miniflare
+
+Mirage
+
+Mirai
+
+Mitel
+
+Mitigation
+
+Mixed Content Errors
+
+MLops
+
+Mobile
+
+Mobile SDK
+
+Model Context Protocol
+
+Moldova
+
+Monitoring
+
+Multi-Cloud
+
+Multi-User
+
+MySQL
+
+NaaS
+
+Net Neutrality
+
+Network
+
+Network Interconnect
+
+Network Performance Update
+
+Network Protection
+
+Network Services
+
+Networking
+
+New Year
+
+NGINX
+
+Ninjas
+
+NIST
+
+Node.js
+
+North America
+
+Notebooks
+
+Notifications
+
+NSEC3
+
+OAuth
+
+Observability
+
+Oceania
+
+OCSP
+
+Offices
+
+Okta
+
+Olympics
+
+Onboarding
+
+Open API
+
+Open Source
+
+OpenAI
+
+OpenBMC
+
+OpenDNS
+
+OpenSSL
+
+OpenTelemetry
+
+Optimization
+
+Origin Rules
+
+Outage
+
+Oxy
+
+Pacific Northwest
+
+Page Rules
+
+Page Shield
+
+Parallels
+
+Partners
+
+Partnership
+
+Password-reuse
+
+Passwords
+
+Passwords (PT)
+
+Patents
+
+Pay Per Crawl
+
+PAYGO
+
+Payments
+
+PCI Certified
+
+Peering
+
+Performance
+
+Performance Optimization
+
+Phishing
+
+php
+
+Phython
+
+Pingora
+
+Pipelines
+
+PlanetScale
+
+Plans
+
+Platform Engineering
+
+Platform Week
+
+Plesk
+
+Policy & Legal
+
+Politics
+
+Portugal
+
+Post Mortem
+
+Post-Quantum
+
+Postgres
+
+Precursor
+
+Prepared Statements
+
+Prisma
+
+Privacy
+
+Privacy Pass
+
+Privacy Week
+
+Private IP
+
+Private Network
+
+Product Design
+
+Product News
+
+Programming
+
+Programming (PT)
+
+Project Fair Shot
+
+Project Galileo
+
+Project Honey Pot
+
+Project Pangea
+
+Project Safekeeping
+
+Project Turpentine
+
+Prometheus
+
+Protocols
+
+Proudflare
+
+Proxying
+
+Public Sector
+
+Python
+
+Python Workers
+
+Quantization
+
+Queues
+
+QUIC
+
+QUICHE
+
+Quicksilver
+
+R2
+
+R2 Super Slurper
+
+Radar
+
+Radar Alerts
+
+Radar API
+
+Radar Maps
+
+Railgun
+
+Randomness
+
+Ransom Attacks
+
+Rapid Reset
+
+Raspberry Pi
+
+Rate Limiting
+
+RC4
+
+RDDoS
+
+React
+
+Reading List
+
+Real-time
+
+Recruiting
+
+Regional Services
+
+Registrar
+
+Reliability
+
+Remote Browser Isolation
+
+Remote Desktop Protocol
+
+Remote Work
+
+Replication
+
+Research
+
+Resolver
+
+Restreaming
+
+Retreat
+
+Reverse Engineering
+
+REvil
+
+Risk Management
+
+Road to Zero Trust
+
+Rocket Loader
+
+RocksDB
+
+Routing
+
+Routing Security
+
+RPC
+
+RPKI
+
+RRDNS
+
+RSA
+
+Russia
+
+Rust
+
+Rust Workers
+
+SaaS
+
+SAAS Security
+
+Sable
+
+Salt
+
+Sampling
+
+Sandbox
+
+SASE
+
+Save The Web
+
+SDK
+
+Search Engine
+
+Secrets Store
+
+Secure Web Gateway
+
+Security
+
+Security Analytics
+
+Security Center
+
+Security Posture
+
+Security Posture Management
+
+Security Service Edge
+
+Security Week
+
+security.txt
+
+SEO
+
+Server Push
+
+Serverless
+
+Serverless (PT)
+
+Serverless AI
+
+Serverless Week
+
+Servers
+
+SIEM
+
+Signed Exchanges (SXG)
+
+SIM
+
+Singapore
+
+Single Sign On (SSO)
+
+Smart Placement
+
+Smart Shield
+
+Snippets
+
+SOC as a Service
+
+South Africa
+
+South America
+
+Spain
+
+spdy
+
+Spectrum
+
+Speed
+
+Speed & Reliability
+
+Speed Brain
+
+Speed Week
+
+Spoofing
+
+Sports
+
+SQL
+
+SRE
+
+SSE
+
+SSH
+
+SSL
+
+Standards
+
+Startup Enterprise Plan
+
+Statistics
+
+StopTheHacker
+
+Storage
+
+Sumo Logic
+
+Super Bowl
+
+Supercloud
+
+Supply Chain Attacks
+
+Support
+
+Sustainability
+
+SWAG
+
+SWG
+
+Swift
+
+Switzerland
+
+SXSW
+
+SYN
+
+SYN Flood
+
+Syria
+
+TCP
+
+Team
+
+Teams Dashboard
+
+Tech Talks
+
+TechCrunch
+
+Technical Writing
+
+Terraform
+
+Testimonials
+
+Testing
+
+Texas
+
+Thanksgiving
+
+The Serverlist Newsletter
+
+Threat Data
+
+Threat Feeds
+
+Threat Intelligence
+
+Threat Operations
+
+Threat Report
+
+Threats
+
+Tiered Cache
+
+TikTok
+
+TLS
+
+TLS 1.3
+
+Tools
+
+Tor
+
+Tracing
+
+Traffic
+
+Transform Rules
+
+Transparency
+
+Trends
+
+Trust & Safety
+
+TTFB
+
+TTL
+
+TURN
+
+TURN Server
+
+Turnstile
+
+TypeScript
+
+UDP
+
+Ukraine
+
+United Kingdom
+
+Universal SSL
+
+URL Scanner
+
+USA
+
+User Research
+
+VDI
+
+Vectorize
+
+Vetflare
+
+Video
+
+Visibility
+
+Vite
+
+VoIP
+
+VPC
+
+VPN
+
+Vulnerabilities
+
+WAF
+
+WAF Attack Score
+
+WAF Rules
+
+Waiting Room
+
+WARP
+
+WARP Connector
+
+WASM
+
+Web Application Firewall
+
+Web Asset Discovery
+
+Web3
+
+WebAssembly
+
+Webinars
+
+WebMCP
+
+WebP
+
+WebRTC
+
+WebSockets
+
+Wildebeest
+
+Womenflare
+
+WordPress
+
+Workers AI
+
+Workers Launchpad
+
+Workers Logs
+
+Workers Observability
+
+Workers Sites
+
+Workers Unbound
+
+Workers VPC
+
+Workflows
+
+World IPv6 Day
+
+Wrangler
+
+x402
+
+Year in Review
+
+Z3
+
+Zaraz
+
+Zero Day Threats
+
+Zero Trust
+
+Zero Trust Week
+
+Zone Versioning
+
+Artificial Intelligence
+
+Workers
+
+Client-Side Security
+
+Architecture
+
+Multi-tenant Secuity
+
+Multi-tenant Security
+
+cf
+
+BEACON
+
+Crawlers
+
+Yandex outage: Data shows that instead of going dark, malicious bots went on the move
+
+Marina Elmore and Lai Yi Ohlsen
+
+Following reported strikes on Yandex data centers, claims circulated on the Internet that Russian bot farms and influence operations had been knocked offline. HTTP traffic charts showed steep drops, fueling speculation that the infrastructure damage had stopped these malicious actors. However, aggregate traffic metrics can easily mislead. There are two autonomous system numbers (ASNs) associated with Yandex: AS13238 is used by Yandex’s search engine, while AS200350 runs its cloud services.
+
+Using Cloudflare Radar and Bot Management data, we analyzed how these two ASNs were affected — and while both saw drops in traffic, they saw differing impact.
+
+Yandex Search (AS13238): The drop in traffic consisted almost entirely of verified search crawlers indexing web pages, images, and site resources.
+
+Yandex.Cloud (AS200350): There was a decline in malicious activities like vulnerability scanning and probing, but high-volume automation did not vanish — it simply migrated to other hosting providers.
+
+While malicious traffic may originate from a particular provider, it does not necessarily tell us who is responsible for the traffic. Understanding why the strikes had little lasting effect on malicious traffic requires analyzing request behavior, rather than just overall traffic patterns.
+
+What happened: the effect of the strikes and pre-event baseline
+
+Between October 7 and 11, reported Ukrainian drone strikes hit three Yandex facilities in Russia, progressively knocking data centers and network capacity offline. As seen on Cloudflare Radar, this culminated in a near-total collapse of the Yandex network on October 11 when traffic plummeted to 99% below baseline for Yandex Search (AS13238) and 90% for Yandex.Cloud (AS200350). Despite a brief partial recovery, both networks remained disrupted through October 13, settling at 86-90% below normal baselines. (As of October 14 at 18:00 UTC, traffic is at 85% of normal.)
+
+A drop in overall HTTP traffic only confirms that the network went down. It does not reveal whether malicious or evasive bots were disrupted. Looking at the pre-event automation baseline, we can see that before the strikes, automated requests accounted for 36.1% of all HTTP traffic observed globally across Cloudflare's network, and 35.8% of traffic from Russian IP addresses.
+
+The outage had different effects on automated activity on the two affected ASNs because they served different roles.
+
+Yandex Search ASN (AS13238) is used for search index crawling. Cloudflare classified 99.5% of its requests as automated, and 93.6% of its bot requests as Verified. Our analysis showed that traffic from this ASN indexed pages, rendered pages, and rendered images, which is consistent behavior for a search crawler. The Yandex Search ASN supplied about 7% of Russia-origin bot requests, and just 0.05% of the global total.
+
+Yandex.Cloud ASN (AS200350) is a cloud-hosting network and carries a very different mix of automation. Approximately 95.0% of its scored requests were bots, but none of its observed bot requests were verified by Cloudflare. Yandex.Cloud’s bots looked more like software apps: nearly two-thirds of their requests sent data to websites, some identified themselves as JavaScript, Python, or Go programs, and a larger share went to software companies than Yandex’s search bots. The Yandex.Cloud ASN supplied about 2% of Russia-origin bot requests, and just 0.01% of the global total.
+
+Impact of the event on overall bot traffic
+
+"Bot traffic" refers to automated requests to websites on Cloudflare's network, such as crawlers and scripts, not necessarily activity on social media platforms. As Yandex’s networks lost capacity, their bot requests fell too. That was expected: nearly all traffic from Yandex Search and Yandex.Cloud was automated. While we saw the obvious drop in total traffic, we did not see any evidence linking a global disruption in malicious traffic to the drop in traffic from Yandex.
+
+Russia-origin bot requests fell roughly in proportion to the Yandex traffic that went offline, since most requests from those networks were automated.
+
+Date UTC+3
+
+Global bot requests (% of all HTTP requests)*
+
+Russia-origin bot requests (% of Russia-origin HTTP requests)
+
+October 1–6: pre-event baseline
+
+39.4%
+
+50.4%
+
+October 7–8: drone strike on Sasovo
+
+39.2% (−0.2%)
+
+48% (-2.4%)
+
+October 9: drone strike on Kaluga
+
+39.4% (+0%)
+
+42.5% (-7.9%)
+
+October 11: drone strike on Vladimir
+
+39.5% (+0.1%)
+
+42.2% (−8.2%)
+
+October 12
+
+39.6% (+0.2%)
+
+43.6% (−6.8%)
+
+October 13
+
+39.5% (+0.1%)
+
+42.1% (−8.3%)
+
+* Radar reports global traffic by both total HTTP requests, and by HTML requests (an approximation of a page view). The above table reflects total request volume.
+
+Impact on Yandex Search ASN (AS13238): less search crawling
+
+The decline on Yandex Search ASN was almost entirely search crawling. Sampled requests showed that 78.1% belonged to verified YandexBot, 11.5% to YandexRenderResourcesBot, and 1.9% to YandexImages.
+
+Among websites and services, the industry segment that saw the steepest drop was Publishing and Newspapers, where traffic from Yandex networks fell 44%. Approximately 90% of pre-event traffic to news sites from this ASN was YandexBot indexing articles, with 40.5% of Cloudflare customers returning HTTP 403 Forbidden responses because the site owner blocked the crawler. When the Yandex Search ASN went offline, customers simply saw less indexing from Yandex.
+
+Impact on Yandex.Cloud ASN (AS200350): legitimate use and migrating malicious traffic
+
+Yandex.Cloud displayed a completely different profile. Following the reported strikes, bot traffic from Yandex.Cloud fell about 40%. Several attack-like categories showed especially sharp declines. For example, WordPress plugin probing fell 90% and scanner-identified requests fell 93%. Interestingly (and tellingly), Cloudflare customer blocks on Yandex.Cloud traffic also fell 70% during the event period, suggesting that proportionately less malicious traffic was even hitting the Cloudflare WAF from this ASN.
+
+Impact on business verticals
+
+Yandex.Cloud’s bot traffic is also interesting when segmented by top request destination industries:
+
+Destination industry
+
+Bot traffic pre-event
+
+Bot traffic during event (Oct 7-13)
+
+Change
+
+4xx (client error) HTTP response status share: pre → event
+
+Computer software
+
+24.24M
+
+15.18M
+
+−37.4%
+
+18.5% → 15.9%
+
+Gambling
+
+23.01M
+
+18.80M
+
+−18.3%
+
+99.1% → 99.3%
+
+Media incl. adult
+
+1.33M
+
+223.1K
+
+−83.3%
+
+82.0% → 61.8%
+
+Internet and telecom
+
+524.2K
+
+206.5K
+
+−60.6%
+
+71.4% → 51.1%
+
+Travel / tourism
+
+363.9K
+
+158.1K
+
+−56.6%
+
+27.0% → 12.3%
+
+Retail / wholesale
+
+316.0K
+
+167.7K
+
+−46.9%
+
+71.0% → 55.9%
+
+Gaming / computer games
+
+226.3K
+
+63.2K
+
+−72.1%
+
+51.4% → 9.2%
+
+Publishing / newspapers
+
+90.8K
+
+8.8K
+
+−90.3%
+
+90.2% → 61.4%
+
+The majority of traffic from the Yandex.Cloud ASN fell into two industry buckets: computer software and gambling. The computer software bucket was predictable for an ASN meant to host third-party applications and software integrations. In fact, we even saw that api.cloudflare.com is a top hostname for Yandex.Cloud request traffic. An overall majority of that traffic succeeded (requests returned 200s) both before and during the event, pointing to legitimate usage.
+
+The gambling sector offers the clearest evidence that malicious automation relocated rather than disappeared. Nearly all of Yandex.Cloud’s bot requests were targeted at one gambling customer account, with traffic shifting among its hostnames. Immediately following the October 8 disruption, bot requests from Yandex.Cloud to this account dropped to zero. Simultaneously, identical requests began appearing from other Russian hosting ASNs, including Radist and Selectel. The incoming traffic maintained an identical fingerprint across providers:
+
+The same JA4 TLS client fingerprint
+
+The same uncommon request paths and HTTP headers
+
+The same custom User-Agent strings
+
+Overall, Russian bot traffic targeting gambling accounts remained essentially flat over the week, moving from 167.7 million to 170.1 million requests (+1.4%). The automation never stopped running; the operators simply migrated their workloads to alternate cloud providers once Yandex.Cloud became unavailable.
+
+Across most industries, the share of bot requests from Yandex.Cloud returning any HTTP 4xx response fell. This is largely due to a drop off in the attack-like traffic mentioned above. This, in combination with the gambling customer analysis, shows that malicious traffic that was sending requests through Yandex.Cloud simply shifted its “services” to other providers after the service disruption.
+
+Finally, when we analyzed social media traffic, we found no unexpected changes in traffic either from Russian-origin IPs (0.6% decrease in total traffic over the event period) or globally (1.2% increase in total traffic over the event period). We repeated the analysis on bot traffic hitting the “post”, “reply”, and “like” endpoints for a specific social media platform and similarly did not find an unexpected shift before or during the event period from either Russian-origin IPs (5.7% decrease in total traffic over the event period) or globally (1.1% increase in total traffic over the event period). Based on our assessment, the data does not appear to support the claims that the strikes crippled social media manipulation, though without further analysis with data outside of Cloudflare, we cannot conclusively say there is no connection.
+
+What the data told us — and what it didn’t
+
+When traffic from Yandex networks collapsed, speculation spread across the Internet that Russian influence operations and malicious botnets had suffered a crippling blow. Cloudflare data tells a different story: across Cloudflare's network, there was no evidence that the strikes knocked social media manipulation offline or otherwise disrupted malicious activity on the Internet. Instead, the data demonstrated:
+
+Search indexing dropped. The overwhelming majority of the traffic that dropped from Yandex Search ASN consisted of verified YandexBot crawlers fetching news articles and web assets. The main impact was reduced content discovery in Yandex Search.
+
+Malicious automation migrated instead of stopping. While vulnerability scanning and plugin probing temporarily dropped on Yandex.Cloud, high-volume operations quickly moved to alternative hosting networks.
+
+A network disruption means that specific servers stopped sending requests, but it does not mean an automated threat disappeared. Cloud workloads are portable, so when a data center goes dark or an IP prefix gets blocked, operators can migrate their scripts to another provider in hours.
+
+Our analysis here is a reminder that client ASN traffic volume is an unreliable proxy for interpreting automated bot behavior. Defending against automated threats requires inspecting request behavior, such as identifying shared JA4 fingerprints, monitoring anomalous request rates, and applying WAF rules to sensitive endpoints, regardless of which network the request originates from. Physical infrastructure is static, but malicious automation is built to move.
+
+On this page
+
+Discuss Online
+
+Related tags
+
+Follow on Social Media
+
+Cloudflare
+
+Subscribe to receive notifications of new posts
+
+We’ll never share your email address.
+
+Thanks for subscribing! Check your inbox to confirm.

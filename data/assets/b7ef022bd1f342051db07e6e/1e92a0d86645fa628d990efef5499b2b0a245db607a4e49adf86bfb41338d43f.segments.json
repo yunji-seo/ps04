@@ -1,0 +1,452 @@
+[
+  {
+    "segment_id": "s-00001",
+    "start_seconds": 0,
+    "end_seconds": 1.46,
+    "text": "Does this sound familiar?"
+  },
+  {
+    "segment_id": "s-00002",
+    "start_seconds": 1.68,
+    "end_seconds": 3.84,
+    "text": "Hey, can you give this a quick review?"
+  },
+  {
+    "segment_id": "s-00003",
+    "start_seconds": 3.98,
+    "end_seconds": 5.18,
+    "text": "And you're like, sure."
+  },
+  {
+    "segment_id": "s-00004",
+    "start_seconds": 6.16,
+    "end_seconds": 7.92,
+    "text": "Which repository is this?"
+  },
+  {
+    "segment_id": "s-00005",
+    "start_seconds": 8.54,
+    "end_seconds": 10.18,
+    "text": "What's different about this?"
+  },
+  {
+    "segment_id": "s-00006",
+    "start_seconds": 10.22,
+    "end_seconds": 12.08,
+    "text": "And where is this feature coming from?"
+  },
+  {
+    "segment_id": "s-00007",
+    "start_seconds": 12.26,
+    "end_seconds": 13.92,
+    "text": "Look, there's so much code"
+  },
+  {
+    "segment_id": "s-00008",
+    "start_seconds": 13.92,
+    "end_seconds": 15.18,
+    "text": "being written all the time,"
+  },
+  {
+    "segment_id": "s-00009",
+    "start_seconds": 15.18,
+    "end_seconds": 17.14,
+    "text": "all over all of our companies."
+  },
+  {
+    "segment_id": "s-00010",
+    "start_seconds": 17.7,
+    "end_seconds": 19.34,
+    "text": "Code review is the new bottleneck."
+  },
+  {
+    "segment_id": "s-00011",
+    "start_seconds": 19.36,
+    "end_seconds": 21.12,
+    "text": "And that's why Codex now brings"
+  },
+  {
+    "segment_id": "s-00012",
+    "start_seconds": 21.12,
+    "end_seconds": 23.46,
+    "text": "that workflow into one place."
+  },
+  {
+    "segment_id": "s-00013",
+    "start_seconds": 23.64,
+    "end_seconds": 25.1,
+    "text": "This is my personal inbox"
+  },
+  {
+    "segment_id": "s-00014",
+    "start_seconds": 25.1,
+    "end_seconds": 26.58,
+    "text": "with GitHub pull requests"
+  },
+  {
+    "segment_id": "s-00015",
+    "start_seconds": 26.58,
+    "end_seconds": 28.22,
+    "text": "from across my repositories."
+  },
+  {
+    "segment_id": "s-00016",
+    "start_seconds": 28.22,
+    "end_seconds": 29.54,
+    "text": "I can see the reviews"
+  },
+  {
+    "segment_id": "s-00017",
+    "start_seconds": 29.54,
+    "end_seconds": 30.58,
+    "text": "that are assigned to me."
+  },
+  {
+    "segment_id": "s-00018",
+    "start_seconds": 30.58,
+    "end_seconds": 32,
+    "text": "I can see stuff I authored"
+  },
+  {
+    "segment_id": "s-00019",
+    "start_seconds": 32,
+    "end_seconds": 33.68,
+    "text": "and I can also find priorities."
+  },
+  {
+    "segment_id": "s-00020",
+    "start_seconds": 34.32,
+    "end_seconds": 35.72,
+    "text": "Now here's one that is"
+  },
+  {
+    "segment_id": "s-00021",
+    "start_seconds": 35.72,
+    "end_seconds": 37.12,
+    "text": "assigned specifically to me."
+  },
+  {
+    "segment_id": "s-00022",
+    "start_seconds": 37.12,
+    "end_seconds": 38.5,
+    "text": "I'm going to pin it in the sidebar."
+  },
+  {
+    "segment_id": "s-00023",
+    "start_seconds": 38.5,
+    "end_seconds": 40.06,
+    "text": "So it's easy to come back to."
+  },
+  {
+    "segment_id": "s-00024",
+    "start_seconds": 40.4,
+    "end_seconds": 41.76,
+    "text": "Cloud code review has"
+  },
+  {
+    "segment_id": "s-00025",
+    "start_seconds": 41.76,
+    "end_seconds": 43.46,
+    "text": "already taken a first pass."
+  },
+  {
+    "segment_id": "s-00026",
+    "start_seconds": 43.62,
+    "end_seconds": 45.28,
+    "text": "Once the connector has the right"
+  },
+  {
+    "segment_id": "s-00027",
+    "start_seconds": 45.28,
+    "end_seconds": 47.36,
+    "text": "repository permissions, initial"
+  },
+  {
+    "segment_id": "s-00028",
+    "start_seconds": 47.36,
+    "end_seconds": 49.66,
+    "text": "reviews can run automatically."
+  },
+  {
+    "segment_id": "s-00029",
+    "start_seconds": 49.98,
+    "end_seconds": 51.52,
+    "text": "The comments Codex leaves"
+  },
+  {
+    "segment_id": "s-00030",
+    "start_seconds": 51.52,
+    "end_seconds": 52.9,
+    "text": "on GitHub show up here too."
+  },
+  {
+    "segment_id": "s-00031",
+    "start_seconds": 52.94,
+    "end_seconds": 54.4,
+    "text": "So I can read the feedback"
+  },
+  {
+    "segment_id": "s-00032",
+    "start_seconds": 54.4,
+    "end_seconds": 56.46,
+    "text": "alongside the change and I don't"
+  },
+  {
+    "segment_id": "s-00033",
+    "start_seconds": 56.46,
+    "end_seconds": 58.36,
+    "text": "need to switch tools or worry"
+  },
+  {
+    "segment_id": "s-00034",
+    "start_seconds": 58.36,
+    "end_seconds": 59.98,
+    "text": "about managing a cloud environment."
+  },
+  {
+    "segment_id": "s-00035",
+    "start_seconds": 60.34,
+    "end_seconds": 63.42,
+    "text": "Each pull request has a private chat."
+  },
+  {
+    "segment_id": "s-00036",
+    "start_seconds": 63.5,
+    "end_seconds": 64.48,
+    "text": "I love this."
+  },
+  {
+    "segment_id": "s-00037",
+    "start_seconds": 64.48,
+    "end_seconds": 66.22,
+    "text": "Look, I can ask, summarize"
+  },
+  {
+    "segment_id": "s-00038",
+    "start_seconds": 66.22,
+    "end_seconds": 68.44,
+    "text": "this change and explain the risks"
+  },
+  {
+    "segment_id": "s-00039",
+    "start_seconds": 68.44,
+    "end_seconds": 70.66,
+    "text": "for this entire project."
+  },
+  {
+    "segment_id": "s-00040",
+    "start_seconds": 71.3,
+    "end_seconds": 73.38,
+    "text": "And all my skills and connectors"
+  },
+  {
+    "segment_id": "s-00041",
+    "start_seconds": 73.38,
+    "end_seconds": 75.08,
+    "text": "can be brought into this context."
+  },
+  {
+    "segment_id": "s-00042",
+    "start_seconds": 75.24,
+    "end_seconds": 76.92,
+    "text": "Like our team's review guidelines"
+  },
+  {
+    "segment_id": "s-00043",
+    "start_seconds": 76.92,
+    "end_seconds": 78.62,
+    "text": "or design documents or whatever."
+  },
+  {
+    "segment_id": "s-00044",
+    "start_seconds": 78.84,
+    "end_seconds": 80.5,
+    "text": "I can also customize the review"
+  },
+  {
+    "segment_id": "s-00045",
+    "start_seconds": 80.5,
+    "end_seconds": 81.86,
+    "text": "instructions depending"
+  },
+  {
+    "segment_id": "s-00046",
+    "start_seconds": 81.86,
+    "end_seconds": 83.22,
+    "text": "on how I like things."
+  },
+  {
+    "segment_id": "s-00047",
+    "start_seconds": 83.3,
+    "end_seconds": 84.86,
+    "text": "Like give me a short summary,"
+  },
+  {
+    "segment_id": "s-00048",
+    "start_seconds": 84.86,
+    "end_seconds": 86.78,
+    "text": "or how about a risk analysis?"
+  },
+  {
+    "segment_id": "s-00049",
+    "start_seconds": 86.96000000000001,
+    "end_seconds": 88.74,
+    "text": "Or hey, how about even put"
+  },
+  {
+    "segment_id": "s-00050",
+    "start_seconds": 88.74,
+    "end_seconds": 90.94,
+    "text": "this in a comic book style explanation?"
+  },
+  {
+    "segment_id": "s-00051",
+    "start_seconds": 90.94,
+    "end_seconds": 93.22,
+    "text": "If I want another pass, I can"
+  },
+  {
+    "segment_id": "s-00052",
+    "start_seconds": 93.22,
+    "end_seconds": 95.75999999999999,
+    "text": "start a local private review myself."
+  },
+  {
+    "segment_id": "s-00053",
+    "start_seconds": 95.92,
+    "end_seconds": 97.28,
+    "text": "Now that's separate from the cloud"
+  },
+  {
+    "segment_id": "s-00054",
+    "start_seconds": 97.28,
+    "end_seconds": 98.6,
+    "text": "review that ran ahead of time."
+  },
+  {
+    "segment_id": "s-00055",
+    "start_seconds": 98.74000000000001,
+    "end_seconds": 101.44,
+    "text": "And now I can ask, ask"
+  },
+  {
+    "segment_id": "s-00056",
+    "start_seconds": 101.44,
+    "end_seconds": 103.52000000000001,
+    "text": "questions and draft a comment"
+  },
+  {
+    "segment_id": "s-00057",
+    "start_seconds": 103.52000000000001,
+    "end_seconds": 105.25999999999999,
+    "text": "in our team's review style."
+  },
+  {
+    "segment_id": "s-00058",
+    "start_seconds": 105.7,
+    "end_seconds": 107.34,
+    "text": "I can check it against the diff."
+  },
+  {
+    "segment_id": "s-00059",
+    "start_seconds": 107.34,
+    "end_seconds": 108.56,
+    "text": "I can make it my own and I"
+  },
+  {
+    "segment_id": "s-00060",
+    "start_seconds": 108.56,
+    "end_seconds": 110.44,
+    "text": "can use the comment and the review"
+  },
+  {
+    "segment_id": "s-00061",
+    "start_seconds": 110.44,
+    "end_seconds": 112.3,
+    "text": "actions right here in Codex."
+  },
+  {
+    "segment_id": "s-00062",
+    "start_seconds": 112.32,
+    "end_seconds": 114.34,
+    "text": "I love that I don't have to leave."
+  },
+  {
+    "segment_id": "s-00063",
+    "start_seconds": 114.44,
+    "end_seconds": 116,
+    "text": "Now when I'm the author, I can"
+  },
+  {
+    "segment_id": "s-00064",
+    "start_seconds": 116,
+    "end_seconds": 117.6,
+    "text": "switch back to my changes and work"
+  },
+  {
+    "segment_id": "s-00065",
+    "start_seconds": 117.6,
+    "end_seconds": 119.62,
+    "text": "through the feedback in the same place."
+  },
+  {
+    "segment_id": "s-00066",
+    "start_seconds": 119.62,
+    "end_seconds": 122.68,
+    "text": "And that's code review in Codex."
+  },
+  {
+    "segment_id": "s-00067",
+    "start_seconds": 122.72,
+    "end_seconds": 124.76,
+    "text": "Find the work, quickly understand"
+  },
+  {
+    "segment_id": "s-00068",
+    "start_seconds": 124.76,
+    "end_seconds": 126.1,
+    "text": "the change, and move the review"
+  },
+  {
+    "segment_id": "s-00069",
+    "start_seconds": 126.1,
+    "end_seconds": 128.36,
+    "text": "forward all in one place."
+  },
+  {
+    "segment_id": "s-00070",
+    "start_seconds": 128.46,
+    "end_seconds": 130.1,
+    "text": "Remove those bottlenecks."
+  },
+  {
+    "segment_id": "s-00071",
+    "start_seconds": 130.48,
+    "end_seconds": 131.98,
+    "text": "GitHub Code Review is generally"
+  },
+  {
+    "segment_id": "s-00072",
+    "start_seconds": 131.98,
+    "end_seconds": 133.32,
+    "text": "available with GitLab"
+  },
+  {
+    "segment_id": "s-00073",
+    "start_seconds": 133.32,
+    "end_seconds": 134.52,
+    "text": "support in preview."
+  },
+  {
+    "segment_id": "s-00074",
+    "start_seconds": 134.62,
+    "end_seconds": 136.52,
+    "text": "Try it with the next review"
+  },
+  {
+    "segment_id": "s-00075",
+    "start_seconds": 136.52,
+    "end_seconds": 137.76,
+    "text": "waiting in your inbox."
+  }
+]

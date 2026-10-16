@@ -1,0 +1,38 @@
+{
+  "fingerprint": "187bff0438854b00edcac79ce08beca7b2f738a0e52257a2a769f74f4fdf9543",
+  "plans": [
+    {
+      "piece_id": "01",
+      "question": "What has recently changed in how AI coding agents are being built and deployed at scale?",
+      "argument": "Several sources describe infrastructure and workflow shifts—such as agent-scale version control and new agent tooling—that may signal a meaningful transition in how coding agents operate rather than incremental feature updates. Whether these changes improve outcomes for small teams or primarily serve large organizations remains unclear from the available materials.",
+      "source_refs": [
+        "source-22",
+        "source-5",
+        "source-13",
+        "source-15"
+      ]
+    },
+    {
+      "piece_id": "02",
+      "question": "How strong is the evidence that AI coding agents actually benefit developers, and what verification gaps remain?",
+      "argument": "Multiple sources discuss benchmarks, evaluation frameworks, and agent behavior claims, but it is worth examining whether the methods behind these assessments are transparent enough to trust or whether they primarily reflect vendor-favorable conditions. The degree to which findings from large or well-resourced teams transfer to student developers and small teams without extensive tooling remains an open question.",
+      "source_refs": [
+        "source-6",
+        "source-20",
+        "source-18",
+        "source-23"
+      ]
+    },
+    {
+      "piece_id": "03",
+      "question": "What should developers actually do differently when adopting AI coding agents, given the permissions, verification, and workflow concerns raised across recent sources?",
+      "argument": "Several sources converge on concrete workflow changes—around secret handling, agent permissions, output verification, and context-setting—that small teams can act on without large budgets, though the practical burden of implementing these safely may be underestimated in vendor-facing materials. Whether guidance aimed at individual developers adequately addresses the compounding risks that emerge when agents operate with broader permissions at scale is not yet clearly resolved.",
+      "source_refs": [
+        "source-7",
+        "source-20",
+        "source-3",
+        "source-13"
+      ]
+    }
+  ]
+}

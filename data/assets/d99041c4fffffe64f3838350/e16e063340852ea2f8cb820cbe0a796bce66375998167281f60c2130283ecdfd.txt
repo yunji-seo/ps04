@@ -1,0 +1,117 @@
+Your next job doesn’t have a title yet: Emerging role skills Q&A with Corey Hymel of Andela
+
+While the whispers say that everyone is becoming a generalist, that's not where headcount is going.
+
+There’s been plenty of chatter about AI’s effect on jobs. Will everyone get laid off to train AI? Will every developer become a super generalist? Are there new roles rising from the ashes? But Corey Hymel, head of research at Andela, wanted numbers behind that chatter. He and his team looked at nearly 50,000 job postings to find the skills and roles that are emerging before the industry has properly given them titles. I spoke with him to find out what that research says about the new developer skillsets that land permanent roles.
+
+—---------------------------------------
+
+Q: You did this research on how skills shift and change in job titles. Could you give an intro to this to the project?
+
+A: At Andela, our general approach and methodology to the market is that job titles and resumes are the best worst thing that we have out in the world right now. We're obsessed with understanding very fine-grained skills of what people are able to do.
+
+That's premise number one. Premise number two was that we hear very commonly "Oh, AI is changing jobs. Oh, AI's gonna get rid of jobs," or, "AI is, gonna create new jobs." But it's all very anecdotal and not very data-driven. We looked at it and said, "Is there a way that we can actually go in and put some numbers and some rigor to actually understand what's going on behind the curtains with all of these jobs?" We've got a internal skill taxonomy and ontology that we use that grounds all of this and is the base of the research and data structure that goes in.
+
+But for us, it's really important because the other big side of our business is around learning and upskilling. So how can we provide our customers information around where the industry is heading. Here's some skills that people should be learning that we're seeing become more common. These are the roles. Some of these might fall in between two.
+
+While you might say, "Front-end engineers need to go learn this," actually you probably should pull in product managers as well.I think job titles have always lagged the work, but especially now it's getting worse and worse.
+
+Q: So it's not necessarily about job titles changing, but more about new skills being applied to existing job titles and mid-range roles appearing. I think you talked about DevSecOps as an example of a bleed role.
+
+A: Exactly. What I'm seeing in the news pretty frequently is that this pervasive narrative that AI's gonna make everyone generalist, and it's just turning these jobs into gray jobs where skills can bleed all over.
+
+And what the data shows is that isn't true. There are very niche skill bundles that are either forming as these net new roles that no one's talked about yet or the underlying skills within historical roles are starting to change.
+
+From the labor market or the hiring side, it's, one, happening so quick that people can't keep up with it. Or two enterprises don't really know what skills people should be learning, so they just give up this generalist title of AI engineer. It's like, what what does that mean? There's 100 different flavors of what that could be. But for them it's just easier to say "Oh, we need someone that does AI."
+
+Q: At re:Invent last year, Amazon's CTO, Werner Vogels, talked about the T-shaped developer, where you have a deep focus but a broad base of understanding. Does your data reflect that? Or are you seeing a more specific concentration of these skill bundles?
+
+A: I've gotten that question a few times, and transparently, I've not followed up with it as much as I probably should have. Because you have the T shape and you have the I shape, and I think there's a star shape. I've gotten questions about a few different ones, but from what we're seeing, I think that probably the T shape does typically follow the pattern in the data. But I don't have a definitive answer on that yet.
+
+Q: That's something I'd love to know because, anecdotally, I hear a lot of people talking about this broadening of what a fullstack developer is that's covering product design to SRE. I wonder if people are actually hiring roles for that or if that's just something that happens within organizations.
+
+A: I don't know. We didn't see in the data this idea of a net generalist. But what we are seeing is that if you look at the typical flow of the software development life cycle, if you put roles down in some linear fashion of product manager and then front-end engineer, back end engineer, DevOps, and then QA, the bleed in between those roles are where we're starting to see the most common mix in skills.
+
+So for instance: the front end product engineer. This might be like a like an F-shaped engineer. Meaning that like they lean to one side—they might have a background in front-end engineering, but now they're being asked to stretch into a product role to talk to customers to get feedback, to prioritize and backlog features, and so on.
+
+We're seeing the same thing on the back-end and the DevOps side of back-end engineers now needing to know about deploying these models into production and think about scalability and stuff—that F goes in the other direction.
+
+I need to think about my shapes a little more for this.
+
+Q:That shape is interesting, though. The F shape one— with AI, now that you're able to touch the things that are closest to you, you can branch out, right? Back end engineers can start touching the database and stuff like that.
+
+A: Even to some degree like merging over into prod, even into the front end side too.
+
+Q:What are some of the the skill bundles that you saw in the research?
+
+A: One of the ones our customers often describe but never label was this idea of an LLM application engineer. This is someone that's very versed in building products on top LLMs, whether it's OpenAI APIs or open weight models or Claude code. They know how to plug into the APIs, but they can also take the step beyond that, meaning that they know how to construct the harnesses.
+
+They know and are familiar with things like evals, which when we talk to customers, they think about it as just a backend engineer. That's a very specific skill set. Your classical back-end engineer will not necessarily know about building agent eval harnesses or governance and guardrails. That one was super interesting and also showed up pretty prevalent in the data.
+
+Another one that I've heard it a few times now, is that 2026 and 2027 is gonna be the year of the CFO. How to deal with consumption spending. Now you have new products that are all on these consumption models, which pass-through products. Not only that, but your developers are consuming these new kind of OpEx spends. A FinOps reliability engineer, someone that's able to think about project development and factoring the cost—not just of typical end-user consumption, like cloud consumption—but also developer tooling. When we're building our AI-native SDLC, people talk about financially responsible ways to do this. We hear a lot about how do we optimize our token spend and how do we reduce our token spend. An engineering role that's very keen to understand costs, like in these cases, we use cheaper or faster models with simpler processes, or we design these to have where you might need Fable or something else because it is highly complex,
+
+The last one was this docs-as-code engineer.
+
+We hear a lot about spec-driven development. It’s treated like something that should be pushed down directly on top of developers, when in reality, there is this new role where people that were doing classical technical writing or classical documentation are some of the best spec-driven engineers. They're the ones that construct the context better than developers can to feed into these new models, as well as set the context for long-term agentic development on these bigger code bases.
+
+Q: The AI application engineer is an interesting one—I hear a lot from people that everybody should be building their own software factory. It seems like this is the thing you're expected to do as an individual engineer, no matter what, because everybody's going through an agent, everybody's doing evals on their own code. It's interesting to see that these skills are specialized in the data.
+
+A: I think that's the big I think insight with all of this. It challenges the narrative and the status quo of, either one, everyone's just gonna be the expanded fullstack developer, or two, everyone's just a generalist and you can just do everything now. In reality, we are seeing statistically significant trends of specific skill groupings that are coming out in hiring and job data.
+
+Q: Did you notice anything about job titles? Do job titles matter for these skill groupings?
+
+A: In my opinion, job titles are important, especially in this context, because it gives enterprises a way to better describe the work that needs to get done. When you look at an enterprise and how a job gets created, specifically when it comes down to the job title, you've got the individual that's closest to the work. A lot of times they might be someone within the team.
+
+But there's layers on top of it, right? It's gotta go to HR, and then to finance, and then procurement, and then eventually a recruiter. You get this chain of custody, and the work gets more ambiguous as it goes down that chain of custody, not only in the description, but the understanding of what the role should be. What I've seen is that the fallback to a generalist role becomes easier.
+
+I hope that with these more specific job titles, from the person that's closest to the work all the way to the edge recruiter, they're able to accurately describe exactly what needs to get done. A better title for that is really important. Because one, it allows the hiring firm to be more specific, it reduces their time, they get better candidates. It puts them in a better place to succeed.
+
+From the candidate side, imagine I've been a back-end engineer for the past 20 years and I now see a back-end engineering role. I'm just hitting apply because I just need to get a job, right? The odds of me ending up in a position where I won’t be successful is relatively high because the underlying skills and requirements and understanding could be vastly different.
+
+I do think in this case it is it is important for these new titles to come along.
+
+Q: In the research post you talked about talent debt. What is talent debt?
+
+A: Talent debt accrues the same way that technical debt does. But the difference with talent debt is that the skill half-life is shrinking substantially. Back in the day, you could go and get a job as a Java engineer and work for 20 years doing Java programming and be okay. But now what we're seeing is that the pace of change is going so fast that the half-life of how long those skills stay relevant is shrinking substantially.
+
+What you get is this skill compression, which then forms into talent debt. A lot of companies are experiencing it now where all of a sudden this race into AI, they look at what they have on the bench and say, "Oh my goodness, we've got nothing even close to what we have to do here."
+
+They have two options then. One is either try to reskill who you have already. Upsides are that you get to keep the strong domain knowledge of the individuals within your team, understand strong system knowledge, and it's good to invest in your people.
+
+The flip side is to try to hire it out. It's faster, but you don't have the domain knowledge, you have ramp time, and you have the the risk of putting the wrong butt in the wrong seat. All of that compounds into this concept of talent debt, which is very similar to technical debt.
+
+Q: Developers have always had to keep learning on the job, right? Even if you're a Java engineer for 20 years, you're learning new frameworks, new features come out, new libraries. Is this acceleration a different sort of thing, where it's not just learning new things for Java, but learning a whole new thing every six months?
+
+A: I think so. It's one thing to pick up a new framework, right? It's one thing to pick up a new programming language. I think a lot of developers are fine with that. The big difference now is that it's a fundamental bedrock shift of the way that you actually work.
+
+That is the big, hard transition. Changing from procedural to object-oriented programming makes you really think structurally about how these things get built, what are ways to optimize and go faster. For a lot of people, that's a stiff change. If you've ever tried to switch between the two, doing C or something procedural into an object-oriented framework, you conceptually think about things much differently.
+
+It's thinking conceptually differently, but at a much bigger scale of how you work as a person. For an engineer, it's going beyond and having to relearn syntax or language or frameworks or methodologies, but into a structural re-understanding how you put all of these new tools to work. How do I actually step back from the code, and how do I adjust in my mind what accountability is and give that to a virtual synthetic knowledge worker.
+
+The engineers that are able to move in between it are ones that have substantial advantage. There’s an engineer working with me from our network making some updates to one of our platforms. He gave me a quote on the time because it was adding some leaderboards in, and I said, "We just need to add a leaderboard. You go give it to Claude Code. This should be an hour."
+
+He was looking at it over four days, so I asked him, "Why does it take so long? Like coding tools are you using?" He uses Claude Code to understand it, but still hand codes everything to a large degree. He doesn't practice agentic development, mostly because he feels accountable for the code that he ships. “If something that I ship is wrong, then that's on me."
+
+I have another developer that just gives it to Claude. If it works, if it passes the unit test and the acceptance test and the smoke test, then ship it to prod. Who cares.
+
+It's interesting to see these different dynamics, but the other underlying one was that the developer that was very hesitant about using it has been using the tools for a while, but has a very small token budget. I think that there's like this fluency gap between those that can, developers that can afford to like fully embrace this new world and have the budget to burn the tokens to get the comfortability with it versus a large group of people that don't. That might be another area of study.
+
+Q: You’re talking about scaling up and becoming comfortable with the tools, but I've heard a lot about AI affecting developer skills, de-skilling, growing lazier with cognitive offloading, people knowing less about the code., Like you said with the the one that's in YOLO mode—if it works, who cares how it works? Do you think AI will make the rescaling and the scaling up harder or easier?
+
+A: I believe there's a lot of different answers to it. On one degree, AI will make upskilling a lot easier, right? You have a personalized tutor. It can explain things to you. I've seen good engineers ask Claude to quiz them on the code so that they get a firm understanding.
+
+Is there gonna be skill degradation? For sure. I think that's one of the premises of any new technology that comes out. Gartner had this skill atrophy onion where you have your core skills that make you who you are. You've got skills that are unique to your domain that are not usually replaceable. Then you have this middle onion skill, which are these skills that are okay to atrophy. For a developer, that might be things like understanding the syntax. I don't necessarily need to know Go to write a Go program anymore. Is that an okay thing to let go? There are some skills in there, maybe general architectural setup that still trigger the sniff test of this doesn't seem just right.
+
+Engineers that have been around for a while that are okay with letting some of these skills go and gaining these new ones are gonna be in extremely good position to accelerate forward. The people that I have concern about are individuals coming into the market now that haven't had time to develop that innate sniff test of when things are going awry and just blindly YOLO stuff. Upskilling and reskilling and skill atrophy or degradation is gonna be a problem in five, ten years when that gap forms.
+
+Or maybe who cares? We weren't allowed to use calculators in school. Now everyone's got calculators, and we turned out fine.
+
+Q: Nobody's coding in Assembly anymore, right? Doesn't matter.
+
+A: Exactly.
+
+Q: For folks who are a little antsy about the future of their jobs and their skills, does this data validate those fears?
+
+A: I think there is a lot of noise about AI making everyone general. There is a lot of AI noise around AI changing jobs. But what we found is that there are new specific skill sets coming out becoming extremely important. People should understand where they fit. We've got another tool where you can put in your current role and we can show you the new role that it's morphing into.
+
+Understanding where the trends are going and where, as an engineer, you can start to invest effort to prepare yourself will be really helpful for everyone.

@@ -1,0 +1,24 @@
+{
+  "stage": "editorial/select_items",
+  "status": "completed",
+  "input_count": 54,
+  "output_count": 54,
+  "started_at": "2026-10-15T19:14:02.824Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [],
+  "model_calls": 14,
+  "token_usage": {
+    "prompt_tokens": 42,
+    "completion_tokens": 13124,
+    "total_tokens": 359314
+  },
+  "finished_at": "2026-10-15T19:17:36.564Z",
+  "exit_code": 0
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "author": "assistant; not student approval",
+    "reason": "Replace a paraphrase mislabeled as a quotation; correct the implication that dataset builders also performed the independent re-labeling. The source explicitly distinguishes the senior engineer auditors from dataset builders.",
+    "before": {
+      "claim_id": "02-c4",
+      "statement": "GitHub's ReviewBench benchmark for AI code review was built by the same team that builds Copilot code review, uses Claude Sonnet 5 as the judge, and reports that offline benchmark movement 'tends to show up online'—hedged language, not a correlation coefficient. The 96.6% inter-rater agreement among senior engineers is a transparency step, but the benchmark corpus contains only 219 pull requests and the same team validated the methodology. These are vendor-run benchmarks requiring independent replication before being treated as established performance claims.",
+      "type": "inference",
+      "evidence": [
+        {
+          "source_ref": "source-6",
+          "locator": {
+            "type": "text",
+            "quote": "We validate findings under a shared rubric. The source of a finding does not determine whether it is correct... We use Claude Sonnet 5 as the LLM grader, applying a consistent evaluation rubric across all submissions... 96.6% agreement — Senior engineers independently labeled golden true-positives before release... Improvements tend to show up online; Regressions tend to show up online too"
+          }
+        }
+      ]
+    },
+    "after": {
+      "claim_id": "02-c4",
+      "statement": "GitHub reports that ReviewBench contains 219 pull requests from 187 repositories across 19 languages and uses Claude Sonnet 5 as its grader. It says senior engineers who had not built the dataset independently re-labeled its ground-truth findings with 96.6% agreement, and describes an online A/B test that moved in the direction predicted offline. This is a transparent vendor-run validation account, not evidence of external independent replication or guaranteed performance on every small team’s codebase.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "source_ref": "source-6",
+          "locator": {
+            "type": "text",
+            "quote": "We analyzed 103.9 million GitHub pull requests to characterize the real-world distribution of code review workloads. ReviewBench contains 219 pull requests from 187 public open source licensed repositories spanning 19 languages, with its language and repository-size distributions closely matching GitHub overall. The complete benchmark dataset is publicly available."
+          }
+        },
+        {
+          "source_ref": "source-6",
+          "locator": {
+            "type": "text",
+            "quote": "Validate findings under a shared rubric. The source of a finding does not determine whether it is correct: a finding counts as a true positive only if it is true, relevant, and non-trivial. We use Claude Sonnet 5 as the LLM grader, applying a consistent evaluation rubric across all submissions. For transparency and reproducibility, we publish both the evaluation rubric and the judge used to apply it."
+          }
+        },
+        {
+          "source_ref": "source-6",
+          "locator": {
+            "type": "text",
+            "quote": "Before release, we asked senior engineers who had not participated in building the benchmark dataset to independently re-label every ground-truth finding from scratch. Their true/false-positive judgments agreed with ReviewBench 96.6% of the time. We version the benchmark dataset, judge, and matcher used in every evaluation, so results can be compared under the same benchmark configuration and revalidated when the benchmark changes. We also publish the validation methodology, agreement measurements, and known threats to validity, so readers can see how benchmark quality is assessed and where uncertainty remains."
+          }
+        },
+        {
+          "source_ref": "source-6",
+          "locator": {
+            "type": "text",
+            "quote": "The online A/B test moved in the same direction as ReviewBench predicted: addressed rate (precision) rose 8.0%, recall rose 13.6%, and comment volume rose 61%, while cost per review fell 8.0%, all relative to the production control."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "author": "assistant; not student approval",
+    "reason": "Use the exact recommendation and surrounding context; qualify it as the author’s proposed practice rather than a measured universal property of all agent systems.",
+    "before": {
+      "claim_id": "03-c1",
+      "statement": "The practical starting point for making agent failures visible is asserting on the work product rather than the agent's report: checking that the row exists in the database, the file is on disk, the branch is actually pushed, or the message actually left the queue—reading state the agent did not author. A scheduled agent that reports success having touched nothing should trigger an alert, because zero-effect successes are currently logged as green squares that no one reads.",
+      "type": "inference",
+      "evidence": [
+        {
+          "source_ref": "source-20",
+          "locator": {
+            "type": "text",
+            "quote": "Assert on the work product. Not 'did the loop exit 0' but 'does the row exist, is the file on disk, did the message actually leave the queue, is the branch actually pushed.' The check has to read state the agent did not author... Alert on the absence of change. A job that always writes, and this time wrote nothing while reporting success, is more suspicious than a job that threw an exception."
+          }
+        }
+      ]
+    },
+    "after": {
+      "claim_id": "03-c1",
+      "statement": "A Stack Overflow Blog contributor recommends checking the work product rather than an agent’s success report: confirm the row, file, queued message or pushed branch in state the agent did not author. The same article recommends alerting when a scheduled job that normally changes something reports success without changing it. These are proposed verification practices, not a controlled estimate of how often all agents fail silently.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "source_ref": "source-20",
+          "locator": {
+            "type": "text",
+            "quote": "Assert on the work product. Not \"did the loop exit 0\" but \"does the row exist, is the file on disk, did the message actually leave the queue, is the branch actually pushed.\" The check has to read state the agent did not author. If your only evidence that the emails went out is the agent's report that it sent them, you do not have evidence. You have a claim from a party that has a vested interest in the answer."
+          }
+        },
+        {
+          "source_ref": "source-20",
+          "locator": {
+            "type": "text",
+            "quote": "Alert on the absence of change. This is the cheapest item on the list and almost nobody does it. A job that always writes, and this time wrote nothing while reporting success, is more suspicious than a job that threw an exception. Errors get alerts; zero-effect successes get a green square in a run history that no one reads. Invert it. A scheduled agent that reports success having touched nothing should page someone. Nothing is a result, and it deserves to be a loud one."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "author": "assistant; not student approval",
+    "reason": "Remove unsupported “uncredited” characterization and a fabricated code quotation. Preserve the source’s narrow outcome-update exception and its distinction between application-role protection and operator-level tamper resistance.",
+    "before": {
+      "claim_id": "03-c5",
+      "statement": "Safety and governance architecture for agent systems requires guardrails that fail closed—an erroring guardrail blocks rather than passing the request through—plus an append-only audit ledger with REVOKE UPDATE/DELETE enforced at the database level, and memory partitioned by tenant_id enforced at every read and write, not just in application code. These are source claims from an uncredited Stack Overflow Blog series without external validation, but the patterns are concrete and independently testable.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "source_ref": "source-19",
+          "locator": {
+            "type": "text",
+            "quote": "Two rules: fail closed (an errored or unavailable guardrail blocks or escalates — it never waves the request through) and log every block as a first-class signal... App role gets INSERT + SELECT only. Revoke mutation in the DB, not just in code... if caller.tenant_id != tenant_id: audit.violation('cross_tenant', identity=identity, request=request); raise Forbidden()"
+          }
+        }
+      ]
+    },
+    "after": {
+      "claim_id": "03-c5",
+      "statement": "A Stack Overflow Blog governance guide proposes fail-closed guardrails and tenant checks at every memory read and write. Its audit-ledger example revokes application-role mutation, then grants a narrow update permission for the outcome column; it explicitly warns that this does not constrain a database owner. These are concrete design proposals, not independent measurements that the proposed controls eliminate failures.",
+      "type": "source_claim",
+      "evidence": [
+        {
+          "source_ref": "source-19",
+          "locator": {
+            "type": "text",
+            "quote": "Two rules: fail closed (an errored or unavailable guardrail blocks or escalates — it never waves the request through) and log every block as a first-class signal."
+          }
+        },
+        {
+          "source_ref": "source-19",
+          "locator": {
+            "type": "text",
+            "quote": "Tenant scoping is non-negotiable: every read/write carries tenant_id (and user_id where the category is user-scoped), checked at the store, with cross-tenant access a hard error."
+          }
+        },
+        {
+          "source_ref": "source-19",
+          "locator": {
+            "type": "text",
+            "quote": "-- App role gets INSERT + SELECT only. Revoke mutation in the DB, not just in code.\nREVOKE UPDATE, DELETE, TRUNCATE ON decision_ledger FROM app_role;\nGRANT  UPDATE (outcome) ON decision_ledger TO app_role;   -- column-level: ONLY `outcome` is writable later\n-- NOTE: this stops the APP, not a DB superuser/owner who can still DROP/TRUNCATE/rewrite. True\n-- append-only against an operator needs WORM/object-lock storage or external anchoring (below)."
+          }
+        }
+      ]
+    }
+  }
+]

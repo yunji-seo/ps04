@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 177,
+    "total_tokens": 2285
+  },
+  "content": "{\"piece_id\":\"03\",\"question\":\"What practical steps should student developers and small teams take now to work safely with AI coding agents, given current evidence on permissions, secret handling, and skill maintenance?\",\"argument\":\"Several sources appear to address concrete operational risks—such as credential exposure, agent permission scope, and the erosion of verification habits—that arise when teams delegate coding work without adequate safeguards, though it is unclear how well the proposed mitigations scale down to resource-constrained or novice settings. Mapping these practical implications across infrastructure, security, and developer-skill dimensions may help readers identify which precautions are actionable today versus which require tooling or organizational support that small teams may lack.\",\"source_refs\":[\"source-7\",\"source-4\",\"source-19\",\"source-3\",\"source-8\"]}"
+}

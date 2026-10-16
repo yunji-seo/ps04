@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 132,
+    "total_tokens": 2005
+  },
+  "content": "{\"piece_id\":\"01\",\"question\":\"What has recently changed in how AI coding agents handle version control and workflow infrastructure, and which of those changes are ready to act on?\",\"argument\":\"Several publishers appear to describe shifts in source-control design and agent-scale Git infrastructure that may signal a meaningful transition in how agents interact with codebases, though vendor framing makes independent assessment difficult. Understanding what has structurally changed, versus what is still experimental, helps student developers decide what to adopt now versus watch carefully.\",\"source_refs\":[\"source-22\",\"source-5\",\"source-13\",\"source-1\"]}"
+}

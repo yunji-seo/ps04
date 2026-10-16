@@ -1,0 +1,10 @@
+{
+  "model": "claude-sonnet-4-6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3,
+    "completion_tokens": 343,
+    "total_tokens": 17435
+  },
+  "content": "```json\n[\n  {\n    \"source_ref\": \"source-1\",\n    \"decision\": \"defer\",\n    \"reason\": \"The transcript is an automated Korean-language caption or dub of what appears to be an English-language GitHub product demo (GitHub Copilot Day, published 2026-10-08). The metadata explicitly states 'Korean automatic caption/dub transcript; original-English equivalence is not independently verified.' This means the content cannot be cited with confidence: specific quoted passages, technical claims, and feature descriptions may differ materially from the original English presentation. The underlying subject—a GitHub-internal Agent Host Protocol (AHP) that allows Copilot agent sessions to roam across devices and be controlled from multiple clients simultaneously—is directly relevant to the central question about coding-agent adoption and verification. However, accepting this item would require treating unverified machine-translated content as quotable evidence, which violates the policy requirement that every substantive claim identify an exact source version with a supporting quote. The item should be deferred pending retrieval of the original English transcript or verified English captions. If the English source becomes available, this could support piece 01 (what changed: cross-device agent session portability) and piece 02 (scrutiny: vendor demo of announced capabilities, not independently verified effectiveness; GitHub/Microsoft commercial incentives; no independent developer testing shown; no evidence of novice or small-team usability). It should not be accepted solely on the basis of the Korean transcript.\",\n    \"piece_ids\": []\n  }\n]\n```"
+}

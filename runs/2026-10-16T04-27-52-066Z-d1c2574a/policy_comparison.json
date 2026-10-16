@@ -1,0 +1,191 @@
+{
+  "baseline": "runs/2026-10-15T14-59-33-161Z-664468fb",
+  "run": "runs/2026-10-16T04-27-52-066Z-d1c2574a",
+  "before": {
+    "accept": 19,
+    "reject": 21,
+    "defer": 4
+  },
+  "after": {
+    "accept": 23,
+    "reject": 16,
+    "defer": 5
+  },
+  "changed_decisions": [
+    {
+      "title": "Introducing on-demand CPU and memory profiling with flamegraphs for Workers and Durable Objects",
+      "before": {
+        "item_id": "feed:cloudflare:8417bba844174a46ac26bf17",
+        "version_id": "ce1e1df05c5aedec4c565a23b852f010440d079b5786183284d266e9d6474edd",
+        "decision": "reject",
+        "reason": "This post announces on-demand CPU and memory flamegraph profiling for Cloudflare Workers and Durable Objects. While it is a substantive engineering post with real internal case studies (R2 binding optimization, OOM debugging), it concerns a platform-specific observability feature for Workers — not AI coding agents, coding-agent verification, agent permissions, or agent-assisted coding workflows. The profiling tool is invoked by developers against their own deployed Workers code, not by or for AI agents generating or reviewing code. It falls outside the publication's defined scope of coding-agent adoption and verification.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:cloudflare:8417bba844174a46ac26bf17",
+        "version_id": "ce1e1df05c5aedec4c565a23b852f010440d079b5786183284d266e9d6474edd",
+        "decision": "accept",
+        "reason": "This Cloudflare vendor post announces on-demand CPU and memory flamegraph profiling for Workers and Durable Objects, available via CLI and dashboard. It is directly relevant to verification and maintainability angles of the series: it shows a concrete technique for identifying what code is actually executing in production, including agent-invoked serverless functions. The post includes specific, narrated real-world examples from Cloudflare's own internal Workers (R2 binding Worker, a Prometheus memory leak), with before/after memory percentile tables that give concrete data rather than generic claims. The profiling approach—capturing samples without halting execution, routing to the correct isolate across distributed infrastructure—is technically explained and immediately actionable. Limitations are stated by the vendor: the profiler requires production traffic; it cannot capture startup-time allocations; on-demand profiling may miss transient misbehavior (continuous profiling is described as future work). The source has vendor incentives and no independent corroboration in this batch, so claims about internal speedups (e.g., '2.7x faster genericR2JsonReplacer') should be attributed rather than treated as independently verified. Useful for piece 01 (what changed) and piece 02 (scrutinize: vendor-only evidence, limitations noted), with potential for piece 03 (implications: profiling as a verification step for code agents deploy).",
+        "piece_ids": [
+          "01",
+          "02",
+          "03"
+        ]
+      }
+    },
+    {
+      "title": "Deno is joining Cloudflare",
+      "before": {
+        "item_id": "feed:cloudflare:a289db51a1e2a244d95269bd",
+        "version_id": "63ca4cabf57b6daf46f847ccb4d3289598c43d3d14ba612e58f2bd7ba1c4b117",
+        "decision": "defer",
+        "reason": "This post announces that the Deno team is joining Cloudflare to unify workerd and celld, making the Workers/Durable Objects programming model self-hostable and scalable outside Cloudflare's network. This is relevant to coding workflows in that it changes where and how developers can run and test Workers-based code, and addresses vendor lock-in concerns that affect practical adoption decisions. However, the post is an acquisition announcement co-authored by Cloudflare and Deno insiders (Kenton Varda and Ryan Dahl) — both parties have direct commercial interest in the outcome. No independent corroboration, third-party developer perspective, or concrete technical milestone beyond intention is present: the post explicitly states 'We'll have more announcements about this work in the coming months.' The central practical claim — that self-hosting Workers with full Durable Objects support will become easy — cannot yet be evaluated. Missing voices include independent developers who have attempted self-hosting workerd, small teams without infrastructure capacity, and anyone who migrated away. Defer until the merged celld/workerd implementation ships with documented self-hosting instructions, at which point the practical adoption impact can be assessed.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:cloudflare:a289db51a1e2a244d95269bd",
+        "version_id": "63ca4cabf57b6daf46f847ccb4d3289598c43d3d14ba612e58f2bd7ba1c4b117",
+        "decision": "accept",
+        "reason": "This Cloudflare post announces the acquisition of the Deno team and the plan to merge celld (Deno's self-hostable distributed Workers/Durable Objects runtime) with workerd (Cloudflare's open-source Workers runtime). This is directly relevant to the series' infrastructure and agent-permissions angles: coding agents increasingly target Workers/edge runtimes, and the availability of a self-hostable, fully compatible Workers runtime changes a practical decision—whether to lock in to Cloudflare-only deployment or adopt a portable architecture. The post is co-authored by Ryan Dahl (Deno creator) and Kenton Varda (Cloudflare Workers architect), and explicitly addresses the lock-in concern and workerd's prior gap in distributed Durable Objects support. Per the student's prior review under v1, this item was changed from defer to accept because of its potential effect on development infrastructure, with announced plans distinguished from verified capabilities. That distinction must be preserved: the merger is announced fact; the merged self-hosting capability is a stated plan with no shipped product yet ('We'll have more announcements about this work in the coming months'). No independent corroboration in this batch. Voices missing: developers who have already built on Workers and must now assess portability risk, small teams without capacity to self-host. Useful for piece 01 (announced change and its significance) and piece 03 (implications for agent deployment targets and infrastructure choices); piece 02 can scrutinize the gap between announcement and delivered capability.",
+        "piece_ids": [
+          "01",
+          "02",
+          "03"
+        ]
+      }
+    },
+    {
+      "title": "Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug",
+      "before": {
+        "item_id": "feed:cloudflare:b33e3af2750ac579c6a4b70a",
+        "version_id": "1c107661c48ebd9fcb5d2c66bc3d64d90b560d52739956a3d1a72ec6ac9ef4bc",
+        "decision": "reject",
+        "reason": "This is a detailed Cloudflare engineering post-mortem on a rare MySQL protocol caching bug in Hyperdrive, their database connection pooler for Workers. The content is technically substantive and demonstrates good debugging practice (examining protocol capability flags, tracing a 0.001% failure rate, root-causing a cache-key encoding mismatch). However, it does not address AI coding agents, coding workflows, agent verification, agent permissions, or developer benefit from AI tooling in any way. The topic is database infrastructure reliability — specifically MySQL wire-protocol capability negotiation and CDN cache sharing between co-located nodes. This falls outside the publication's stated scope of 'coding workflows, verification, maintainability, agent permissions, and evidence of developer benefit' for AI coding agents. It would be relevant to a database engineering publication but not to this series.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:cloudflare:b33e3af2750ac579c6a4b70a",
+        "version_id": "1c107661c48ebd9fcb5d2c66bc3d64d90b560d52739956a3d1a72ec6ac9ef4bc",
+        "decision": "accept",
+        "reason": "This Cloudflare engineering post-mortem documents a subtle, real bug in Hyperdrive MySQL caching — a 0.001%-frequency silent data corruption caused by a protocol capability mismatch between client and endpoint nodes sharing a CDN cache. It is directly useful to student developers and small teams building applications with Cloudflare Workers + MySQL: it illustrates (a) how infrastructure-layer assumptions from one database type (Postgres) can silently corrupt results when ported to another (MySQL), (b) why beta-period error rates matter and should be monitored before trusting GA claims, and (c) the verification gap — a 0.001% silent error producing empty query results would be very hard for a developer to detect without explicit monitoring. The article honestly names a vendor product and a customer-reported failure, describes the root cause in technical detail, and documents the fix. This is a single vendor publisher with no independent corroboration, which limits its use to piece 02 (scrutiny/verification angle) and piece 03 (implications: what developers must still verify themselves in managed infrastructure). It supports the series question about what developers should still verify even when using managed platform services.",
+        "piece_ids": [
+          "02",
+          "03"
+        ]
+      }
+    },
+    {
+      "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+      "before": {
+        "item_id": "feed:cloudflare:c9ecfd64e78478743d984991",
+        "version_id": "0c2bd4caae0d6f1091909050a04a95daf47b396444a992d00e2867df18c23feb",
+        "decision": "reject",
+        "reason": "This is a joint announcement from Cloudflare and OpenAI describing a research pilot where Cloudflare network signals help OpenAI's crawler discover and index web pages for ChatGPT Search. The content covers web crawling efficiency, index discovery, and content control tools (AI Crawl Control). It is a vendor partnership announcement with source claims only — the 'hundreds of millions of new web pages' indexed figure is asserted without methodology, and the authors have direct commercial interests in the outcome. More importantly, this item does not address AI coding agents, coding workflows, code verification, agent permissions, or developer productivity in any meaningful way. The relevance to the central question — which advances in AI coding agents are useful to adopt and what should developers verify — is nil. General AI discovery infrastructure is excluded by the project's stated exclusions ('general AI news without a coding-workflow consequence').",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:cloudflare:c9ecfd64e78478743d984991",
+        "version_id": "0c2bd4caae0d6f1091909050a04a95daf47b396444a992d00e2867df18c23feb",
+        "decision": "defer",
+        "reason": "This Cloudflare + OpenAI announcement describes a joint research pilot in which Cloudflare network signals helped OpenAI's search crawler discover and index 'hundreds of millions of new web pages.' There is an indirect coding workflow consequence: developers building web applications or publishing technical documentation may want to understand how AI-driven content discovery works and how to use Cloudflare's AI Crawl Control to manage it. The article also raises a tension relevant to the series — AI agents accessing and indexing web content, and site owners' control over that. However, the evidence base is weak for the target question: all substantive claims come from a joint vendor announcement with no independent measurement, no third-party evaluation of discovery quality, no data on developer-facing outcomes, and no methodology for the 'hundreds of millions of pages' figure beyond a 1% network cohort assertion. The distinction between 'metadata signals for discovery' and 'content for training' is asserted but not independently verified. The article is worth revisiting if independent analysis of the pilot's outcomes emerges, or if the AI Crawl Control tooling develops a clearer coding-workflow consequence. Currently it cannot support even a bounded claim without relying solely on vendor assertions.",
+        "piece_ids": []
+      }
+    },
+    {
+      "title": "Under the hood, off the hot path: How D1 scales to millions of databases",
+      "before": {
+        "item_id": "feed:cloudflare:ed13bbc4659884e865747331",
+        "version_id": "6238113fe3f516649cfcfd5e97d1804de41f061e999d0412018cdf01fe41ba24",
+        "decision": "reject",
+        "reason": "This is a detailed, credible engineering deep dive into how Cloudflare D1's control plane scales to millions of SQLite databases. It mentions in passing that 'AI-assisted development and vibe coding platforms' are driving demand for one-database-per-user architectures, and quotes an OpenAI representative (ChatGPT Sites). However, the article's substance is entirely about Cloudflare's internal distributed systems architecture (Durable Objects, Workers KV, Hyperdrive, Postgres sharding, Kafka-like queues, ClickHouse). It does not address how developers should evaluate, adopt, verify, or constrain AI coding agents. The AI/vibe-coding mention is a brief framing device, not the central argument. No practical coding-workflow consequence for the target audience can be drawn without fabricating a connection. Rejecting on topical grounds.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:cloudflare:ed13bbc4659884e865747331",
+        "version_id": "6238113fe3f516649cfcfd5e97d1804de41f061e999d0412018cdf01fe41ba24",
+        "decision": "defer",
+        "reason": "This Cloudflare engineering post describes how D1 scales to millions of databases using Durable Objects, Workers KV, Hyperdrive, and async queue patterns. It is technically detailed and relevant to developers building on Cloudflare's platform. However, its connection to the central question—AI coding agents, verification of agent output, and what to adopt—is indirect. The post mentions 'AI-assisted development and vibe coding platforms' and 'AI agent-driven development' as drivers of the many-small-databases pattern, but the body is an architecture deep-dive into D1's control plane internals, not an assessment of agent capabilities or adoption tradeoffs. It could serve as background infrastructure context for a piece about what backing databases agents provision at scale, but without corroborating sources that explicitly link D1's architecture to agent workflows, it cannot anchor any of the three required arguments. Defer pending additional sources that connect agent-provisioned database patterns to developer decisions.",
+        "piece_ids": []
+      }
+    },
+    {
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "before": {
+        "item_id": "feed:github:0b0f6d3b9776aa2bdcca4c51",
+        "version_id": "5b02378f5789044ef95a7bba5f11a3c7a0a628c3a3f75268015eeef5d775e89c",
+        "decision": "defer",
+        "reason": "This GitHub Blog post by a GitHub content strategist (Gwen Davis) directly addresses the central question — what developers should delegate to AI agents and what they should verify themselves — making it topically relevant. It recommends three practices: directing AI agents with clear problem definitions, using a second model to critique the first model's output before accepting it, and reserving judgment/tradeoff decisions for the human developer. The SQL query critique example (missing duplicate timestamp handling, missing index recommendation, potential performance issue on large tables) is a concrete, actionable illustration. However, several limitations prevent outright acceptance for this batch alone. First, the author is a GitHub content strategist with a commercial incentive to promote GitHub Copilot's 'Rubber Duck agent'; the tips are presented without any independent measurement of their effectiveness, user study, or comparison against a baseline. The 'Rubber Duck agent' claim is a vendor feature claim, not established effectiveness. Second, this is a standalone opinion/advice piece with no independent corroboration from other publishers in this batch, and editorial policy requires at least three independent publishers per synthesis argument. Third, missing voices are notable: no novice developer perspective, no evidence from unsuccessful deployments, no small-team cost consideration. The piece may serve piece_ids 01 (what changed) and 03 (implications) in a future batch if independent corroboration is found. Deferring rather than accepting because synthesis requirements cannot be met from this batch alone, and the core claims are vendor-positioned without independent validation.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:github:0b0f6d3b9776aa2bdcca4c51",
+        "version_id": "5b02378f5789044ef95a7bba5f11a3c7a0a628c3a3f75268015eeef5d775e89c",
+        "decision": "accept",
+        "reason": "This GitHub blog post by a GitHub content strategist offers career-focused, practical guidance on working with AI coding agents: directing agents rather than just using them, critically reviewing AI output (including the specific technique of using a second model to critique the first), and reserving human judgment for architectural tradeoffs and problem validation. It is directly on-topic for the central question of what developers should adopt and what they must still verify themselves. The framing of agent delegation—defining work, reviewing outputs, making technical decisions—speaks to the audience of student developers and small teams. Limitations: This is a vendor publication (GitHub/Microsoft, maker of Copilot), so the advice implicitly promotes Copilot features like the 'Rubber Duck agent.' The 'Tip #2' critique-model example is illustrative, not a controlled study. No independent measurement of effectiveness is provided. Missing voices: novices who lack the judgment to evaluate AI critiques, small teams without access to multi-model setups, and unsuccessful adoption cases. Piece 01 can use the agent-direction framing as evidence of changing workflows; Piece 02 can scrutinize the vendor incentive and the absence of verification data; Piece 03 can address the implication that judgment and review skills matter more as agents handle more implementation.",
+        "piece_ids": [
+          "01",
+          "02",
+          "03"
+        ]
+      }
+    },
+    {
+      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+      "before": {
+        "item_id": "feed:github:0d18ec305a1878e27e64b561",
+        "version_id": "f6b5cfd7b4fbd44eb704545b833f6cd57398300e1a08165cc925dac0c1a15851",
+        "decision": "defer",
+        "reason": "This GitHub Blog post describes a production ML system — a two-stage secret detection pipeline (regex candidate generation + fine-tuned ModernBERT classifier) — with specific claimed metrics: 11.5% higher owner-weighted acceptance in an A/B experiment, 86% faster post-push scan execution, and over 98% cost reduction versus the previous LLM-based pipeline. This is directly relevant to the central question: AI-assisted coding agents generate more code faster, increasing the risk of accidentally committed secrets; this tooling change aims to catch those secrets more reliably. The pipeline design (hybrid deterministic + learned classifier) and the reasoning for choosing a small fine-tuned encoder over a general LLM for this task are substantive and practically instructive. However, several limitations apply. The authors (Batu Ozturkler and Shengyu Fu) are Microsoft/GitHub employees with commercial incentive; this is a vendor publication about their own product. The A/B experiment methodology is described at a high level but no sample size, confidence intervals, experiment duration, or pre-registration are reported. The 'owner-weighted acceptance' metric is defined in the article but its relationship to actual security outcomes (secrets actually prevented from being exploited) is not established. The offline evaluation (13% higher precision, 19% higher recall) and the online A/B result (11.5% acceptance improvement) are different metrics that are not reconciled. No independent replication or external audit is present. In this batch, there is no second independent publisher covering this system or the underlying problem. Deferring: the piece has genuine relevance for piece_ids 01 (what changed in secret scanning) and 02 (scrutinize the methodology and metric choices), and could support piece_id 03 (implications for AI-accelerated coding workflows), but synthesis requires independent corroboration not present in this batch. If a future batch provides a second independent perspective on AI-generated code and secret leakage, this item should be reconsidered for acceptance.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:github:0d18ec305a1878e27e64b561",
+        "version_id": "f6b5cfd7b4fbd44eb704545b833f6cd57398300e1a08165cc925dac0c1a15851",
+        "decision": "accept",
+        "reason": "This GitHub engineering post describes a new context-aware secret classifier for GitHub secret scanning, reporting measured production results: 11.5% higher owner-weighted alert acceptance, 86% faster post-push scan execution time, and 98% lower serving cost versus the prior LLM-based pipeline. The connection to the central question is concrete: AI-accelerated development increases the volume of code commits and therefore the surface area for accidentally committed secrets. The companion post referenced ('Secret protection must scale with software') explicitly links faster AI coding to the need for faster secret protection. The methodology is disclosed: two-stage pipeline (regex + fine-tuned ModernBERT), A/B experiment for online evaluation, offline precision/recall measurements, and explanation of the owner-weighted metric to avoid distortion from bulk-resolution. Limitations: This is a self-reported vendor study by GitHub/Microsoft with no independent replication. The A/B baseline is the prior LLM pipeline, not a non-AI baseline, so absolute improvement over no scanning is not stated. Training data sourcing relies partly on synthetic examples. Missing voices: developers who generate high false-positive rates in practice, small teams on free tiers who may not have push protection available, and accessibility of the configuration. Piece 01 can note the concrete improvement as evidence AI tooling in the security layer is maturing; Piece 02 can scrutinize the self-reported metrics and absence of independent audit; Piece 03 can discuss the implication that developers should verify agent-generated code with automated scanning rather than assuming clean output.",
+        "piece_ids": [
+          "01",
+          "02",
+          "03"
+        ]
+      }
+    },
+    {
+      "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+      "before": {
+        "item_id": "feed:simon-willison:901eddfa61b84a5e35f1f60f",
+        "version_id": "7741fedcf06145f55c16e3b0dd30097e14ad1b54eccfea7de0e4c7496bf9d1a5",
+        "decision": "reject",
+        "reason": "This is a detailed Python 3.15 release summary by Simon Willison covering lazy imports, unpacking syntax, the new Tachyon sampling profiler, and uv upgrade steps. It is useful Python tooling content but has no connection to AI coding agents, agent verification, agent permissions, or delegation of coding work. It does not serve the central question. No piece IDs applicable.",
+        "piece_ids": []
+      },
+      "after": {
+        "item_id": "feed:simon-willison:901eddfa61b84a5e35f1f60f",
+        "version_id": "7741fedcf06145f55c16e3b0dd30097e14ad1b54eccfea7de0e4c7496bf9d1a5",
+        "decision": "defer",
+        "reason": "This is a substantive, well-documented article about Python 3.15 features (lazy imports, unpacking in comprehensions, the new Tachyon sampling profiler) and Python 3.11 improvements now available to developers dropping 3.10 support. It is relevant to the coding environment student developers work in, and the built-in sampling profiler is particularly notable as a verification and debugging tool. However, there is no direct connection to AI coding agents, agent verification, or delegation workflows. The item could support an 'implications and what to watch next' angle (e.g., how lazy imports affect agent-generated plugin code, or how the new profiler could be used to verify agent-generated performance claims), but on its own the link to the central question is indirect. Defer pending whether other accepted items create a cross-source synthesis opportunity where Python 3.15 tooling becomes relevant to verifying agent output. Do not infer this item is useless — it may become valuable in a broader candidate set.",
+        "piece_ids": []
+      }
+    },
+    {
+      "title": "Production-grade LLMs and agents: a field guide",
+      "before": {
+        "item_id": "feed:stackoverflow:56dba7d9cf962ed143721fa8",
+        "version_id": "3921e34ddc0003c2f4420e1d6716786e7202484d3cd3738dcd4e6446b81c609b",
+        "decision": "accept",
+        "reason": "This is the index/overview article for the same six-level maturity series as source-3. It provides the overall maturity model (levels 0–6), a 10-question self-assessment checklist, and a map to each deep-dive article. It is useful as a standalone navigational and evaluative tool: the self-assessment directly serves the 'what to verify yourself' angle, and the maturity model gives student developers a framework for diagnosing gaps. The one-paragraph thesis ('shrink the model's job to the smallest decision that needs judgment, then wrap it in deterministic machinery') is a clear, quotable framing. Limitations: this is a series overview/index page, not a standalone evidence piece — its substantive claims are supported by the linked deep-dives, not this article itself. It does not provide new empirical data beyond what is in source-3 and the broader series. Treating it as independent corroboration of source-3 would be incorrect; it is the same series. However, it contributes a distinct artifact (the self-assessment checklist and maturity levels 0 and 6) not fully present in source-3, which focused on Level 5 alone. Serves angles 01 (what changed: a structured framework for evaluating agent readiness) and 03 (implications: what the path to production-grade actually requires, framed for self-assessment). Reuse with source-3 is acceptable only when serving different arguments — the index for framing/assessment, the Level 5 piece for operational specifics.",
+        "piece_ids": [
+          "01",
+          "03"
+        ]
+      },
+      "after": {
+        "item_id": "feed:stackoverflow:56dba7d9cf962ed143721fa8",
+        "version_id": "3921e34ddc0003c2f4420e1d6716786e7202484d3cd3738dcd4e6446b81c609b",
+        "decision": "defer",
+        "reason": "This is the index/overview post for the same six-part Stack Overflow Blog series as source-3. It provides a maturity model summary, a 90-second self-assessment checklist, and links to each deep-dive article. As an index, it adds real structural value — the maturity levels and the self-assessment checklist are independently citable — but nearly all substantive content it introduces is developed in detail in source-3 (Level 5) and presumably in other series articles not yet in this batch. Accepting both source-3 and source-4 from the same publisher risks the appearance of treating one series as multiple independent corroborators, which the policy explicitly prohibits. The self-assessment checklist ('Fewer than half ticked → you're earlier than the demo suggests') and the one-paragraph thesis ('shrink the model's job to the smallest decision that needs judgment, then wrap it in deterministic machinery') are concise and quotable. However, these points are substantively covered or implied in source-3. Deferring rather than rejecting because the maturity model framing and the self-assessment tool could serve angle 01 or angle 03 distinctly if other batch items are insufficient — but the next stage should confirm whether a different-publisher source covers the same framing before including this as a second Stack Overflow Blog item from the same series in the same synthesis.",
+        "piece_ids": []
+      }
+    }
+  ]
+}

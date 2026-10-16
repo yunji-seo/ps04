@@ -1,0 +1,727 @@
+{
+  "checked_at": "2026-10-15T13:40:48.172Z",
+  "purpose": "Source discovery only; not a complete pipeline run or eligibility assessment",
+  "results": [
+    {
+      "source": {
+        "source_id": "simon",
+        "publisher_id": "simon-willison",
+        "kind": "feed",
+        "url": "https://simonwillison.net/atom/everything/"
+      },
+      "status": "retrieved",
+      "count": 30,
+      "items": [
+        {
+          "item_id": "feed:simon-willison:4c30b4b05fcb88bec2dc3e39",
+          "source_id": "simon",
+          "publisher_id": "simon-willison",
+          "kind": "feed",
+          "title": "Anti-Patterns in Software Blogging",
+          "url": "https://simonwillison.net/2026/Oct/7/anti-patterns-in-software-blogging/",
+          "published_at": "2026-10-07T14:53:51.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.535Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://simonwillison.net/atom/everything/",
+            "field": "published",
+            "value": "2026-10-07T14:53:51+00:00"
+          },
+          "native_id": "https://simonwillison.net/2026/Oct/7/anti-patterns-in-software-blogging/"
+        },
+        {
+          "item_id": "feed:simon-willison:a919ba35a5e056c2278ba024",
+          "source_id": "simon",
+          "publisher_id": "simon-willison",
+          "kind": "feed",
+          "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
+          "url": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
+          "published_at": "2026-10-07T00:16:45.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.535Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://simonwillison.net/atom/everything/",
+            "field": "published",
+            "value": "2026-10-07T00:16:45+00:00"
+          },
+          "native_id": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "github",
+        "publisher_id": "github",
+        "kind": "feed",
+        "url": "https://github.blog/feed/"
+      },
+      "status": "failed",
+      "error": "DOCTYPE declarations are not accepted in source feeds"
+    },
+    {
+      "source": {
+        "source_id": "cloudflare",
+        "publisher_id": "cloudflare",
+        "kind": "feed",
+        "url": "https://blog.cloudflare.com/rss/"
+      },
+      "status": "retrieved",
+      "count": 20,
+      "items": [
+        {
+          "item_id": "feed:cloudflare:23e8d56010663b8be21c5cd8",
+          "source_id": "cloudflare",
+          "publisher_id": "cloudflare",
+          "kind": "feed",
+          "title": "Building an evidence-grounded agentic security operations harness on Cloudflare",
+          "url": "https://blog.cloudflare.com/agentic-security-operations/",
+          "published_at": "2026-10-07T16:30:36.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.467Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://blog.cloudflare.com/rss/",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 16:30:36 GMT"
+          },
+          "native_id": "01M49SJF5QT2EPN5CTQ3C99EZW"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "fowler",
+        "publisher_id": "martin-fowler",
+        "kind": "feed",
+        "url": "https://martinfowler.com/feed.atom"
+      },
+      "status": "retrieved",
+      "count": 30,
+      "items": [
+        {
+          "item_id": "feed:martin-fowler:ce8017b6cf7878e552ba01be",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "When Software Meets Hardware",
+          "url": "https://martinfowler.com/articles/software-meets-hardware.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.328Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "tag:martinfowler.com,2026-10-15:When-Software-Meets-Hardware"
+        },
+        {
+          "item_id": "feed:martin-fowler:fa2cf7f3abc01193a67a5eb6",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "Maybe We Shouldn't Be Reviewing All This Code",
+          "url": "https://martinfowler.com/rachels-ramblings/code-review.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.335Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "https://martinfowler.com/rachels-ramblings/code-review.html"
+        },
+        {
+          "item_id": "feed:martin-fowler:8abf47a3da157b1e527fae49",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "Making Your Data Ready for Agentic AI",
+          "url": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.335Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "tag:martinfowler.com,2026-08-27:Making-Your-Data-Ready-for-Agentic-AI"
+        },
+        {
+          "item_id": "feed:martin-fowler:bf54a8a4e57cee033d83ec10",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "Citizens Build, Agents Execute, Experts Govern",
+          "url": "https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.335Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "https://martinfowler.com/rachels-ramblings/citizens-agents-experts.html"
+        },
+        {
+          "item_id": "feed:martin-fowler:e8f4d6c95542ce0ca11dbdad",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "TDD inside the agent loop - theater or actual value?",
+          "url": "https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.335Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "tag:martinfowler.com,2026-08-11:TDD-inside-the-agent-loop---theater-or-actual-value-"
+        },
+        {
+          "item_id": "feed:martin-fowler:2cc2ae252fb2084a6b420e7d",
+          "source_id": "fowler",
+          "publisher_id": "martin-fowler",
+          "kind": "feed",
+          "title": "The Conductor Developer",
+          "url": "https://martinfowler.com/rachels-ramblings/conductor-developer.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T13:40:47.335Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://martinfowler.com/feed.atom",
+            "field": "dc:date",
+            "value": null
+          },
+          "native_id": "https://martinfowler.com/rachels-ramblings/conductor-developer.html"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "stackoverflow",
+        "publisher_id": "stackoverflow",
+        "kind": "feed",
+        "url": "https://stackoverflow.blog/feed/"
+      },
+      "status": "retrieved",
+      "count": 40,
+      "items": [
+        {
+          "item_id": "feed:stackoverflow:425cbd44d7ef5cc67868c4f7",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Taking a look under your agent’s hood",
+          "url": "https://stackoverflow.blog/2026/10/09/taking-a-look-under-your-agent-s-hood/",
+          "published_at": "2026-10-09T07:40:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Fri, 09 Oct 2026 07:40:00 GMT"
+          },
+          "native_id": "65868662-3b7d-4a63-9fa9-e699c48529fc"
+        },
+        {
+          "item_id": "feed:stackoverflow:56dba7d9cf962ed143721fa8",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Production-grade LLMs and agents: a field guide",
+          "url": "https://stackoverflow.blog/2026/10/08/production-grade-llms-and-agents-a-field-guide/",
+          "published_at": "2026-10-08T20:22:56.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Thu, 08 Oct 2026 20:22:56 GMT"
+          },
+          "native_id": "f13e8883-6d06-432d-9f93-10ae8b0fd048"
+        },
+        {
+          "item_id": "feed:stackoverflow:bcd34ceb205e64cdf75eeddb",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "A green exit code is not evidence that the work happened",
+          "url": "https://stackoverflow.blog/2026/10/08/a-green-exit-code-is-not-evidence-that-the-work-happened/",
+          "published_at": "2026-10-08T14:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Thu, 08 Oct 2026 14:00:00 GMT"
+          },
+          "native_id": "358fa8ac-2467-4ef4-893c-dad3490046df"
+        },
+        {
+          "item_id": "feed:stackoverflow:e069db761dd97c3affe23a5f",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Part 3: Knowing when your agent doesn’t know: the confidence layer",
+          "url": "https://stackoverflow.blog/2026/10/07/part-3-knowing-when-your-agent-doesn-t-know-the-confidence-layer/",
+          "published_at": "2026-10-07T20:40:29.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 20:40:29 GMT"
+          },
+          "native_id": "ce1fd642-fe2b-4d83-95ad-67b7645d7959"
+        },
+        {
+          "item_id": "feed:stackoverflow:1f12fc7a66e64f3b347909fa",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Part 1: Make your AI agents boring: the determinism layer",
+          "url": "https://stackoverflow.blog/2026/10/07/part-1-make-your-ai-agents-boring-the-determinism-layer/",
+          "published_at": "2026-10-07T20:14:49.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 20:14:49 GMT"
+          },
+          "native_id": "39f2fc9f-742a-4273-a4d1-abdecd14fcf8"
+        },
+        {
+          "item_id": "feed:stackoverflow:a8d12650230e9bcc8204ab96",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Part 6: An operating system for coding agents: the disciplined build",
+          "url": "https://stackoverflow.blog/2026/10/07/part-6-an-operating-system-for-coding-agents-the-disciplined-build/",
+          "published_at": "2026-10-07T20:09:22.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 20:09:22 GMT"
+          },
+          "native_id": "7fdf107e-3649-4a6b-98c4-89788838cfbf"
+        },
+        {
+          "item_id": "feed:stackoverflow:e7cb562ecff5722f8d397be4",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Implementing a Modular Master-Agent Telemetry & Diagnostic Framework in Python: Prime-Sentinel Command (PSC)",
+          "url": "https://stackoverflow.blog/2026/10/07/implementing-a-modular-master-agent-telemetry-and-diagnostic-framework-in-python-prime-sentinel-command-psc/",
+          "published_at": "2026-10-07T20:03:47.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 20:03:47 GMT"
+          },
+          "native_id": "f2b2b7a0-c8e2-4387-8a7d-439b28bab359"
+        },
+        {
+          "item_id": "feed:stackoverflow:329a38c7dc23f3c833bd608a",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Tales from the 2026 Developer Survey results",
+          "url": "https://stackoverflow.blog/2026/10/06/tales-from-the-2026-developer-survey-results/",
+          "published_at": "2026-10-06T17:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Tue, 06 Oct 2026 17:00:00 GMT"
+          },
+          "native_id": "8e6c3a8a-3d27-44c8-be90-0b74d1090a4a"
+        },
+        {
+          "item_id": "feed:stackoverflow:edead97c0dddd2912dacde14",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "The results of the 2026 Developer Survey are here!",
+          "url": "https://stackoverflow.blog/2026/10/06/the-results-of-the-2026-developer-survey-are-here/",
+          "published_at": "2026-10-06T14:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Tue, 06 Oct 2026 14:00:00 GMT"
+          },
+          "native_id": "b1af6214-1a59-4309-8484-920746d31d04"
+        },
+        {
+          "item_id": "feed:stackoverflow:ca30611f3bc9c5d6c1988e7e",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Constraints that make developers faster",
+          "url": "https://stackoverflow.blog/2026/10/02/constraints-that-make-developers-faster/",
+          "published_at": "2026-10-02T07:40:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Fri, 02 Oct 2026 07:40:00 GMT"
+          },
+          "native_id": "f7b6d808-33ec-4a2d-bf20-66847f8d6bc7"
+        },
+        {
+          "item_id": "feed:stackoverflow:667e210bf14f4925d216aea2",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "A look back before we look forward: A Developer Survey retrospective",
+          "url": "https://stackoverflow.blog/2026/10/01/a-look-back-before-we-look-forward-a-developer-survey-retrospective/",
+          "published_at": "2026-10-01T14:47:33.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Thu, 01 Oct 2026 14:47:33 GMT"
+          },
+          "native_id": "5b49fdc8-0b0b-41d8-bbf6-6f6d8460e709"
+        },
+        {
+          "item_id": "feed:stackoverflow:26c4eebf5fc0b2f718e4b16f",
+          "source_id": "stackoverflow",
+          "publisher_id": "stackoverflow",
+          "kind": "feed",
+          "title": "Getting ready for 2026 results: A look back on Developer Survey findings",
+          "url": "https://stackoverflow.blog/2026/09/30/getting-ready-for-2026-results-a-look-back-on-developer-survey-findings/",
+          "published_at": "2026-09-30T14:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.487Z",
+          "media_url": null,
+          "date_evidence": {
+            "source": "https://stackoverflow.blog/feed/",
+            "field": "pubDate",
+            "value": "Wed, 30 Sep 2026 14:00:00 GMT"
+          },
+          "native_id": "ffd0f62d-2597-4506-a15a-f073dbaae590"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "latent",
+        "publisher_id": "latent-space",
+        "kind": "podcast",
+        "url": "https://www.latent.space/feed"
+      },
+      "status": "retrieved",
+      "count": 20,
+      "items": [
+        {
+          "item_id": "podcast:latent-space:247153705736c57d29c6ef69",
+          "source_id": "latent",
+          "publisher_id": "latent-space",
+          "kind": "podcast",
+          "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+          "url": "https://www.latent.space/p/crossing-the-threshold",
+          "published_at": "2026-10-14T21:40:52.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.580Z",
+          "media_url": "https://substackcdn.com/image/fetch/$s_!rtS2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4aa91ce4-8821-4844-aa0f-56d4bd3c8d7e_1280x720.jpeg",
+          "date_evidence": {
+            "source": "https://www.latent.space/feed",
+            "field": "pubDate",
+            "value": "Wed, 14 Oct 2026 21:40:52 GMT"
+          },
+          "native_id": "https://www.latent.space/p/crossing-the-threshold"
+        },
+        {
+          "item_id": "podcast:latent-space:be997bf718606abb5880af09",
+          "source_id": "latent",
+          "publisher_id": "latent-space",
+          "kind": "podcast",
+          "title": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+          "url": "https://www.latent.space/p/dyna",
+          "published_at": "2026-10-13T22:25:55.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.580Z",
+          "media_url": "https://api.substack.com/feed/podcast/220234130/c77b90e7331c0fabae60105d2325e9a0.mp3",
+          "date_evidence": {
+            "source": "https://www.latent.space/feed",
+            "field": "pubDate",
+            "value": "Tue, 13 Oct 2026 22:25:55 GMT"
+          },
+          "native_id": "https://www.latent.space/p/dyna"
+        },
+        {
+          "item_id": "podcast:latent-space:e71374164f2cb1add8d9303e",
+          "source_id": "latent",
+          "publisher_id": "latent-space",
+          "kind": "podcast",
+          "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+          "url": "https://www.latent.space/p/claude-dynamic-workflows",
+          "published_at": "2026-10-12T18:18:17.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.580Z",
+          "media_url": "https://substack-post-media.s3.amazonaws.com/public/images/dda42c05-6ce1-4e54-b544-f7d1557f04b2_1280x720.jpeg",
+          "date_evidence": {
+            "source": "https://www.latent.space/feed",
+            "field": "pubDate",
+            "value": "Mon, 12 Oct 2026 18:18:17 GMT"
+          },
+          "native_id": "https://www.latent.space/p/claude-dynamic-workflows"
+        },
+        {
+          "item_id": "podcast:latent-space:22732f8185e35596b40539e9",
+          "source_id": "latent",
+          "publisher_id": "latent-space",
+          "kind": "podcast",
+          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+          "url": "https://www.latent.space/p/stacklok",
+          "published_at": "2026-10-07T14:10:45.000Z",
+          "retrieved_at": "2026-10-15T13:40:47.580Z",
+          "media_url": "https://substackcdn.com/image/fetch/$s_!r55R!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe1c3cd3d-2682-47cb-9be6-74302c1ca8ea_2560x1440.png",
+          "date_evidence": {
+            "source": "https://www.latent.space/feed",
+            "field": "pubDate",
+            "value": "Wed, 07 Oct 2026 14:10:45 GMT"
+          },
+          "native_id": "https://www.latent.space/p/stacklok"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "changelog",
+        "publisher_id": "changelog",
+        "kind": "podcast",
+        "url": "https://changelog.com/podcast/feed"
+      },
+      "status": "retrieved",
+      "count": 1015,
+      "items": [
+        {
+          "item_id": "podcast:changelog:a137e4d815e4f78035d264ab",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "MCP on Code Mode (Interview)",
+          "url": "https://changelog.com/podcast/681",
+          "published_at": "2026-05-15T21:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/podcast/681/the-changelog-681.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Fri, 15 May 2026 21:00:00 +0000"
+          },
+          "native_id": "changelog.com/1/2826"
+        },
+        {
+          "item_id": "podcast:changelog:b9296f6f620a5a3787958923",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Exploring with agents (Interview)",
+          "url": "https://changelog.com/podcast/680",
+          "published_at": "2026-04-24T20:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/podcast/680/the-changelog-680.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Fri, 24 Apr 2026 20:00:00 +0000"
+          },
+          "native_id": "changelog.com/1/2822"
+        },
+        {
+          "item_id": "podcast:changelog:86359ab39c539d224cb56d4c",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "The mythical agent-month (News)",
+          "url": "https://changelog.com/news/182",
+          "published_at": "2026-02-23T20:45:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/182/changelog-news-182.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 23 Feb 2026 20:45:00 +0000"
+          },
+          "native_id": "changelog.com/16/2818"
+        },
+        {
+          "item_id": "podcast:changelog:645d0ce449d1c5f73ad8e9fe",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Agent psychosis: are we going insane? (News)",
+          "url": "https://changelog.com/news/177",
+          "published_at": "2026-01-19T20:30:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/177/changelog-news-177.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 19 Jan 2026 20:30:00 +0000"
+          },
+          "native_id": "changelog.com/16/2804"
+        },
+        {
+          "item_id": "podcast:changelog:0ba2f111b060a201045d173a",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Linus Torvalds gets the AI coding bug (News)",
+          "url": "https://changelog.com/news/176",
+          "published_at": "2026-01-12T19:35:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/176/changelog-news-176.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 12 Jan 2026 19:35:00 +0000"
+          },
+          "native_id": "changelog.com/16/2802"
+        },
+        {
+          "item_id": "podcast:changelog:16546dc0c9a744fa39f5fccf",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "From GitLab to Kilo Code (Interview)",
+          "url": "https://changelog.com/podcast/672",
+          "published_at": "2026-01-07T21:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/podcast/672/the-changelog-672.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Wed, 07 Jan 2026 21:00:00 +0000"
+          },
+          "native_id": "changelog.com/1/2794"
+        },
+        {
+          "item_id": "podcast:changelog:17f7ac905d0d1f9fb01df01a",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Agents in the database (Interview)",
+          "url": "https://changelog.com/podcast/671",
+          "published_at": "2025-12-18T21:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/podcast/671/the-changelog-671.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Thu, 18 Dec 2025 21:00:00 +0000"
+          },
+          "native_id": "changelog.com/1/2793"
+        },
+        {
+          "item_id": "podcast:changelog:a336b8569116defb20df35f0",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "The code, prose & pods that shaped 2025 (News)",
+          "url": "https://changelog.com/news/174",
+          "published_at": "2025-12-15T20:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.155Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/174/changelog-news-174.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 15 Dec 2025 20:00:00 +0000"
+          },
+          "native_id": "changelog.com/16/2798"
+        },
+        {
+          "item_id": "podcast:changelog:c86818c4e37f1f2bd846d799",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Very important agents (Friends)",
+          "url": "https://changelog.com/friends/120",
+          "published_at": "2025-12-05T22:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.156Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/friends/120/changelog--friends-120.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Fri, 05 Dec 2025 22:00:00 +0000"
+          },
+          "native_id": "changelog.com/17/2795"
+        },
+        {
+          "item_id": "podcast:changelog:be64cee9efb1cdf54e389db6",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Agentic infra changes everything (Interview)",
+          "url": "https://changelog.com/podcast/664",
+          "published_at": "2025-10-30T13:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.156Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/podcast/664/the-changelog-664.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Thu, 30 Oct 2025 13:00:00 +0000"
+          },
+          "native_id": "changelog.com/1/2777"
+        },
+        {
+          "item_id": "podcast:changelog:2f52dbdc4a65e54f33c2897a",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "Code like a surgeon (News)",
+          "url": "https://changelog.com/news/167",
+          "published_at": "2025-10-27T19:45:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.156Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/167/changelog-news-167.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 27 Oct 2025 19:45:00 +0000"
+          },
+          "native_id": "changelog.com/16/2776"
+        },
+        {
+          "item_id": "podcast:changelog:a2c97955a33902544d3ce6ef",
+          "source_id": "changelog",
+          "publisher_id": "changelog",
+          "kind": "podcast",
+          "title": "The science behind developer flow states (News)",
+          "url": "https://changelog.com/news/166",
+          "published_at": "2025-10-20T19:00:00.000Z",
+          "retrieved_at": "2026-10-15T13:40:48.156Z",
+          "media_url": "https://op3.dev/e/https://pscrb.fm/rss/p/https://cdn.changelog.com/uploads/news/166/changelog-news-166.mp3",
+          "date_evidence": {
+            "source": "https://changelog.com/podcast/feed",
+            "field": "pubDate",
+            "value": "Mon, 20 Oct 2025 19:00:00 +0000"
+          },
+          "native_id": "changelog.com/16/2773"
+        }
+      ]
+    },
+    {
+      "source": {
+        "source_id": "practicalai",
+        "publisher_id": "practical-ai",
+        "kind": "podcast",
+        "url": "https://feeds.transistor.fm/practical-ai"
+      },
+      "status": "failed",
+      "error": "HTTP 404 from feeds.transistor.fm"
+    }
+  ]
+}

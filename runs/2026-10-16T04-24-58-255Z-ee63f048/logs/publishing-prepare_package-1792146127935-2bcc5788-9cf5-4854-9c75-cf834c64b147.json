@@ -1,0 +1,16 @@
+{
+  "stage": "publishing/prepare_package",
+  "status": "completed",
+  "input_count": 3,
+  "output_count": 9,
+  "started_at": "2026-10-16T10:22:07.766Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": [],
+  "finished_at": "2026-10-16T10:22:07.935Z",
+  "exit_code": 0
+}

@@ -1,0 +1,16 @@
+{
+  "stage": "workflows/collect_sources",
+  "status": "failed",
+  "started_at": "2026-10-15T13:52:49.846Z",
+  "finished_at": "2026-10-15T13:55:03.298Z",
+  "exit_code": 1,
+  "input_count": null,
+  "output_count": null,
+  "tools": [
+    "bash"
+  ],
+  "models": [],
+  "cost_usd": 0,
+  "cost_is_estimate": false,
+  "errors": []
+}

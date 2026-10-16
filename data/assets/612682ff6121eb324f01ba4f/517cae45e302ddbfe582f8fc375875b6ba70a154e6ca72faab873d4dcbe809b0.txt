@@ -1,0 +1,364 @@
+Part 4: Safety and governance for LLM systems: guardrails, PII, audit, and memory
+
+The level where an LLM system stops being a demo and earns the right to touch real data and real decisions: layered guardrails that fail closed, PII handled at the boundary, an immutable audit trail, and scoped memory.
+
+By the time an LLM system is making decisions that matter, “it usually works” is no longer the bar. This is Level 4 of the maturity model — safety and governance — and it’s where four disciplines that teams tend to bolt on late have to be designed in instead. They share one idea: don’t trust a single point to do the right thing. Layer independent guardrails so a miss at one is caught at the next. Handle sensitive data at every boundary so it never accumulates where it shouldn’t. Write an immutable audit trail so “why did it do that?” has an answer months later. And scope memory by category so one customer’s data can never reach another’s decision — with a clean line between what you ship and what the system earns.
+
+None of these is exotic. Each is a small, testable contract enforced in code. Here is how they fit together.
+
+Defense in depth: layer your guardrails
+
+A lot of teams “add guardrails” by bolting one moderation filter onto the model output and calling it done. That’s the AI equivalent of a single firewall rule. Real safety, like real security, is defense in depth: several independent layers, each catching a different class of problem, arranged so a miss at one is caught at the next.
+
+Make every guardrail the same small contract, so you can add, remove, test, and reorder them independently.
+
+from typing import Protocol, Literal
+from dataclasses import dataclass, field
+
+@dataclass
+class GuardrailResult:
+    action: Literal["ok", "block", "redact", "flag"]
+    layer: str
+    rule: str = ""
+    detail: dict = field(default_factory=dict)   # e.g. {"fields": ["email"]}
+
+class Guardrail(Protocol):
+    layer: str
+    def check(self, ctx: "Context") -> GuardrailResult: ...
+
+A request then hits checkpoints on the way in and out:
+
+#  Layer                          Catches                                                 Stage
+-  -----------------------------  ------------------------------------------------------  ---------------------
+1  Input / pre-prompt             injection, oversized/malformed input                    before the model
+2  Grounding constraints          model using disallowed actions/data; off-schema output  shapes the model call
+3  Output scrub                   policy violations, PII echoed back                      after generation
+4  Verification                   business-rule / consistency violations                  deterministic code
+5  Judge                          "plausible but wrong" that passed mechanical checks     sampled second model
+6  Composed confidence + routing  the unknowns — anything still uncertain                 final net
+
+in ─▶[1 input]─▶[2 grounding]─▶(model)─▶[3 output scrub]─▶[4 verify]─▶[5 judge]─▶[6 confidence/route]─▶ act|escalate
+
+The order and the pass/fail logic live in one readable place. Two rules: fail closed (an errored or unavailable guardrail blocks or escalates — it never waves the request through) and log every block as a first-class signal.
+
+def run_guardrails(ctx, layers, metrics) -> list[GuardrailResult]:
+    applied = []                                     # accumulate — a redacted result must be visible to the caller/audit
+    for g in layers:
+        try:
+            r = g.check(ctx)
+        except GuardrailError:                       # NARROW — don't swallow your own bugs as a "block"
+            metrics.incr("guardrail_blocks_total", layer=g.layer, rule="error")  # rule = bounded enum, NEVER matched content
+            return applied + [GuardrailResult("block", g.layer, "error")]   # same label the metric emitted
+        if r.action == "ok":
+            continue
+        metrics.incr("guardrail_blocks_total", layer=g.layer, rule=r.rule)
+        if r.action in ("redact", "flag"):
+            ctx.apply(r); applied.append(r); continue
+        if r.action == "block":
+            return applied + [r]                     # stop at first hard block
+        return applied + [GuardrailResult("block", g.layer, "unknown_action")]  # unknown action == block (fail closed)
+    return applied or [GuardrailResult("ok", "all")]
+
+The one test that matters most here proves it fails closed:
+
+def test_fail_closed_on_error():
+    class Boom:                                 # a guardrail that throws
+        layer = "x"
+        def check(self, ctx): raise GuardrailError("boom")
+    result = run_guardrails(ctx, [Boom()], NullMetrics())
+    assert result[-1].action == "block"         # an erroring guardrail BLOCKS, never silently passes
+
+Why layers beat one big filter: there’s no single point of failure (injection slips past layer 1? grounding limits what it can do; an off output? scrub or verification catches it). Each layer is simple and testable — six single-purpose checks each have a clear contract, where one mega-filter is impossible to reason about. And different layers catch different failure modes: input scrub catches attacks, verification catches logic errors, the judge catches plausible-wrongness, confidence catches unknown unknowns. No single mechanism covers all four.
+
+One more reason to meter every block: guardrail_blocks_total{layer, rule} is one of the sharpest production health signals you have. A spike is an attack, a regression, or a bad deploy — page on it.
+
+The anti-patterns are mostly the inverse of the rules. Fail-open is worse than no guardrail — it gives false assurance. One layer doing everything is unmaintainable. Guardrails the model can talk past (“please don’t do X” in the prompt) aren’t guardrails — constrain the output space (enum/schema) so the disallowed thing is unrepresentable. Silent blocks mean you can’t tell an attack from a bug. And note that last layer-3 job — scrubbing PII the model echoed back — which is the natural handoff to the next discipline.
+
+PII at the boundary
+
+AI systems are unusually hungry for data — they want rich context to reason well, and they generate records of everything they decide. That collides with a basic obligation: don’t accumulate sensitive personal data you don’t need. The resolution is to handle PII at the boundary — scrub it on the way in and out, and never let raw sensitive data settle into your stores, logs, or model traffic.
+
+Drive redaction from a declared classification, not ad-hoc if field == "email" scattered around.
+
+class Sensitivity(Enum):
+    PUBLIC = 0      # ok anywhere
+    INTERNAL = 1    # ok in tier-1/2 logs + ledger summary
+    PII = 2         # mask in summaries; never in shared memory; tier-3 only if retained at all
+    SECRET = 3      # never persisted, never logged, never to the model unless essential
+
+FIELD_POLICY = {                         # the single source of truth
+    "name": Sensitivity.PII, "email": Sensitivity.PII, "card_number": Sensitivity.SECRET,
+    "amount": Sensitivity.INTERNAL, "category": Sensitivity.PUBLIC,
+}
+
+Every place data moves between components is a boundary — into the system, into the model, into the ledger, into logs, out to a service. At each, ask: does what crosses here need raw sensitive data? Usually no — redact, mask, or hash before it crosses.
+
+inbound ─▶[scrub]─▶ working set ─▶[scrub]─▶ model
+                          ├─▶[redact + hash]─▶ ledger    (no raw PII)
+                          └─▶[redact]─▶ logs             (no raw PII)
+
+The ledger boundary deserves special care: you need to prove what a decision was made on, not retain the sensitive payload. Store a hash plus a redacted summary; re-hash later to prove equivalence — verifiability without the liability.
+
+def classify(key) -> Sensitivity:
+    return FIELD_POLICY.get(key, Sensitivity.PII)      # DEFAULT-DENY: unknown keys are treated as PII
+
+def redact(obj):                                       # MUST recurse — real payloads are nested
+    if isinstance(obj, dict):
+        return {k: ("•••" if classify(k).value >= Sensitivity.PII.value else redact(v))
+                for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [redact(v) for v in obj]
+    return obj
+
+def drop_secrets(obj):                                 # SECRET fields never even enter the hash input
+    if isinstance(obj, dict):
+        return {k: drop_secrets(v) for k, v in obj.items() if classify(k) is not Sensitivity.SECRET}
+    if isinstance(obj, list):
+        return [drop_secrets(v) for v in obj]
+    return obj
+
+def ledger_view(raw: dict, tenant_key: bytes) -> dict:   # the ONLY way to write to the ledger
+    safe = drop_secrets(raw)
+    # HMAC with a per-tenant key, NOT bare sha256 — a plain hash of low-entropy PII (card, email,
+    # phone) is brute-forceable / rainbow-tableable, so "verifiability without liability" needs a key.
+    return {"inputs_hmac": "hmac-sha256:" + hmac_sha256(tenant_key, canonical_json(safe)),
+            "inputs_summary": redact(raw)}
+
+> Two decisions to pin once and reuse everywhere: (a) keyed hash (HMAC, per-tenant key in KMS) for any low-entropy field — a bare SHA-256 of a 16-digit number is reversible; (b) a single canonical-JSON spec (e.g. RFC 8785 / JCS — sorted keys, normalized unicode, fixed number format), because the audit-ledger hash chain depends on re-hashing producing identical bytes.
+
+The model is an external boundary too — often a third party. Strip sensitive fields it doesn’t need to reason out of prompts, and scrub its output before persisting or returning, because models echo input back. (That output scrub is exactly layer 3 above.)
+
+The failure mode is “we redact in most places” — a leak with extra steps. Make scrubbing the only path through each boundary, so a developer can’t forget:
+
+ledger.append(ledger_view(raw, tenant_key))   # there is no ledger.append(raw) — redaction isn't optional
+log.tier2(redact(event))            # the logging helper redacts; raw logging isn't exposed
+
+And design for residency and access up front. Sensitive data carries constraints on where it may live and who may read it — per-tenant keys, region-pinned storage for regulated tiers, access-gated audit reads. Retrofitting after data has spread everywhere is the nightmare you’re avoiding. The subtle leak isn’t out, it’s sideways — per-user context reaching the components that decide for other users — but that one is best handled structurally, in the memory model below.
+
+The append-only audit ledger
+
+The first time someone asks “why did the system decide that for case X back in March?”, you find out whether you built an audit trail or just have logs. Logs are for debugging — they rotate, they’re unstructured, they’re not the truth. An audit ledger is the canonical, append-only, tamper-evident record of every decision and why. For anything consequential it’s not optional.
+
+CREATE TABLE decision_ledger (
+  decision_id     TEXT PRIMARY KEY,        -- threads through logs/traces for this decision
+  ts              TIMESTAMPTZ NOT NULL,
+  tenant_id       TEXT NOT NULL,
+  identity        TEXT NOT NULL,           -- who/what authority it ran with
+  capability      TEXT NOT NULL,
+  inputs_hash     TEXT NOT NULL,           -- keyed hash of canonical inputs (NOT the raw payload)
+  inputs_summary  JSONB NOT NULL,          -- redacted, PII-free human-readable summary
+  model_version   TEXT NOT NULL,
+  prompt_version  TEXT NOT NULL,
+  decision        JSONB NOT NULL,          -- the structured decision
+  confidence      REAL,                    -- nullable: a manual supersede carries no model confidence
+  routing         TEXT NOT NULL,           -- auto | hitl_recommended | hitl_required | reject | abstain
+  outcome         JSONB,                   -- the ONE mutable column, filled in later; EXCLUDED from the hash
+  supersedes      TEXT REFERENCES decision_ledger(decision_id),
+  seq             BIGSERIAL,               -- monotonic, for the hash chain
+  prev_hash       TEXT,                    -- entry_hash of seq-1
+  entry_hash      TEXT NOT NULL            -- H(canonical(row-without-hash) + prev_hash)
+);
+-- App role gets INSERT + SELECT only. Revoke mutation in the DB, not just in code.
+REVOKE UPDATE, DELETE, TRUNCATE ON decision_ledger FROM app_role;
+GRANT  UPDATE (outcome) ON decision_ledger TO app_role;   -- column-level: ONLY `outcome` is writable later
+-- NOTE: this stops the APP, not a DB superuser/owner who can still DROP/TRUNCATE/rewrite. True
+-- append-only against an operator needs WORM/object-lock storage or external anchoring (below).
+
+Three design choices do the heavy lifting.
+
+Append-only — corrections supersede, never overwrite. You never edit or delete an entry; a correction is a new row that points at the old one.
+
+seq 1041  decision=approve  conf=0.91  supersedes=NULL
+seq 1207  decision=reject   conf=NULL  supersedes=<id of 1041>  reason="manual review"
+
+The history is the truth — a half-remembered old entry is never silently wrong, it’s visibly superseded. Enforce it at the database (revoke UPDATE/DELETE), because “we promise not to update it” is not append-only.
+
+Hash the inputs — prove what, don’t warehouse it. This is the same ledger_view from the PII section: store a hash plus a redacted summary, and prove a decision was made on specific inputs by re-hashing and comparing. Storing the full sensitive payload "for completeness" just builds a honeypot.
+
+Tamper-evidence — sign or chain. “Append-only” is a discipline until you make it cryptographic.
+
+import hashlib
+IMMUTABLE = ("decision_id","ts","tenant_id","identity","capability","inputs_hash","inputs_summary",
+             "model_version","prompt_version","decision","confidence","routing","seq","supersedes")
+GENESIS = "0" * 64
+
+def _h(payload: dict) -> str:                                  # runnable: encode + hexdigest
+    return hashlib.sha256(canonical_json(payload).encode()).hexdigest()
+
+def seal(row: dict, prev_hash: str) -> dict:
+    row["prev_hash"]  = prev_hash
+    # hash ONLY immutable fields (NOT `outcome`, written later) via a STRUCTURED payload —
+    # never string-concat hash+json (boundary ambiguity: two different rows could serialize identically).
+    row["entry_hash"] = _h({"row": {k: row[k] for k in IMMUTABLE}, "prev": prev_hash})
+    return row
+
+A hash chain is tamper-evidence against mutation — alter one row and every later entry_hash stops matching. It does not stop truncation (delete the tail) or a full rewrite from genesis. So the verifier asserts seq contiguity and a known GENESIS; and for an operator-level threat, also sign each entry_hash with an asymmetric key a separate signer holds, publishing periodic signed checkpoints to external storage. REVOKE stops the app; signing plus anchoring is what stops someone with DB write access.
+
+def verify_chain(rows):                      # returns first broken/missing seq, or None
+    prev, expect = GENESIS, None
+    for r in sorted(rows, key=lambda r: r["seq"]):
+        if expect is not None and r["seq"] != expect:        # contiguity → detects truncation/deletion
+            return expect                                     # a gap means rows were removed
+        if r["entry_hash"] != _h({"row": {k: r[k] for k in IMMUTABLE}, "prev": prev}):
+            return r["seq"]                                   # mutation detected
+        prev, expect = r["entry_hash"], r["seq"] + 1
+    return None
+
+Append under a lock: read the tail’s entry_hash with SELECT … FOR UPDATE (or an advisory lock) in the same transaction as the INSERT, or two concurrent appends fork the chain on the same prev_hash.
+
+Prove the tamper-evidence — the whole value prop in one test:
+
+def test_tamper_detected():
+    chain = seal_all([row(1), row(2), row(3)])     # three sealed, chained rows
+    chain[1]["decision"] = {"label": "tampered"}    # mutate a sealed row in place
+    assert verify_chain(chain) == chain[1]["seq"]   # detected exactly at the altered row
+
+And the queries the ledger is for:
+
+-- "why did the system do X, and what's its current state?" — the FULL supersede chain, both directions
+WITH RECURSIVE lineage AS (
+  SELECT * FROM decision_ledger WHERE decision_id = $1
+  UNION
+  SELECT d.* FROM decision_ledger d JOIN lineage l
+    ON d.decision_id = l.supersedes      -- walk back to ancestors
+    OR d.supersedes  = l.decision_id     -- walk forward to whatever superseded it
+)
+SELECT * FROM lineage ORDER BY seq;      -- the current state is the last row
+-- auto-execution rate by capability, last 7 days
+SELECT capability, avg((routing='auto')::int) FROM decision_ledger
+ WHERE ts > now() - interval '7 days' GROUP BY capability;
+
+The ledger is the backbone, not a side-effect: analytics, drift detection, override rates, and debugging all read from it, and decision_id ties each entry to its trace. So write the entry as the last node of every decision, unconditionally — never “skip the ledger if the queue is full,” or your audit has holes exactly when things went wrong.
+
+A memory model for multi-tenant agents
+
+The moment your agents serve more than one customer — or even more than one user — “memory” stops being a feature and becomes a data-governance problem wearing a feature’s clothes. A single undifferentiated memory store is the sideways leak from the PII section made concrete: cross-tenant data exposure waiting to happen, and an audit you can’t pass. The fix isn’t a fancier vector DB; it’s a typed memory model — named categories, each with explicit rules for scope, access, and sensitivity, enforced in code at the store boundary.
+
+from enum import Enum
+
+class MemoryCategory(Enum):
+    TENANT_SHARED      = "tenant_shared"      # org-wide knowledge — NO personal data
+    AGENT_NAMESPACE    = "agent_namespace"    # learned patterns (abstractions only, never raw records)
+    WORKFLOW_CONTEXT   = "workflow_context"   # scratch state for ONE invocation; discarded after
+    AUDIT              = "audit"              # immutable record; role-gated reads only
+    SEMANTIC_KNOWLEDGE = "semantic_knowledge" # curated reference/grounding facts
+    CONVERSATION       = "conversation"       # per-user, per-session; FIREWALLED from decision agents
+
+The point isn’t these exact six — it’s that every datum belongs to exactly one category, and the category dictates the rules. For each, pin down three things and enforce them in code, not docs:
+
+category            scope (partition key)  who can read             may hold PII?
+------------------  ---------------------  -----------------------  -----------------------------
+TENANT_SHARED       tenant                 any caller in tenant     **no**
+AGENT_NAMESPACE     tenant                 the system               patterns only, **no raw PII**
+WORKFLOW_CONTEXT    invocation             that invocation          transient only
+AUDIT               tenant                 audit role only          hashes/redacted
+SEMANTIC_KNOWLEDGE  global/tenant          the system               curated, **no** user PII
+CONVERSATION        user + session         that user's own session  yes, firewalled
+
+Tenant scoping is non-negotiable: every read/write carries tenant_id (and user_id where the category is user-scoped), checked at the store, with cross-tenant access a hard error.
+
+@dataclass
+class Caller:                       # comes from the validated auth context, NOT the request body
+    tenant_id: str
+    user_id: str | None = None
+    role: str | None = None
+
+def partition_key(category, tenant_id, *, user_id=None, session_id=None, invocation_id=None) -> str:
+    C = MemoryCategory                                          # each branch matches the table's scope column
+    if category is C.WORKFLOW_CONTEXT:                          # invocation-scoped — the next run can't read it
+        assert invocation_id, "workflow context is invocation-scoped"
+        return f"{category.value}:{tenant_id}:{invocation_id}"
+    if category is C.CONVERSATION:                             # per-user, per-session
+        assert user_id and session_id, "conversation is per-user, per-session"
+        return f"{category.value}:{tenant_id}:{user_id}:{session_id}"
+    if category is C.SEMANTIC_KNOWLEDGE:                       # may be global; 'global' never collapses tenants together
+        return f"{category.value}:{tenant_id or 'global'}"
+    return f"{category.value}:{tenant_id}"                     # TENANT_SHARED, AGENT_NAMESPACE, AUDIT
+
+def read(category, *, tenant_id, key, caller: Caller, user_id=None, session_id=None, invocation_id=None):
+    enforce_access(category, tenant_id, caller, user_id)        # raises Forbidden on ANY violation
+    return store.get(partition_key(category, tenant_id, user_id=user_id,
+                                   session_id=session_id, invocation_id=invocation_id), key)
+
+def enforce_access(category, tenant_id, caller: Caller, user_id):
+    if caller.tenant_id != tenant_id:                          # THE cross-tenant gate
+        raise Forbidden("cross-tenant access")
+    if category is MemoryCategory.AUDIT and caller.role != "audit":
+        raise Forbidden("audit memory is role-gated")
+    if category is MemoryCategory.CONVERSATION:                 # firewall: only your OWN session
+        if user_id is None or caller.user_id != user_id:
+            raise Forbidden("conversation memory is per-user")
+
+def write(category, *, tenant_id, key, value, caller: Caller, user_id=None, session_id=None, invocation_id=None):
+    enforce_access(category, tenant_id, caller, user_id)
+    if category in (MemoryCategory.TENANT_SHARED, MemoryCategory.AGENT_NAMESPACE) and contains_pii(value):
+        raise Forbidden(f"{category} must not hold personal data")   # explicit raise, NOT assert (-O strips asserts)
+    store.put(partition_key(category, tenant_id, user_id=user_id,
+                            session_id=session_id, invocation_id=invocation_id), key, value)
+
+The firewall that prevents the embarrassing leak is CONVERSATION: a decision agent for user B must never read user A's conversation. Keep it in its own category, readable only within A's own session, and never injected into a shared decision path. That one boundary prevents a whole class of "why does the AI know that about me?" incidents — and it's the structural answer to the sideways leak flagged earlier.
+
+Test the leaks you’re most afraid of on day one — at the boundary, not by string-searching a serialized context (a base64 or embedding of the data would slip a substring check):
+
+def test_no_cross_tenant_read():
+    write(MemoryCategory.TENANT_SHARED, tenant_id="A", key="policy", value="x", caller=Caller("A"))
+    with pytest.raises(Forbidden):                                   # A's caller may not read B's partition
+        read(MemoryCategory.TENANT_SHARED, tenant_id="B", key="policy", caller=Caller("A"))
+
+def test_conversation_firewalled_to_owning_user():
+    write(MemoryCategory.CONVERSATION, tenant_id="A", user_id="u1", session_id="s1", key="msg",
+          value="secret", caller=Caller("A", user_id="u1"))
+    with pytest.raises(Forbidden):                                   # u2 can't read u1's conversation
+        read(MemoryCategory.CONVERSATION, tenant_id="A", key="msg",
+             user_id="u1", session_id="s1", caller=Caller("A", user_id="u2"))
+
+Even single-tenant today, writing it this way makes the move to multi-tenant a config change instead of a rewrite. The anti-patterns: one undifferentiated store (no category, no rule, eventual leak); filtering “in the application, usually” instead of at the store boundary on every access; raw records in shared/namespace memory (those are abstractions-only — check at write time); and clearing memory that wipes curated knowledge — which is the seam the last section exists to draw.
+
+Seed vs runtime: what you ship vs what the system earns
+
+Here’s a bug I’ve watched happen more than once: someone runs a “clear memory” or “reset” to wipe accumulated state, and it also deletes the prompts, rules, and reference data the system needs to function. It comes back amnesiac — not just forgetting what it learned, but forgetting what it is.
+
+The root cause is a missing distinction. In any stateful AI system there are two completely different kinds of data, and they should be stored, versioned, and lifecycle-managed differently: seed (what you ship — prompts, prompt versions, decision rules and policies, golden sets and eval baselines, grounding data) and runtime (what the system earns — the audit ledger, learned memory, drift signals, incidents, per-session context). Seed is the genome: authored by you, version-controlled, travels with the deploy, never mutated by the running system. Runtime is experience: a byproduct of operating, mutable, much of it disposable — clear it and the system still works, back to baseline behavior, because its identity lives in seed.
+
+A directory layout that encodes the seam:
+
+seed/            # shipped with the release, READ-ONLY at runtime, version-controlled
+  prompts/
+  rules/
+  golden_sets/
+  grounding/
+runtime/         # earned by operating, mutable, clearable without breaking behavior
+  ledger/        # decisions made (canonical audit)
+  memory/        # learned/earned state
+  drift/         # signals, incidents, governance
+  sessions/      # per-invocation context
+
+The single most important function is a scoped reset — and the guard must be a real raise, not an assert (production runs with -O` would drop the assert and silently allow a seed wipe):
+
+def clear_state(scope: str):
+    if scope != "runtime":                            # explicit raise — `assert` is STRIPPED under python -O
+        raise ValueError("refusing to clear seed — seed is shipped config, not state")
+    for area in ("memory", "drift", "sessions"):      # NOT ledger by default — it's the audit record
+        storage.purge(f"runtime/{area}")
+    # seed/** is never touched. The amnesia bug cannot happen.
+
+Note even within runtime, the ledger is retained — it’s the audit record from earlier; purge memory and sessions, not history. (Caveat: “clear runtime and behavior returns to seed-baseline” assumes earned memory is additive context, not load-bearing input to decisions — state that assumption for your system.)
+
+New behavior doesn’t sneak from runtime into how the system acts. You promote validated runtime signals into seed through a deliberate, reviewed step:
+
+runtime signal (e.g. a pattern recurs, humans keep correcting X the same way)
+   └─▶ candidate (proposed prompt/rule/golden-case change)
+        └─▶ review + eval gate (does it improve quality without regressing baseline?)
+             └─▶ merged into seed/  → ships in the next release
+
+The system never edits its own seed at runtime — that would be unversioned, unreviewed, irreproducible behavior change. Learning is a PR, not a side effect. The seam makes the hard questions easy: reset clears runtime only; nothing in seed changes without a reviewed, eval-gated release; anything seed-driven is reproducible given the input, while what got learned explicitly is not; and new behavior always comes from promoted runtime signals through review, never runtime → behavior directly.
+
+The takeaway
+
+Safety and governance at this level isn’t a feature you add; it’s an architecture you arrange, and the four pieces reinforce each other. Guardrails compose behind one contract and fail closed, so a single failure is a caught failure. PII is scrubbed at every boundary and hashed instead of stored, so the rich context an AI needs accumulates without the raw liability — and the output scrub is just a guardrail layer, while the ledger hash is just the boundary’s ledger_view. The audit ledger is append-only, tamper-evident, and written as the final unconditional step of every decision, so “why did it do that in March?” is a one-row query with verifiable lineage. Memory is typed and scoped so one tenant’s — or one user’s — data can never reach another’s decision, which is the structural cure for the sideways leak. And the seed/runtime seam keeps all of this resettable and reproducible, with learning flowing through review rather than mutating behavior in place. Build these in at Level 4 and the system becomes one you can stand behind under audit — instead of one you can only apologize for.
+
+Series: Running LLM systems in production — Level 4 of 6: Safety & governance.
+
+These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.
+
+creativecommons.org/licenses/by-sa/4.0/deed.en

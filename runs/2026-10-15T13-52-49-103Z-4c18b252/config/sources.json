@@ -1,0 +1,9 @@
+[
+  {"source_id":"simon-feed","publisher_id":"simon-willison","kind":"feed","url":"https://simonwillison.net/atom/everything/","max_items":15,"perspective":"Independent practitioner; links may repeat other publishers and must be traced"},
+  {"source_id":"github-feed","publisher_id":"github","kind":"feed","url":"https://github.blog/feed/","max_items":12,"perspective":"Vendor and developer-platform operator"},
+  {"source_id":"cloudflare-feed","publisher_id":"cloudflare","kind":"feed","url":"https://blog.cloudflare.com/rss/","max_items":10,"perspective":"Infrastructure vendor and engineering practice"},
+  {"source_id":"stackoverflow-feed","publisher_id":"stackoverflow","kind":"feed","url":"https://stackoverflow.blog/feed/","max_items":12,"perspective":"Developer survey publisher and commercial platform"},
+  {"source_id":"latent-podcast","publisher_id":"latent-space","kind":"podcast","url":"https://www.latent.space/feed","max_items":2,"episode_urls":["https://www.latent.space/p/thariq","https://www.latent.space/p/devday-2026"],"include_urls":["https://www.latent.space/p/thariq","https://www.latent.space/p/devday-2026"],"perspective":"Interviews with vendor staff; two interviews from this show count as one publisher"},
+  {"source_id":"github-video","publisher_id":"github","kind":"youtube","url":"https://www.youtube.com/watch?v=KT6p0MNXoCE","max_items":1,"perspective":"Vendor demonstration; shared publisher identity with GitHub blog"},
+  {"source_id":"openai-video","publisher_id":"openai","kind":"youtube","url":"https://www.youtube.com/watch?v=IZXv6a78NDw","max_items":1,"perspective":"Vendor demonstration; benefits require scrutiny"}
+]

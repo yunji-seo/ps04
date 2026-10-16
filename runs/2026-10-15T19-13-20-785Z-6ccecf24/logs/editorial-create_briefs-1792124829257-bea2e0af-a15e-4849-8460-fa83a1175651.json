@@ -1,0 +1,26 @@
+{
+  "stage": "editorial/create_briefs",
+  "status": "failed",
+  "input_count": 54,
+  "output_count": 0,
+  "started_at": "2026-10-16T04:26:56.652Z",
+  "tools": [
+    "node v22.14.0"
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "cost_usd": null,
+  "cost_is_estimate": false,
+  "errors": [
+    "Plan 03: Select at least three different publisher_id values"
+  ],
+  "model_calls": 4,
+  "token_usage": {
+    "prompt_tokens": 12,
+    "completion_tokens": 636,
+    "total_tokens": 8924
+  },
+  "finished_at": "2026-10-16T04:27:09.257Z",
+  "exit_code": 1
+}

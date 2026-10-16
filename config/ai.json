@@ -1,0 +1,7 @@
+{
+  "provider": "mit-parley",
+  "base_url": "https://parley.api.mit.edu/v1",
+  "model": "claude-sonnet-4-6",
+  "selection_batch_size": 4,
+  "cost_reporting": "Actual token usage is retained; dollar cost is unknown unless reconciled with the provider account. No automatic retry."
+}
