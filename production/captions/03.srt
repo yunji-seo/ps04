@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:04,000
+Before your team adopts an AI coding agent, the most useful question
+
+2
+00:00:04,000 --> 00:00:08,000
+isn't "does it work?" It's: who checks the result, and how much
+
+3
+00:00:08,000 --> 00:00:12,000
+does that checking cost? Several recent sources raise that question from different
+
+4
+00:00:12,000 --> 00:00:15,000
+angles. Here's what they actually say—and what they don't.
+
+5
+00:00:15,000 --> 00:00:19,088
+The human role. GitHub's skills guidance argues that working with AI agents
+
+6
+00:00:19,088 --> 00:00:23,176
+is a high-skill coordination job: defining problems clearly, evaluating generated code, and
+
+7
+00:00:23,176 --> 00:00:27,264
+deciding what's ready to ship. That framing comes from a company selling
+
+8
+00:00:27,264 --> 00:00:31,352
+agent tools, so treat it as a source claim, not an independent
+
+9
+00:00:31,352 --> 00:00:35,440
+finding. But the practical point holds: delegating implementation does not remove responsibility
+
+10
+00:00:35,440 --> 00:00:39,527
+for the result. Prompting as a skill. In a Latent Space podcast
+
+11
+00:00:39,527 --> 00:00:43,615
+interview, Anthropic's Thariq Shihipar described prompting as more like writing for a
+
+12
+00:00:43,615 --> 00:00:47,703
+specific audience than entering a search query—something with a high skill ceiling
+
+13
+00:00:47,703 --> 00:00:51,791
+that depends on building a mental model of how the agent thinks,
+
+14
+00:00:51,791 --> 00:00:55,879
+knowing your domain vocabulary, and actively hunting for what you haven't written
+
+15
+00:00:55,879 --> 00:00:59,967
+down yet. He calls those unknown unknowns the most important gap. His
+
+16
+00:00:59,967 --> 00:01:04,055
+example: ask an agent to design a game without any game-design background,
+
+17
+00:01:04,055 --> 00:01:08,143
+and you may not be able to tell whether the output is
+
+18
+00:01:08,143 --> 00:01:12,231
+any good. This is a vendor perspective, not a measured study—but the
+
+19
+00:01:12,231 --> 00:01:16,319
+warning applies any time you generate code in a domain you don't
+
+20
+00:01:16,319 --> 00:01:17,000
+understand well.
+
+21
+00:01:17,000 --> 00:01:21,757
+How much process do you actually need? A Stack Overflow production field
+
+22
+00:01:21,757 --> 00:01:26,514
+guide published in early October proposes a staged maturity model: determinism, evaluation,
+
+23
+00:01:26,514 --> 00:01:31,270
+confidence handling, safety, operability, and a full production build. Its self-assessment asks
+
+24
+00:01:31,270 --> 00:01:36,027
+things like: can the agent only propose changes, with a separate step
+
+25
+00:01:36,027 --> 00:01:40,784
+to apply them? Does a prompt change that breaks quality fail your
+
+26
+00:01:40,784 --> 00:01:45,541
+CI pipeline? Can you stop automated decisions in seconds without a deploy?
+
+27
+00:01:45,541 --> 00:01:50,297
+This is practitioner guidance, not an empirically validated minimum for student projects.
+
+28
+00:01:50,297 --> 00:01:55,054
+The guide's own sequencing principle translates well even if the full checklist
+
+29
+00:01:55,054 --> 00:01:59,811
+doesn't: a prototype generating boilerplate needs lighter controls than a service handling
+
+30
+00:01:59,811 --> 00:02:01,000
+authentication or payments.
+
+31
+00:02:01,000 --> 00:02:05,560
+One concrete cost. GitHub's push-protection announcement illustrates what scaled agent output means
+
+32
+00:02:05,560 --> 00:02:10,120
+for a specific risk. According to GitHub, push protection today stops roughly
+
+33
+00:02:10,120 --> 00:02:14,680
+30 percent of newly detected secrets before they enter repository history; the
+
+34
+00:02:14,680 --> 00:02:19,240
+remaining 70 percent are found after the credential is already exposed, requiring
+
+35
+00:02:19,240 --> 00:02:23,800
+human cleanup that doesn't scale with code volume. A new AI classifier
+
+36
+00:02:23,800 --> 00:02:28,360
+called ModernBERT could more than double prevention coverage—but it will consume AI
+
+37
+00:02:28,360 --> 00:02:32,920
+credits and was in private preview at announcement time. The existing protection
+
+38
+00:02:32,920 --> 00:02:37,480
+feature and the proposed new classifier are not the same thing. Plan
+
+39
+00:02:37,480 --> 00:02:39,000
+around what's available today.
+
+40
+00:02:39,000 --> 00:02:43,522
+Infrastructure promises are still promises. Cloudflare and Deno announced that the Deno
+
+41
+00:02:43,522 --> 00:02:48,043
+team is joining Cloudflare, with a plan to merge their two server
+
+42
+00:02:48,043 --> 00:02:52,565
+runtimes and make self-hosting a first-class supported experience. More announcements are promised
+
+43
+00:02:52,565 --> 00:02:57,087
+in coming months. You can self-host either runtime today—but that existing capability
+
+44
+00:02:57,087 --> 00:03:01,609
+is distinct from the merged experience being described. Monitor this work rather
+
+45
+00:03:01,609 --> 00:03:05,000
+than planning a migration around something that hasn't shipped.
+
+46
+00:03:05,000 --> 00:03:10,182
+A gap worth naming. No source here measures adoption costs or outcomes
+
+47
+00:03:10,182 --> 00:03:15,364
+specifically for student teams. The vendor sources have commercial interests, and the
+
+48
+00:03:15,364 --> 00:03:20,545
+field guide offers advice rather than measured student outcomes. Novice maintainers, accessibility
+
+49
+00:03:20,545 --> 00:03:24,000
+needs, and teams without enterprise budgets remain underrepresented.
+
+50
+00:03:24,000 --> 00:03:28,140
+So here is the practical sequence: pick one bounded task whose result
+
+51
+00:03:28,140 --> 00:03:32,280
+you can verify yourself, identify who on your team owns that check,
+
+52
+00:03:32,280 --> 00:03:36,420
+and match controls to the actual risk level. The question to keep
+
+53
+00:03:36,420 --> 00:03:40,560
+asking: when you find a defect the agent introduced silently, how long
+
+54
+00:03:40,560 --> 00:03:44,700
+did that take to catch—and was the time saved earlier worth it?

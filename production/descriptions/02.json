@@ -1,0 +1,8 @@
+{
+  "title": "AI Agent Verification: What a Success Signal Actually Proves",
+  "description": "A completion signal does not establish that a task produced the intended result. This video compares external result checks, decision notes, code-review benchmarks and monitoring, including the limits of the available evidence.\n\nAgent Engineering Brief | Yunji Seo\nAssessment as of October 16, 2026.\n\nSources:\nhttps://stackoverflow.blog/2026/10/08/a-green-exit-code-is-not-evidence-that-the-work-happened/\nhttps://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/\nhttps://stackoverflow.blog/2026/10/09/taking-a-look-under-your-agent-s-hood/\nhttps://www.latent.space/p/thariq\n\nLimitations: The evidence relies heavily on provider accounts and practitioner perspectives. It does not establish measured benefits or adoption costs for student teams. Announced plans are distinguished from verified capabilities.\n\nDisclosure: Research and drafting were assisted by AI. Yunji Seo supplied editorial judgments and approved the article/script drafts. Google Vids generated the synthetic narration and presentation; final scene timing was adjusted locally. The abstract background is AI-generated.\n",
+  "article_url": null,
+  "youtube_url": null,
+  "visibility": "unlisted",
+  "made_for_kids": false
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "piece": "01",
+    "path": "production/videos/01-final.mp4",
+    "duration_seconds": 242.1,
+    "width": 1920,
+    "height": 1080,
+    "audio_preserved_without_reencoding": true,
+    "scene_starts_seconds": [
+      0,
+      25,
+      64,
+      96,
+      126,
+      168,
+      209
+    ]
+  },
+  {
+    "piece": "02",
+    "path": "production/videos/02-final.mp4",
+    "duration_seconds": 232.433333,
+    "width": 1920,
+    "height": 1080,
+    "audio_preserved_without_reencoding": true,
+    "scene_starts_seconds": [
+      0,
+      18,
+      83,
+      106,
+      142,
+      189,
+      213
+    ]
+  },
+  {
+    "piece": "03",
+    "path": "production/videos/03-final.mp4",
+    "duration_seconds": 224.7,
+    "width": 1920,
+    "height": 1080,
+    "audio_preserved_without_reencoding": true,
+    "scene_starts_seconds": [
+      0,
+      15,
+      77,
+      121,
+      159,
+      185,
+      204
+    ]
+  }
+]

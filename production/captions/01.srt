@@ -1,0 +1,219 @@
+1
+00:00:00,000 --> 00:00:04,286
+If you've been watching AI coding tool announcements lately, you've heard the
+
+2
+00:00:04,286 --> 00:00:08,571
+pitch: let agents handle your pull requests, automate your code review, ship
+
+3
+00:00:08,571 --> 00:00:12,857
+faster. What's said less often is that the infrastructure behind those workflows
+
+4
+00:00:12,857 --> 00:00:17,143
+is still being redesigned, the permission controls have known gaps, and the
+
+5
+00:00:17,143 --> 00:00:21,429
+impressive scale numbers describe provider workloads—not yours. Here's what's been reported, what's
+
+6
+00:00:21,429 --> 00:00:25,000
+still being built, and what stays your responsibility either way.
+
+7
+00:00:25,000 --> 00:00:29,776
+Start with the numbers. GitHub reports that developers and agents made 7.38
+
+8
+00:00:29,776 --> 00:00:34,551
+billion commits on the platform in September 2026—described by GitHub as more
+
+9
+00:00:34,551 --> 00:00:39,327
+than five times the level from a year earlier—and that monthly pushes
+
+10
+00:00:39,327 --> 00:00:44,102
+grew from roughly 0.69 billion to 3.35 billion year over year, which
+
+11
+00:00:44,102 --> 00:00:48,878
+GitHub attributes substantially to agent-driven workloads. But GitHub is explicit: the repositories
+
+12
+00:00:48,878 --> 00:00:53,653
+driving those figures are large engineering teams running dense CI pipelines alongside
+
+13
+00:00:53,653 --> 00:00:58,429
+agent fleets. Large CI workloads and concentrated repository activity are alternative explanations
+
+14
+00:00:58,429 --> 00:01:03,204
+for the growth. These figures do not measure what a student team
+
+15
+00:01:03,204 --> 00:01:04,000
+would gain.
+
+16
+00:01:04,000 --> 00:01:09,120
+Anthropic's account—relayed through a commentary post by Simon Willison, not the primary
+
+17
+00:01:09,120 --> 00:01:14,240
+engineering article—shows a similar internal pattern. Daily code merges grew from roughly
+
+18
+00:01:14,240 --> 00:01:19,360
+2,500 in May 2026 to over 30,000 in September 2026, and Anthropic
+
+19
+00:01:19,360 --> 00:01:24,480
+built and migrated to a custom source-control system called Scion, with Claude
+
+20
+00:01:24,480 --> 00:01:29,600
+described as its heaviest user. This is infrastructure for an AI lab's
+
+21
+00:01:29,600 --> 00:01:34,720
+own agent workload. It is not externally available and was explicitly designed
+
+22
+00:01:34,720 --> 00:01:36,000
+without offline support.
+
+23
+00:01:36,000 --> 00:01:40,235
+Now look at what's available to you. OpenAI's Codex product video demonstrates
+
+24
+00:01:40,235 --> 00:01:44,471
+a code-review workflow where an agent takes an automatic first-pass review of
+
+25
+00:01:44,471 --> 00:01:48,706
+GitHub pull requests once repository permissions are configured. GitHub integration is described
+
+26
+00:01:48,706 --> 00:01:52,941
+as generally available; GitLab is in preview. What the video does not
+
+27
+00:01:52,941 --> 00:01:57,176
+provide is any evaluation of review accuracy, false-positive rates, or how often
+
+28
+00:01:57,176 --> 00:02:01,412
+the agent misses something. That gap matters directly if you're deciding whether
+
+29
+00:02:01,412 --> 00:02:05,647
+to treat the first pass as a genuine check or just a
+
+30
+00:02:05,647 --> 00:02:06,000
+hint.
+
+31
+00:02:06,000 --> 00:02:10,667
+On permissions, an Anthropic employee on the Latent Space podcast described multiple
+
+32
+00:02:10,667 --> 00:02:15,333
+layers being added to manage agent permissions at scale: inference-time probes and
+
+33
+00:02:15,333 --> 00:02:20,000
+classifiers, an "auto mode" that checks whether agent actions match what the
+
+34
+00:02:20,000 --> 00:02:24,667
+user actually granted, and identity isolation for multi-agent contexts. One example given:
+
+35
+00:02:24,667 --> 00:02:29,333
+an agent with database access might use computer-use capabilities to issue its
+
+36
+00:02:29,333 --> 00:02:34,000
+own credentials and edit data—auto mode is designed to catch this by
+
+37
+00:02:34,000 --> 00:02:38,667
+comparing intent against granted scope. But the same account describes this as
+
+38
+00:02:38,667 --> 00:02:43,333
+ongoing work with known edge cases, not a completed system. This is
+
+39
+00:02:43,333 --> 00:02:48,000
+a vendor employee describing their own product, not an independent security audit.
+
+40
+00:02:48,000 --> 00:02:52,642
+Here is the distinction worth holding onto. GitHub states its planned new
+
+41
+00:02:52,642 --> 00:02:57,283
+architecture must preserve branch protections, required reviews, and audit logs. GitHub also
+
+42
+00:02:57,283 --> 00:03:01,925
+reports internal benchmarks showing up to 35 times higher write throughput—a figure
+
+43
+00:03:01,925 --> 00:03:06,566
+from GitHub's own engineering team, not an independent evaluator. Willison's commentary adds
+
+44
+00:03:06,566 --> 00:03:11,208
+something at a different layer: Anthropic used adversarial AI review while building
+
+45
+00:03:11,208 --> 00:03:15,849
+Scion and found it effective but myopic—skilled engineers had to steer the
+
+46
+00:03:15,849 --> 00:03:20,491
+model away from over-engineering in response to hypothetical concerns. One layer enforces
+
+47
+00:03:20,491 --> 00:03:25,132
+workflow controls. The other requires human judgment about what the agent is
+
+48
+00:03:25,132 --> 00:03:29,000
+actually optimizing for. Higher throughput does not replace either one.
+
+49
+00:03:29,000 --> 00:03:33,786
+One final note. The evidence relies heavily on provider accounts, some relayed
+
+50
+00:03:33,786 --> 00:03:38,571
+through independent commentary. No small-team perspective, no unsuccessful deployment, no independent accuracy
+
+51
+00:03:38,571 --> 00:03:43,357
+measurement appears in this evidence set. That absence matters. The practical question
+
+52
+00:03:43,357 --> 00:03:48,142
+is not whether Anthropic's commit volume grew twelve-fold. It is: when an
+
+53
+00:03:48,142 --> 00:03:52,928
+agent takes a first-pass review of your pull request, what should you
+
+54
+00:03:52,928 --> 00:03:57,713
+still check—and how would you know if it missed something important? These
+
+55
+00:03:57,713 --> 00:04:02,100
+sources do not establish how much review your own project needs.

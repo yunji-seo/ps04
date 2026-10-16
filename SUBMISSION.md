@@ -1,9 +1,9 @@
 # Problem Set 4 Student Submission
 
-**Status: incomplete; drafts approved and production package prepared.** No article or video has been published. See [current status](docs/STATUS.md) and [final audit](docs/FINAL_AUDIT.md).
+**Status: incomplete; three Substack drafts saved, three videos rendered, private GitHub repository uploaded.** Public publication, personal reflection and technical recording remain pending. See [final publication review](production/FINAL_REVIEW.md), [current status](docs/STATUS.md) and [final audit](docs/FINAL_AUDIT.md).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
-**GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (private; upload and reviewer access verification pending)  
+**GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (private; uploaded; reviewer access verification pending)  
 **Separate 4–6 minute technical demonstration:** Not recorded; [script and shot list](docs/TECHNICAL_DEMO.md)
 
 ## Topic and audience
@@ -18,9 +18,9 @@ All three pairs use evidence from the actual October 16, 2026 run. The student a
 
 | Piece | Title | Substack | YouTube |
 | --- | --- | --- | --- |
-| 1 | The Infrastructure Underneath Your Agent: What Providers Are Rebuilding and Why It Matters | Not published | Not produced |
-| 2 | Green Lights, Empty Boxes: What the Evidence Actually Shows About AI Agent Verification | Not published | Not produced |
-| 3 | A Small-Team Adoption Plan: Verify One Task, Budget the Controls, Watch the Roadmap | Not published | Not produced |
+| 1 | The Infrastructure Underneath Your Agent: What Providers Are Rebuilding and Why It Matters | Saved draft; not published | Rendered 4:02; not uploaded |
+| 2 | Green Lights, Empty Boxes: What the Evidence Actually Shows About AI Agent Verification | Saved draft; not published | Rendered 3:52; not uploaded |
+| 3 | A Small-Team Adoption Plan: Verify One Task, Budget the Controls, Watch the Roadmap | Saved draft; not published | Rendered 3:45; not uploaded |
 
 [Read all three article/script pairs](runs/2026-10-16T04-24-58-255Z-ee63f048/REVIEW_READY.md). Article lengths are 840, 800 and 808 words excluding references. Narration lengths are 626, 645 and 612 words; estimated duration is 4.47, 4.61 and 4.37 minutes at 140 words/minute. Actual Google Vids/HeyGen production and duration checks remain pending.
 
