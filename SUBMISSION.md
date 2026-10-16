@@ -1,6 +1,6 @@
 # Problem Set 4 Student Submission
 
-**Status: incomplete; three Substack drafts saved, three videos rendered, private GitHub repository uploaded.** Public publication, personal reflection and technical recording remain pending. See [final publication review](production/FINAL_REVIEW.md), [current status](docs/STATUS.md) and [final audit](docs/FINAL_AUDIT.md).
+**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** Personal reflection, a separate technical demonstration recording and reviewer access verification remain pending. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (private; uploaded; reviewer access verification pending)  
@@ -14,15 +14,15 @@ Its recurring question is: **Which recent advances are useful enough to adopt, a
 
 ## Series
 
-All three pairs use evidence from the actual October 16, 2026 run. The student approved these drafts for production; they are not completed publications.
+All three pairs use evidence from the actual October 16, 2026 run. The student approved production and subsequent publication on October 16, 2026. Articles are free to read; videos use unlisted visibility.
 
 | Piece | Title | Substack | YouTube |
 | --- | --- | --- | --- |
-| 1 | The Infrastructure Underneath Your Agent: What Providers Are Rebuilding and Why It Matters | Saved draft; not published | Rendered 4:02; not uploaded |
-| 2 | Green Lights, Empty Boxes: What the Evidence Actually Shows About AI Agent Verification | Saved draft; not published | Rendered 3:52; not uploaded |
-| 3 | A Small-Team Adoption Plan: Verify One Task, Budget the Controls, Watch the Roadmap | Saved draft; not published | Rendered 3:45; not uploaded |
+| 1 | The Infrastructure Underneath Your Agent: What Providers Are Rebuilding and Why It Matters | [Read article](https://yunjiseo1.substack.com/p/the-infrastructure-underneath-your) | [Watch video](https://youtu.be/zVci2_C2zSg) |
+| 2 | Green Lights, Empty Boxes: What the Evidence Actually Shows About AI Agent Verification | [Read article](https://yunjiseo1.substack.com/p/green-lights-empty-boxes-what-the) | [Watch video](https://youtu.be/H4e4VRAvDE8) |
+| 3 | A Small-Team Adoption Plan: Verify One Task, Budget the Controls, Watch the Roadmap | [Read article](https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify) | [Watch video](https://youtu.be/tXzF3HVnM0U) |
 
-[Read all three article/script pairs](runs/2026-10-16T04-24-58-255Z-ee63f048/REVIEW_READY.md). Article lengths are 840, 800 and 808 words excluding references. Narration lengths are 626, 645 and 612 words; estimated duration is 4.47, 4.61 and 4.37 minutes at 140 words/minute. Actual Google Vids/HeyGen production and duration checks remain pending.
+[Read all three article/script pairs](runs/2026-10-16T04-24-58-255Z-ee63f048/REVIEW_READY.md). Article lengths are 840, 800 and 808 words excluding references. Narration lengths are 626, 645 and 612 words. Final video durations are 4:02, 3:52 and 3:45 (YouTube may round up). Google Vids audio was retained while slide timing was finished locally.
 
 ## Setup and execution
 
@@ -105,4 +105,4 @@ Compare [policy v1](runs/2026-10-15T14-59-33-161Z-664468fb/config/editorial_poli
 
 **Not yet supplied by the student.** Use the [reflection worksheet](docs/REFLECTION_WORKSHEET.md) to discuss one insight, one editorial failure or limitation, an architectural tradeoff and the next improvement. No personal reflection has been fabricated.
 
-Before submission, finish [the audit](docs/FINAL_AUDIT.md), provide the actual publication and demonstration URLs, supply student identity, and verify repository and publication access.
+Before submission, finish [the audit](docs/FINAL_AUDIT.md), provide the technical demonstration URL and personal reflection, and verify reviewer access to the private repository.

@@ -19,3 +19,7 @@ Exact source passage:
 Interpretation: existing self-hostable runtimes and an announced merged supported experience are different claims. The source promises further announcements. The draft recommends monitoring delivery rather than assuming a shipped integration or measured savings.
 
 The complete [claim packet](../runs/2026-10-16T04-24-58-255Z-ee63f048/CLAIM_REVIEW.md) exposes written passages and audiovisual timestamps. The command node research/inspect_demo.mjs displays this item's metadata, decision and structured claim without credentials.
+
+## Published destination
+
+The traced claim appears in the “Infrastructure Promises Are Still Promises” section of https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify. Companion video: https://youtu.be/tXzF3HVnM0U.

@@ -4,13 +4,13 @@ Prepared for Yunji Seo, GitHub `yunji-seo`, on October 16, 2026.
 
 The approved editorial package is `runs/2026-10-16T04-24-58-255Z-ee63f048/package`. Its review fingerprint remains `4696f6228ecb7306980ef87f890f920a62e2400b596b383d2c339e60b18dee24`.
 
-## Substack drafts
+## Substack publication
 
-These are saved drafts, not published article URLs.
+Published after student approval on October 16, 2026; free web access, without email delivery.
 
-1. https://yunjiseo1.substack.com/publish/post/220712421
-2. https://yunjiseo1.substack.com/publish/post/220714046
-3. https://yunjiseo1.substack.com/publish/post/220714166
+1. https://yunjiseo1.substack.com/p/the-infrastructure-underneath-your
+2. https://yunjiseo1.substack.com/p/green-lights-empty-boxes-what-the
+3. https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify
 
 ## Video production
 
@@ -24,7 +24,7 @@ Google Vids initially generated Korean summaries. Those were replaced in all 21 
 | 02 | https://docs.google.com/videos/d/1SN097F0ii65UrnQqNy4CEkZukJ1kQSgJ0QTuNT6JnzQ/edit | https://docs.google.com/presentation/d/1Q3wIVOSaa-Jnw0de758EAzy9UmPaZFiqnSJZymMYmog/edit |
 | 03 | https://docs.google.com/videos/d/1s2RbDbSouQ4I6je2CLBpM7yC8kcwScorNBIFcqZesJ4/edit | https://docs.google.com/presentation/d/1LM-EkvGU_l-Z1BlJabES6GJNVeZR9gv6ZEsL9E2gVss/edit |
 
-The first two exported MP4 files were retrieved and checked: 1920×1080 with audio, 242.091 and 232.405 seconds respectively. The third export and final media review are pending. Rendered MP4 files remain outside Git because publication assets are hosted separately.
+All three final MP4 files are 1920×1080 with audio, with durations 242.1, 232.433 and 224.7 seconds. Google Vids audio was preserved; local finishing replaced delayed visual entrances with the approved static scene images. English script-derived SRT timings are approximate. These SRT files and embedded MP4 subtitles are available locally; a separate YouTube caption track has not been verified. Rendered MP4 files remain outside Git.
 
 ## Background provenance
 
@@ -32,4 +32,6 @@ The first two exported MP4 files were retrieved and checked: 1920×1080 with aud
 
 ## Remaining handoffs
 
-The student requested review of actual material before public publication. The final rendered videos must therefore be reviewed before publishing the series. The student's reflection remains pending by their request. The technical demonstration script is prepared but is not a recording. Publication URLs and reciprocal links must be added only after actual publication. The private repository requires reviewer access verification before submission.
+The student approved publication and YouTube upload terms. Three articles and three unlisted video uploads are linked in ../SUBMISSION.md. The student’s reflection remains pending by request. The technical demonstration script is prepared but is not a recording. The private repository requires reviewer access verification.
+
+YouTube Studio confirmed all three videos as unlisted. Description URLs are saved, but YouTube requests one-time channel verification to make external links clickable; URLs can still be copied. No such verification was performed.
