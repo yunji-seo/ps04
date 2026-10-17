@@ -1,6 +1,6 @@
 # Approved production materials
 
-The student approved the three article/script pairs on October 16, 2026. Automated checks confirm the approved content fingerprint is unchanged. This folder is ready for video production; it is not a published series. Public publishing authorization is separate.
+The student approved the three article/script pairs on October 16, 2026. Automated checks confirm the approved content fingerprint is unchanged. Production and separately authorized publication are complete. [Actual publication links](publication_links.json) identify the three articles and companion videos. This folder retains the approved production inputs.
 
 | Piece | Article | Video script and visual plan | Narration only | Evidence | Estimated narration |
 | --- | --- | --- | --- | --- | --- |
@@ -8,13 +8,13 @@ The student approved the three article/script pairs on October 16, 2026. Automat
 | 02 | [Article](articles/02.md) | [Script](video_scripts/02.md) | [Text](narration/02.txt) | [Sources](sources/02.md) | 4.61 min |
 | 03 | [Article](articles/03.md) | [Script](video_scripts/03.md) | [Text](narration/03.txt) | [Sources](sources/03.md) | 4.37 min |
 
-## Production sequence
+## Reproduction procedure
 
 1. Import each narration into Google Vids or HeyGen. Use its corresponding visual plan; do not speak the stage directions or source-link labels.
-2. Keep the evidence date October 16, 2026 visible. Inspect pronunciation, captions, source cues and the rendered duration; target 3–5 minutes. The durations above are estimates at 140 words/minute.
-3. Complete video-description metadata with the actual production tool and eventual article/video URLs. No URLs or rendered outputs have been invented.
+2. Keep the evidence date October 16, 2026 visible. Inspect pronunciation, captions, source cues and the rendered duration; target 3–5 minutes. The table retains planning estimates at 140 words/minute; actual final durations are 4:02, 3:52 and 3:45.
+3. For a new publication, complete its descriptions with the actual production tool and URLs. This series already has saved URLs in publication_links.json.
 4. Review the rendered videos and completed descriptions before public publishing. Publish only after separate authorization, then cross-link and verify accessibility.
-5. Enter the real URLs in publication_links.json and SUBMISSION.md. Record the separate technical demonstration and supply the student reflection.
+5. Preserve actual URLs in publication_links.json and SUBMISSION.md. The current series and student reflection are complete; the separate technical demonstration URL is still to be added.
 
 ## Description checks before publication
 

@@ -17,7 +17,7 @@ Both runs collected live sources, then required recorded recovery. Original fail
 | Accept / reject / defer | 23 / 27 / 4 | 26 / 26 / 5 |
 | Recovered article/script pairs | 3 | 3 |
 | Recovery completed, UTC | October 16, 04:38:50 | October 16, 04:43:43 |
-| Final approval | Pending; superseded drafts | Approved for production on October 16 |
+| Final approval | Superseded; not selected for publication | Approved for production on October 16 |
 
 Counts compare observations with the persistent store, already populated by earlier attempts. The eligible corpus includes retained items, explaining why it exceeds newly retrieved observations.
 
@@ -60,6 +60,6 @@ Draft format failures and source overstatements were corrected. Both summaries i
 
 Start-to-recovery wall time was approximately 9 hours 25 minutes for A and 18 minutes 45 seconds for B. It includes pauses and overlapping work, not only compute. Summary elapsed time may also include later reporting/checking.
 
-MIT Parley used `claude-sonnet-4-6`; actual token usage is archived. Per-run dollars remain unknown. Known local-stage costs sum to zero while paid-stage dollar costs are null. No credits were purchased.
+MIT Parley used `claude-sonnet-4-6`; actual token usage is archived. [List-price cost estimates](COST_ESTIMATE.md) are supplied; actual Parley charges remain unknown. Known local-stage costs sum to zero while paid-stage dollar costs are null. No credits were purchased.
 
-Exact assignment-week boundaries were not provided, so calendar eligibility remains unconfirmed.
+The student reports an extended submission deadline of October 17, 2026, America/New_York. The original execution timestamps above are preserved.

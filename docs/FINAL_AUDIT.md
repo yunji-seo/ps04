@@ -1,6 +1,6 @@
 # Final requirement audit
 
-Reconciled against the course README.md and ARCHITECTURE.md and retained artifacts on October 16, 2026. This is a requirements review, not a new live pipeline execution. Existing 25-test results were inspected; no paid AI calls were made.
+Reconciled against the course README.md and ARCHITECTURE.md and retained artifacts; submission documentation updated October 17, 2026. This is a requirements review, not a new live pipeline execution. Existing 25-test results were inspected; no paid AI calls were made.
 
 ## Confirmed deliverables
 
@@ -20,17 +20,17 @@ Reconciled against the course README.md and ARCHITECTURE.md and retained artifac
 | Reflection | Student-supplied observations edited into English in SUBMISSION.md |
 | Repository access | GitHub Public status verified; no collaborator invitation needed |
 | Setup, diagram, commands and claim trace | SUBMISSION.md, SETUP.md, DESIGN.md and CLAIM_TRACE.md |
-| Credentials | Latest recorded exact configured-key scan: 1,042 candidate files, zero matches. This is not a general secret detector |
+| Credentials | See AUDIT_RESULT.json for the latest exact configured-key scan count and zero-match result. This is not a general secret detector |
 
-## Missing or qualified requirements
+## Technical demonstration and verification scope
 
-1. **Technical demonstration:** the separate 4–6 minute narrated recording and its URL are still missing. The prepared script covers architecture/entry point, source-to-published-claim trace, the second run, duplicate handling/recovery, human policy correction and a design tradeoff. Those files must actually be shown readably during recording; narration alone is not demonstration. The student will add the URL.
-2. **Different-day execution:** live runs started October 15 and 16, but both required downstream recovery and both recoveries completed October 16. Preserve this qualification; do not claim two uninterrupted successful runs on separate days. Whether these recovered runs satisfy the requirement is a grading judgment.
+1. **Technical demonstration URL:** not yet supplied. The student will add the separate 4–6 minute recording URL to SUBMISSION.md. Personal rehearsal scripts are kept outside this repository.
+2. **Different-day execution and recovery:** live runs started October 15 and 16. Both completed their downstream stages through recorded recovery on October 16. The assignment permits recovery; uninterrupted success is not an additional requirement. Original failures and recovery timestamps remain inspectable in RUN_COMPARISON.md and the run receipts.
 3. **Meaningful update demonstration supplied:** [Withheld-item replay](WITHHELD_REPLAY.md) uses an isolated store and actual retained Deno evidence: 1 new / 56 unchanged, then 57 unchanged. Archived decisions and claim mapping explain the editorial effect. This is explicitly a historical-date replay, not another live collection or new AI selection.
 4. **Approximate costs supplied:** [Cost report](COST_ESTIMATE.md) calculates public list-price scenarios from archived responses and explains unallocated token counts. Actual MIT Parley charges remain unknown; the report is not an invoice.
-5. **Deadline:** the student reports an extension to October 17, 2026, America/New_York. Exact assignment-week start was not supplied. The live-run dates remain unchanged.
+5. **Deadline:** the student reports an extension to October 17, 2026, America/New_York. Original run timestamps are preserved.
 6. **Access verified at HTTP level:** all six publication URLs plus GitHub returned HTTP 200 and expected page titles without cookies or authentication; see [access report](PUBLIC_ACCESS.json). This does not establish complete playback, narration quality or caption synchronization. Full listening review remains a human check; subtitle timing is approximate.
 
-## Conclusion
+## Submission state
 
-Most deliverables are present, but the submission cannot honestly be labeled fully complete. The technical recording is a definite missing artifact. Execution dates, assignment-week start and full listening review retain the qualifications above. The withheld-item replay, estimated-cost report and anonymous HTTP link checks are now supplied. No dates, costs, human judgments or verification results have been invented.
+The implementation, evidence archive, editorial review, published series, reflection, cost estimates and access checks are present. The separate technical demonstration URL is the outstanding submission field. Verification limits concerning semantic judgments, billing reconciliation and complete audio/caption review are documented above; they are not claims that the published outputs are missing.

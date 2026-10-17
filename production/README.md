@@ -1,5 +1,3 @@
-> Access update: GitHub confirms this repository is public following the student’s requested visibility change. Earlier private-repository notes below are historical.
-
 # Production record
 
 Prepared for Yunji Seo, GitHub `yunji-seo`, on October 16, 2026.
@@ -32,8 +30,8 @@ All three final MP4 files are 1920×1080 with audio, with durations 242.1, 232.4
 
 `assets/editorial-background.png` was generated with the built-in image tool. It is decorative, not evidence of a real system. Prompt: “Use case: productivity-visual. Create a restrained editorial background for an English educational video series about AI coding agents, verification, and software infrastructure. 16:9 widescreen. Deep midnight navy nearly uniform over the left 70 percent, subtle cinematic texture. On the far right edge, a small abstract arrangement of translucent cyan glass layers suggesting software infrastructure and careful inspection, softly lit, understated, plenty of negative space. Flat quiet background suitable for readable white slide text. No text, no numbers, no logos, no UI, no recognizable product, no arrows, no people, no watermark. This is an abstract illustration, not evidence of a real system.”
 
-## Remaining handoffs
+## Submission status
 
-The student approved publication and YouTube upload terms. Three articles and three unlisted video uploads are linked in ../SUBMISSION.md. The student supplied the reflection, which was edited into English in SUBMISSION.md. The technical demonstration script is prepared but is not a recording. The repository is now public; no collaborator invitation is required.
+The student approved publication and YouTube upload terms. Three articles and three unlisted video uploads are linked in ../SUBMISSION.md. The student supplied the reflection, which was edited into English in SUBMISSION.md. The separate technical demonstration URL has not yet been supplied. The repository is now public; no collaborator invitation is required.
 
 YouTube Studio confirmed all three videos as unlisted. Description URLs are saved, but YouTube requests one-time channel verification to make external links clickable; URLs can still be copied. No such verification was performed.

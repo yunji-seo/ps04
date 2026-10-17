@@ -1,6 +1,6 @@
 # Local setup and execution
 
-All sixteen component entry points have implementations, including MIT Parley selection, briefs, articles and video scripts. Live collection runs started on October 15 and 16, 2026; failed editorial stages were subsequently recovered. The current corpus contains 57 eligible items, including two YouTube videos and two podcasts. Article approval, video production and publication remain separate human handoffs; see SUBMISSION.md for the current deliverables.
+All sixteen component entry points have implementations, including MIT Parley selection, briefs, articles and video scripts. Live collection runs started on October 15 and 16, 2026; failed editorial stages were subsequently recovered. The current corpus contains 57 eligible items, including two YouTube videos and two podcasts. Article approval, video production and publication were completed through the documented human handoffs; see SUBMISSION.md for the published deliverables.
 
 ## Dependencies
 
@@ -73,6 +73,6 @@ The later article-body-v2 extractor selects known article containers before broa
 
 ## Secrets and costs
 
-The student saved an existing Parley credential directly in the Git-ignored `.env` file. A live model-list request and a 31-token connection test succeeded. Editorial requests use the existing API credit; no additional credit or service purchase was made. Never include `.env` in submission archives, configuration snapshots or logs. Network failures are not automatically retried. Planning, brief validation and writing constraints permit at most two corrective model calls after the first response; all calls and feedback are archived. Exact matching completed outputs can be reused. Token usage is retained as reported by the provider; per-run USD cost remains null until reconciled against provider billing. An account-level balance observation is not a per-run cost estimate.
+The student saved an existing Parley credential directly in the Git-ignored `.env` file. A live model-list request and a 31-token connection test succeeded. Editorial requests use the existing API credit; no additional credit or service purchase was made. Never include `.env` in submission archives, configuration snapshots or logs. Network failures are not automatically retried. Planning, brief validation and writing constraints permit at most two corrective model calls after the first response; all calls and feedback are archived. Exact matching completed outputs can be reused. Token usage is retained as reported by the provider; actual per-run USD charges remain null until reconciled against provider billing; list-price estimates are documented in COST_ESTIMATE.md. An account-level balance observation is not a per-run cost estimate.
 
 Recorded zero cost on completed local stages means no paid model/API call occurred in that stage; it is not an estimate of electricity, internet or subscription costs. Unknown provider costs must be recorded as null, not zero.

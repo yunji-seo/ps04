@@ -1,8 +1,8 @@
 # One claim traced to retained evidence
 
-**Current status: draft, not approved or published.** Add the actual published article URL before recording the final demonstration.
+**Publication status: approved and published.** [Read article 03](https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify) · [Watch its companion video](https://youtu.be/tXzF3HVnM0U). The trace below connects the published claim to its retained source evidence.
 
-1. [Article 03 preview](../runs/2026-10-16T04-24-58-255Z-ee63f048/review_preview/articles/03.md) discusses Deno under the hosting roadmap. The [canonical draft](../runs/2026-10-16T04-24-58-255Z-ee63f048/articles/03.md) carries marker 03-c5.
+1. [Published article 03](https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify), under “Infrastructure Promises Are Still Promises,” discusses the Deno hosting roadmap. The [canonical draft](../runs/2026-10-16T04-24-58-255Z-ee63f048/articles/03.md) carries marker 03-c5.
 2. [Briefs](../runs/2026-10-16T04-24-58-255Z-ee63f048/briefs.jsonl), piece 03, claim 03-c5, classifies this as a source claim, not an independently verified deployment result.
 3. [Selection](../runs/2026-10-16T04-24-58-255Z-ee63f048/decisions.jsonl) accepts the item with vendor/roadmap qualifications. The student changed its earlier defer decision to accept; [the actual review](STUDENT_EDITORIAL_REVIEW.md) preserves that judgment.
 4. [Eligible record](../runs/2026-10-16T04-24-58-255Z-ee63f048/eligible.jsonl) fixes the item and version below.
@@ -16,7 +16,7 @@ Exact source passage:
 
 > We'll have more announcements about this work in the coming months. But if you can't wait, you can start self-hosting celld or workerd today.
 
-Interpretation: existing self-hostable runtimes and an announced merged supported experience are different claims. The source promises further announcements. The draft recommends monitoring delivery rather than assuming a shipped integration or measured savings.
+Interpretation: existing self-hostable runtimes and an announced merged supported experience are different claims. The source promises further announcements. The published article recommends monitoring delivery rather than assuming a shipped integration or measured savings.
 
 The complete [claim packet](../runs/2026-10-16T04-24-58-255Z-ee63f048/CLAIM_REVIEW.md) exposes written passages and audiovisual timestamps. The command node research/inspect_demo.mjs displays this item's metadata, decision and structured claim without credentials.
 

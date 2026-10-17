@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T14:32:23.975Z",
+  "checked_at": "2026-10-17T14:54:54.983Z",
   "review_passed": true,
   "review_id": "4696f6228ecb7306980ef87f890f920a62e2400b596b383d2c339e60b18dee24",
   "student_approval": true,
@@ -7,7 +7,7 @@
   "course_instructions_unchanged": true,
   "documentation_links": "passed",
   "configured_key_scan": {
-    "candidate_files_scanned": 1065,
+    "candidate_files_scanned": 1066,
     "matches": 0,
     "index_access": "Store list interface only; historical index structure was not directly scanned",
     "scope": "Exact configured Parley key; not a general secret detector"

@@ -1,6 +1,6 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The separate technical demonstration URL is the outstanding submission field. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
@@ -67,7 +67,7 @@ After actual student approval matching the current review fingerprint:
 bash run.sh --package runs/RUN_ID
 ```
 
-Replace RUN_ID with the approved run. The packaging component reruns checks and rejects missing or stale approval. The student explicitly approved the current drafts on October 16, 2026; the [production package](runs/2026-10-16T04-24-58-255Z-ee63f048/package/README.md) is prepared. Public publishing authorization is separate. Google Vids/HeyGen production, Substack/YouTube publication and the technical recording are documented [human handoffs](docs/HUMAN_HANDOFFS.md).
+Replace RUN_ID with the approved run. The packaging component reruns checks and rejects missing or stale approval. The student explicitly approved the current drafts on October 16, 2026; the [production package](runs/2026-10-16T04-24-58-255Z-ee63f048/package/README.md) is prepared. Separate public publishing authorization was subsequently supplied. Google Vids production and Substack/YouTube publication are complete; see [handoff record](docs/HUMAN_HANDOFFS.md).
 
 ## Evidence and actual runs
 
@@ -76,7 +76,7 @@ Replace RUN_ID with the approved run. The packaging component reruns checks and 
 | A: live collection, later editorial recovery | October 15, 2026 UTC and New York | [Summary](runs/2026-10-15T19-13-20-785Z-6ccecf24/summary.json) | About 9h25m start-to-recovery wall time; pauses included; dollars unknown |
 | B: live collection, later editorial recovery | October 16, 2026 UTC and New York | [Summary](runs/2026-10-16T04-24-58-255Z-ee63f048/summary.json) | About 18m45s start-to-recovery wall time; dollars unknown |
 
-Both original entry-point attempts failed; downstream recovery is separately recorded. Run A completed recovery on October 16. These are different-day starts with recovery, not two uninterrupted full completions on different dates. The student reports the deadline was extended to October 17, 2026 (America/New_York); exact assignment-week start remains unconfirmed.
+Both original entry-point attempts failed; downstream recovery is separately recorded. Run A completed recovery on October 16. These are different-day starts with recovery, not two uninterrupted full completions on different dates. The student reports the deadline was extended to October 17, 2026 (America/New_York); the original execution and recovery timestamps are retained.
 
 Run B retains 57 eligible items: 53 written, two YouTube and two podcast items, across six publisher identities. It found three new observations, six changed versions and 42 unchanged observations. Five changed versions were layout/sidebar noise rather than new article content. See [actual comparison and limitations](docs/RUN_COMPARISON.md). An earlier [same-day replay](runs/2026-10-15T13-59-38-909Z-90051c10/changes.jsonl) demonstrates 44 unchanged observations.
 
@@ -109,4 +109,4 @@ The Deno announcement was a useful example. I decided it should be included beca
 
 My main takeaway is that the specificity of the creator's input strongly affects how well an AI system reflects the creator's intentions. Broad instructions leave room for the model to apply assumptions that may differ from mine. Next, I would make the editorial policy more concrete by adding examples of material to accept or reject, especially cases with indirect relevance, and explaining the reasoning behind each example. I would then review the resulting decisions to see whether the system better reflects those intentions without accepting unrelated material.
 
-Before submission, finish [the audit](docs/FINAL_AUDIT.md), provide the technical demonstration URL, and verify the submitted demonstration link.
+The [requirement audit](docs/FINAL_AUDIT.md) records the submitted evidence and verification scope. The student will add the separate technical demonstration URL to the field at the top of this document.

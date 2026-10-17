@@ -54,7 +54,7 @@ if (!Array.isArray(body.data)) throw new Error('Unexpected model-list response')
 console.log(body.data.map(model => model.id).join('\n'));
 ```
 
-## Credits and remaining access check
+## Credits and verified connection
 
 MIT's July 8, 2026 announcement states that the API is available to faculty, staff, postdocs, graduate students and undergraduate students. It specifies $30 in complimentary monthly API credits for faculty, staff, postdocs and graduate students. It does not establish the undergraduate allowance or this student's remaining balance. API credits are separate from chat credits.
 
@@ -64,4 +64,4 @@ The student has now signed in. The API account page shows available credit and n
 
 The student saved the existing key directly in the ignored local `.env` file. No further key setup or new key creation is needed. Do not paste it into chat.
 
-Connection setup is complete. Run `node --env-file=.env research/check_parley.mjs` only when another connection check is justified; it makes a real, small generation request. All four AI stages have executed against real evidence. The current 57-item run produced three briefs and article/script pairs after recorded recovery. Student draft review remains pending. Per-run dollar costs are unknown; account-level observations are not per-run cost estimates. No additional credit purchase is authorized by this setup note.
+Connection setup is complete. Run `node --env-file=.env research/check_parley.mjs` only when another connection check is justified; it makes a real, small generation request. All four AI stages have executed against real evidence. The current 57-item run produced three briefs and article/script pairs after recorded recovery. The student approved the article/script drafts and publication. [Approximate list-price costs](COST_ESTIMATE.md) are available; actual account charges are not independently reconciled. No additional credit purchase is authorized by this setup note.
