@@ -1,6 +1,6 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) records additional qualifications concerning run dates, update evidence, cost estimates and final verification. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  

@@ -1,41 +1,36 @@
-> Access update: GitHub confirms this repository is public following the student’s requested visibility change. Earlier private-repository notes below are historical.
-
-> Publication update (2026-10-16): The student approved publication and YouTube upload terms. All three articles are published, all three videos uploaded with unlisted visibility, and reciprocal links saved. See [submission index](../SUBMISSION.md). Earlier pending-publication notes below describe the pre-publication review. The student supplied the personal reflection, now included in SUBMISSION.md. Technical demo recording remains pending.
-
 # Final requirement audit
 
-October 16, 2026: **not ready for submission**.
+Reconciled against the course README.md and ARCHITECTURE.md and retained artifacts on October 16, 2026. This is a requirements review, not a new live pipeline execution. Existing 25-test results were inspected; no paid AI calls were made.
 
-| Requirement | Status | Evidence or remaining work |
-| --- | --- | --- |
-| Topic and audience | Complete | config/project.json |
-| Sixteen Bash components and boundaries | Implemented | Source, DESIGN.md; 25 tests pass |
-| All three input types | Demonstrated | 57 eligible: 53 written, two YouTube, two podcast |
-| Six independent sources | Six publisher identities represented | Shared vendor/interview claims are not independent corroboration |
-| Original media and timestamped evidence | Retained locally | Media retrieval in SETUP.md; text/segments in data/assets |
-| Publication dates and 30-day filter | Implemented and tested | Actual dates; no live exclusions; labeled boundary fixtures |
-| Versions and duplicate handling | Demonstrated | 44 unchanged replay items; extraction-noise limitation documented |
-| AI selection and synthesis | Complete for drafts | Exact prompts, requests/responses, decisions and briefs |
-| Three distinct arguments | Approved for production | Four/three/four publisher identities; all input types used |
-| Three 600–900 word articles | Drafted | 840 / 800 / 808 words |
-| Three 3–5 minute videos | Rendered | 4:02 / 3:52 / 3:45; final listening and caption-sync review pending |
-| Student sample review and revision | Complete | Six actual judgments; controlled policy replay |
-| Corrections preserved | Complete for assistant edits | Correction and wording audits; no fabricated student edits |
-| Two live runs on different days | Qualified evidence | October 15/16 starts; both recovered; first recovery finished October 16 |
-| Assignment-week eligibility | Unconfirmed | Exact assigned week not supplied |
-| Automated content assessment | Passing | Current fingerprint in REVIEW_READY.md |
-| Student draft approval | Complete | Actual approval recorded October 16 against the current fingerprint |
-| Production handoff | Complete | Approved article/script/source package created; rendered-video review remains |
-| Google Vids or HeyGen videos | Produced | Google Vids audio and scenes; local finishing; production/FINAL_REVIEW.md |
-| Substack/YouTube publication | Not published | Six accessible URLs and cross-links required |
-| Separate 4–6 minute demo | Script prepared | Recording pending; trace actual published article before submission |
-| Setup and architecture | Complete | SETUP.md and DESIGN.md |
-| Personal reflection | Complete; student supplied content, edited into English | ../SUBMISSION.md#personal-reflection |
-| Student identity and GitHub remote | Uploaded | Yunji Seo; yunji-seo/ps04-agent-engineering-brief; private reviewer access pending |
-| Credentials excluded | Local exact-key check passed; recheck before push | Ignored .env; no configured key in 972 candidate files or exported current store records; [audit result](AUDIT_RESULT.json) |
-| URL verification | Pending publication | Check without creator login/paywall |
+## Confirmed deliverables
 
-The student review and production handoff are complete. Render and inspect the videos, resolve the description details in the production guide, obtain separate public publishing authorization, publish and cross-link all six artifacts, record the demo, add the student's reflection/identity, push to the intended repository and verify every link.
+| Requirement | Evidence / result |
+| --- | --- |
+| One topic, audience, recurring question and publication scope | SUBMISSION.md; config/project.json |
+| Sixteen Bash components, configuration and four prompts | Required entry points implemented; component boundaries documented in DESIGN.md; prior 25-test suite passed |
+| At least 12 items, six sources, two per input type | 57 eligible records: 53 written, 2 YouTube, 2 podcast; six publisher identities |
+| Evidence assets and timestamps | All text/segment paths in the eligible corpus resolve; original media retrieval documented in SETUP.md |
+| Three distinct briefs and source coverage | Pieces reference 4 / 3 / 4 publisher identities; all three input types contribute across the series. Publisher counts alone do not prove independent corroboration of shared claims |
+| Freshness | UTC 30-day filter and boundary tests; publication as-of date 2026-10-16; no live exclusions occurred |
+| AI selection, synthesis, prompts and intermediate records | Canonical run retains decisions, briefs, requests/responses, article/script manifests and checks |
+| Human sample review and policy revision | Six student judgments; policy v1/v2 and controlled 44-item replay with nine changes retained |
+| Three articles, 600–900 words each | 840 / 800 / 808 words excluding references; published free-access Substack pages |
+| Three videos, approximately 3–5 minutes each | 4:02 / 3:52 / 3:45; Google Vids production with documented local finishing; unlisted YouTube status observed |
+| Cross-links and AI presentation disclosure | Article/video links saved; video descriptions include sources and production disclosure. YouTube external URLs require channel verification to become clickable, but can be copied |
+| Reflection | Student-supplied observations edited into English in SUBMISSION.md |
+| Repository access | GitHub Public status verified; no collaborator invitation needed |
+| Setup, diagram, commands and claim trace | SUBMISSION.md, SETUP.md, DESIGN.md and CLAIM_TRACE.md |
+| Credentials | Latest recorded exact configured-key scan: 1,042 candidate files, zero matches. This is not a general secret detector |
 
-A script is not a rendered video; a local preview is not a publication; automated checks are not student approval.
+## Missing or qualified requirements
 
+1. **Technical demonstration:** the separate 4–6 minute narrated recording and its URL are still missing. The prepared script covers architecture/entry point, source-to-published-claim trace, the second run, duplicate handling/recovery, human policy correction and a design tradeoff. Those files must actually be shown readably during recording; narration alone is not demonstration. The student will add the URL.
+2. **Different-day execution:** live runs started October 15 and 16, but both required downstream recovery and both recoveries completed October 16. Preserve this qualification; do not claim two uninterrupted successful runs on separate days. Whether these recovered runs satisfy the requirement is a grading judgment.
+3. **Meaningful update demonstration:** the three new Run B items did not supply new claims to the final series; five of six changed versions were extraction noise. A dedicated, clearly labeled replay introducing a previously withheld eligible item was not located in this inspection. Generic store update fixtures and the unchanged replay are available, but should not be presented as that editorial demonstration. If the course treats this as no meaningful new material, its specified withheld-item replay remains to be supplied.
+4. **Approximate cost:** provider token usage is retained, but per-run dollar estimates remain unknown. Receipts legitimately use null for unknown costs; the README nevertheless requests approximate run costs. Do not equate no new credit purchase with zero usage cost.
+5. **Assignment-week eligibility:** exact assigned-week dates were not provided, so this requirement cannot be confirmed.
+6. **Final media/access review:** platform publication and visibility were observed. A complete listening/caption-sync review and anonymous playback of every link have not been established by this audit. Script-derived subtitle timing is approximate. Evidence is vendor-heavy and the collected Korean automatic GitHub transcript has an explicitly documented limitation.
+
+## Conclusion
+
+Most deliverables are present, but the submission cannot honestly be labeled fully complete. The technical recording is a definite missing artifact. Execution dates, meaningful update evidence, cost estimates, assignment-week eligibility and final media/access verification retain the qualifications above. No dates, costs, human judgments or verification results have been invented.
