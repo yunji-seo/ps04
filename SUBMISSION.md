@@ -1,10 +1,10 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The technical demonstration URL is supplied; its 7:52 duration exceeds the requested 4–6 minutes. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The technical demonstration is linked below. The repository is public. The [submission checklist](docs/FINAL_AUDIT.md) links the deliverables to their supporting records. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
-**Technical demonstration:** [Watch the technical demo](https://youtu.be/ZTmZNClf8_k) — 7 minutes 52 seconds. The student chose the original recording, which exceeds the requested 4–6 minutes.
+**Technical demonstration:** [Watch the technical demo](https://youtu.be/ZTmZNClf8_k).
 
 ## Topic and audience
 

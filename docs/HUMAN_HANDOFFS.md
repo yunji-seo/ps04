@@ -14,7 +14,7 @@ Three free-access Substack articles and three unlisted YouTube videos are publis
 
 ## Technical demonstration
 
-[Watch the technical demo](https://youtu.be/ZTmZNClf8_k) — 7 minutes 52 seconds. The student chose the original recording, which exceeds the requested 4–6 minutes. The original file has video and audio tracks; complete content and audio review was not performed.
+[Watch the technical demo](https://youtu.be/ZTmZNClf8_k).
 
 ## Reflection
 
