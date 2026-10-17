@@ -14,7 +14,7 @@ Three free-access Substack articles and three unlisted YouTube videos are publis
 
 ## Technical demonstration
 
-The separate 4–6 minute narrated technical demonstration URL has not been supplied. Yunji Seo will add it to SUBMISSION.md. It must show architecture and entry point, a source-to-published-claim trace, the second run and duplicate handling or recovery, an editorial correction and an architectural tradeoff.
+[Watch the technical demo](https://youtu.be/ZTmZNClf8_k) — 7 minutes 52 seconds. The student chose the original recording, which exceeds the requested 4–6 minutes. The original file has video and audio tracks; complete content and audio review was not performed.
 
 ## Reflection
 

@@ -1,10 +1,10 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The separate technical demonstration URL is the outstanding submission field. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The technical demonstration URL is supplied; its 7:52 duration exceeds the requested 4–6 minutes. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
-**Separate 4–6 minute technical demonstration:** Recording URL pending; to be added by Yunji Seo.
+**Technical demonstration:** [Watch the technical demo](https://youtu.be/ZTmZNClf8_k) — 7 minutes 52 seconds. The student chose the original recording, which exceeds the requested 4–6 minutes.
 
 ## Topic and audience
 
@@ -109,4 +109,4 @@ The Deno announcement was a useful example. I decided it should be included beca
 
 My main takeaway is that the specificity of the creator's input strongly affects how well an AI system reflects the creator's intentions. Broad instructions leave room for the model to apply assumptions that may differ from mine. Next, I would make the editorial policy more concrete by adding examples of material to accept or reject, especially cases with indirect relevance, and explaining the reasoning behind each example. I would then review the resulting decisions to see whether the system better reflects those intentions without accepting unrelated material.
 
-The [requirement audit](docs/FINAL_AUDIT.md) records the submitted evidence and verification scope. The student will add the separate technical demonstration URL to the field at the top of this document.
+The [requirement audit](docs/FINAL_AUDIT.md) records the submitted evidence and verification scope. The technical demonstration URL is included at the top of this document.

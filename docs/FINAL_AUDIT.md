@@ -24,7 +24,7 @@ Reconciled against the course README.md and ARCHITECTURE.md and retained artifac
 
 ## Technical demonstration and verification scope
 
-1. **Technical demonstration URL:** not yet supplied. The student will add the separate 4–6 minute recording URL to SUBMISSION.md. Personal rehearsal scripts are kept outside this repository.
+1. **Technical demonstration supplied:** [Watch the technical demo](https://youtu.be/ZTmZNClf8_k) — 7 minutes 52 seconds. The student chose the original recording, which exceeds the requested 4–6 minutes. Full content/audio review was not performed. Personal rehearsal scripts remain outside the repository.
 2. **Different-day execution and recovery:** live runs started October 15 and 16. Both completed their downstream stages through recorded recovery on October 16. The assignment permits recovery; uninterrupted success is not an additional requirement. Original failures and recovery timestamps remain inspectable in RUN_COMPARISON.md and the run receipts.
 3. **Meaningful update demonstration supplied:** [Withheld-item replay](WITHHELD_REPLAY.md) uses an isolated store and actual retained Deno evidence: 1 new / 56 unchanged, then 57 unchanged. Archived decisions and claim mapping explain the editorial effect. This is explicitly a historical-date replay, not another live collection or new AI selection.
 4. **Approximate costs supplied:** [Cost report](COST_ESTIMATE.md) calculates public list-price scenarios from archived responses and explains unallocated token counts. Actual MIT Parley charges remain unknown; the report is not an invoice.
@@ -33,4 +33,4 @@ Reconciled against the course README.md and ARCHITECTURE.md and retained artifac
 
 ## Submission state
 
-The implementation, evidence archive, editorial review, published series, reflection, cost estimates and access checks are present. The separate technical demonstration URL is the outstanding submission field. Verification limits concerning semantic judgments, billing reconciliation and complete audio/caption review are documented above; they are not claims that the published outputs are missing.
+The implementation, evidence archive, editorial review, published series, reflection, cost estimates and access checks are present. The technical demonstration URL is supplied; its 7:52 duration exceeds the requested 4–6 minutes. Verification limits concerning semantic judgments, billing reconciliation and complete audio/caption review are documented above; they are not claims that the published outputs are missing.
