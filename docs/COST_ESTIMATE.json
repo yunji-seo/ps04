@@ -1,0 +1,811 @@
+{
+  "generated_at": "2026-10-17T01:50:01.849Z",
+  "source": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview",
+  "input_usd_per_million": 3,
+  "output_usd_per_million": 15,
+  "method": "Public list-price scenarios, NOT MIT Parley invoice. Unallocated total tokens are priced alternatively as input or output. Cache categories are not recoverable from these archives. Not a guaranteed bound. Includes archived failed/truncated responses; excludes unreported failures, other run directories, subscriptions and production tools. Files are counted once within each selected run.",
+  "runs": [
+    {
+      "run": "2026-10-15T19-13-20-785Z-6ccecf24",
+      "response_files": 37,
+      "prompt_tokens": 111,
+      "completion_tokens": 52363,
+      "total_tokens": 895476,
+      "unallocated_tokens": 843002,
+      "missing_usage": 0,
+      "base_usd": 0.785778,
+      "scenario_input_usd": 3.314784,
+      "scenario_output_usd": 13.430808,
+      "entries": [
+        {
+          "file": "content-write_articles-1792125247237-778fc522-e466-41f1-89b9-5ce51b2b1baa-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1387,
+            "total_tokens": 51659
+          }
+        },
+        {
+          "file": "content-write_articles-1792125374545-a14c49b6-58cd-4758-9df8-937cda091ab1-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1526,
+            "total_tokens": 22768
+          }
+        },
+        {
+          "file": "content-write_articles-1792125401651-0b50e480-b094-4e39-a1ee-4aa27781cda4-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1437,
+            "total_tokens": 17076
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125425973-f5dc7290-19aa-480c-8996-4dd692f1ad4a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2676,
+            "total_tokens": 54428
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125457532-fbedb592-dd53-4d7d-9089-35863df06cf2-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 3373,
+            "total_tokens": 26248
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125495863-0f376d03-dd23-474a-ad44-b3e393a670a2-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 3388,
+            "total_tokens": 20575
+          }
+        },
+        {
+          "file": "editorial-brief_01-1792124936664-d59b19c7-7066-4bed-b75f-9b138992f0ad-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2281,
+            "total_tokens": 49880
+          }
+        },
+        {
+          "file": "editorial-brief_02-1792125057335-085c8e2b-a9b9-4737-9aef-84c760f12636-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2291,
+            "total_tokens": 20359
+          }
+        },
+        {
+          "file": "editorial-brief_03-1792125221108-462b9425-7ed4-4679-bbd6-4f72e409e31c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2212,
+            "total_tokens": 13984
+          }
+        },
+        {
+          "file": "editorial-create_briefs-1792091856848-6fd1624e-28f6-4ad9-94f1-b811e501c289-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 8470,
+            "total_tokens": 150439
+          }
+        },
+        {
+          "file": "editorial-plan_01-1792124816679-88b6412c-76a0-4365-a2cd-32ea222f2e92-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 132,
+            "total_tokens": 2005
+          }
+        },
+        {
+          "file": "editorial-plan_01-1792124924426-50d30180-d7dd-4670-a5c8-b2e1c1a378d6-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 114,
+            "total_tokens": 2108
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792124821060-2004728b-3cdb-4d5b-bece-7125e4f3de02-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 154,
+            "total_tokens": 2151
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792124927002-3b578d75-d345-48d4-af9f-76285c46b170-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 127,
+            "total_tokens": 2227
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792124824130-79a2deac-f7b8-4fe6-aca3-ad0a96221471-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 177,
+            "total_tokens": 2285
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792124827523-4695f655-9452-4408-965c-4e3b5e2ba8a4-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 173,
+            "total_tokens": 2483
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792124930179-1e02c392-0e48-48f6-b34d-3bc0b7d6eb58-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 153,
+            "total_tokens": 2333
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792124933244-73894c25-bd2b-4d13-9c3a-fa88aeaf0c6f-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 149,
+            "total_tokens": 2507
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792124934924-d9d9ab0b-3af7-4bdf-afe5-f0f53f902bb3-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 149,
+            "total_tokens": 2536
+          }
+        },
+        {
+          "file": "editorial-plan_briefs-1792092444572-18837795-da64-453c-99ed-c82369edf711-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 3146,
+            "total_tokens": 21848
+          }
+        },
+        {
+          "file": "editorial-plan_briefs-1792124686394-997b92ab-daa6-45ff-aa29-6ab2ccdbe3e7-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 869,
+            "total_tokens": 19883
+          }
+        },
+        {
+          "file": "editorial-repair_brief_02-1792125182877-5d9183fb-1090-41af-89c4-878492005723-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2443,
+            "total_tokens": 23141
+          }
+        },
+        {
+          "file": "editorial-repair_brief_02-1792125202791-8fc240d7-1320-4f5a-9c67-61af10281fb9-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2412,
+            "total_tokens": 23239
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091642859-338c6ad7-9afa-4c89-988b-32e27f8d876a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 595,
+            "total_tokens": 38375
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091652819-1d3776a5-c86a-49d8-82fd-14e5ff17412a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 656,
+            "total_tokens": 38781
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091663620-29911231-82ae-4ecb-9f87-0adafcac0407-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1027,
+            "total_tokens": 41323
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091680170-24a6794f-b9b9-49da-8e2d-539005c71e86-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1167,
+            "total_tokens": 14110
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091698527-181c3367-708f-454b-998b-6bc6d27e1680-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1196,
+            "total_tokens": 14845
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091718816-dc30ac3c-a11f-47dd-b10b-45d214fd8339-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 872,
+            "total_tokens": 9497
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091732369-3e6f740a-4713-4324-bd22-b6a26e759fb2-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 862,
+            "total_tokens": 5219
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091745654-b85882a7-7992-44bb-af8f-5bf889d8724d-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 589,
+            "total_tokens": 6089
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091754306-83d535e2-dde9-4d12-9235-2f698add6d58-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 640,
+            "total_tokens": 4146
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091763748-bbb45f5b-13e3-4f5c-80cc-d5770f08e770-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 921,
+            "total_tokens": 18769
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091778564-fa574bb7-7e7e-47d5-a9fe-40faecd05d88-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1243,
+            "total_tokens": 24180
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091798077-0764ec38-2274-44a0-8547-85b2a5d248ad-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1088,
+            "total_tokens": 16753
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091815231-c254af4a-64f3-42d1-ab40-9c4dbc6b14a8-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1659,
+            "total_tokens": 99590
+          }
+        },
+        {
+          "file": "editorial-select_items-1792091843635-fa1b3c11-1c52-4aa0-8933-d8842a12fda9-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 609,
+            "total_tokens": 27637
+          }
+        }
+      ]
+    },
+    {
+      "run": "2026-10-16T04-24-58-255Z-ee63f048",
+      "response_files": 49,
+      "prompt_tokens": 147,
+      "completion_tokens": 62493,
+      "total_tokens": 1125532,
+      "unallocated_tokens": 1062892,
+      "missing_usage": 0,
+      "base_usd": 0.937836,
+      "scenario_input_usd": 4.126512,
+      "scenario_output_usd": 16.881216,
+      "entries": [
+        {
+          "file": "content-repair_write_articles-1792125668984-4780923a-b5b6-44d3-ac83-2165c299b598-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1302,
+            "total_tokens": 11045
+          }
+        },
+        {
+          "file": "content-repair_write_video_scripts-1792125720554-dcc261f6-3954-456e-81cc-f73243a9c273-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2141,
+            "total_tokens": 16360
+          }
+        },
+        {
+          "file": "content-repair_write_video_scripts-1792125735711-3d02142b-5e6f-418a-8777-38ea0a5c1b28-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2080,
+            "total_tokens": 16181
+          }
+        },
+        {
+          "file": "content-repair_write_video_scripts-1792125769730-b0c7d353-281b-42ec-90cb-71df8e1c5715-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1906,
+            "total_tokens": 13667
+          }
+        },
+        {
+          "file": "content-repair_write_video_scripts-1792125806060-2b8a46dc-8c16-4ae1-bfde-4ffb333107dc-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2304,
+            "total_tokens": 16425
+          }
+        },
+        {
+          "file": "content-write_articles-1792125359767-56cf64c0-6048-4caa-9b67-8d5cd786d898-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1546,
+            "total_tokens": 47429
+          }
+        },
+        {
+          "file": "content-write_articles-1792125404142-5a3d78c9-87e8-4a2c-8623-c956fefe8f94-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1323,
+            "total_tokens": 55137
+          }
+        },
+        {
+          "file": "content-write_articles-1792125429227-1f7a40e1-4bf4-46cb-b753-ba80a07231bf-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1345,
+            "total_tokens": 46618
+          }
+        },
+        {
+          "file": "content-write_articles-1792125624173-b42a0e89-3991-4590-a794-e3ba73a2d65e-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1467,
+            "total_tokens": 11691
+          }
+        },
+        {
+          "file": "content-write_articles-1792125646834-21c45a48-c394-47bb-b8c2-c2e0e218a053-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1461,
+            "total_tokens": 9628
+          }
+        },
+        {
+          "file": "content-write_articles-1792125676083-6e003b80-bfb4-4ab0-ba67-a2ccfb26c0d0-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1439,
+            "total_tokens": 11381
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125454463-b223ab8e-4b2d-4b3d-bc67-e9e83cf401c9-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 3462,
+            "total_tokens": 51000
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125494197-41a5c1a9-6879-4808-a2c7-c7f2c13da64c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2715,
+            "total_tokens": 57955
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125524838-8057fc7e-3847-49ef-bded-535595c3d14a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2472,
+            "total_tokens": 49211
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125698184-76686b95-b1ae-47fc-b6cd-7a96fb9ba42c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2248,
+            "total_tokens": 14071
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125748500-73d5e617-d516-4c02-a38d-134c8525e5f9-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2012,
+            "total_tokens": 11612
+          }
+        },
+        {
+          "file": "content-write_video_scripts-1792125780845-06655f83-090b-4689-9d45-d9da4b5ec91c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2437,
+            "total_tokens": 13938
+          }
+        },
+        {
+          "file": "editorial-brief_01-1792125241781-2ccaedd2-d449-448d-9aff-e1e76f318e3c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2131,
+            "total_tokens": 45309
+          }
+        },
+        {
+          "file": "editorial-brief_02-1792125266677-60c4c0f6-fbf5-4764-86d5-286dc6872104-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2215,
+            "total_tokens": 54209
+          }
+        },
+        {
+          "file": "editorial-brief_03-1792125333594-abeea035-b4f8-4015-93a3-c0c42d417694-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2231,
+            "total_tokens": 44488
+          }
+        },
+        {
+          "file": "editorial-plan_01-1792125014602-8050dacf-aa84-4cf3-8978-6b1b6b94326c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 114,
+            "total_tokens": 2390
+          }
+        },
+        {
+          "file": "editorial-plan_01-1792125227367-d4b4912f-eb91-4968-bc23-9e410ca9c0fb-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 122,
+            "total_tokens": 2452
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125017179-814c042a-f294-42d5-819a-b89c906f8258-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 111,
+            "total_tokens": 2439
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125019810-1dacb3b9-0a0f-4164-beeb-70a4200d5953-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 111,
+            "total_tokens": 2564
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125021328-b016f40e-f439-4320-a16b-178e2404cdaf-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 111,
+            "total_tokens": 2564
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125230286-78ad2c06-0558-41dd-b1d9-811b953c5432-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 130,
+            "total_tokens": 2475
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125233156-5cc81184-f12b-43ff-9f19-cc0a7c3d77f2-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 125,
+            "total_tokens": 2625
+          }
+        },
+        {
+          "file": "editorial-plan_02-1792125234696-e49269d1-80ea-4fa9-b86c-418ebc5ebb4f-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 125,
+            "total_tokens": 2653
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792125236184-9e22ab77-d87f-46cc-a66b-92a0b6bdd775-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 133,
+            "total_tokens": 2630
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792125238712-9db26283-7956-44ca-9a40-2c3dae2476d1-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 129,
+            "total_tokens": 2784
+          }
+        },
+        {
+          "file": "editorial-plan_03-1792125240251-7471a185-4313-43a8-bfdc-fcf241060aef-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 129,
+            "total_tokens": 2813
+          }
+        },
+        {
+          "file": "editorial-reconsider_video-1792125139763-3f71529d-0c8f-471e-a7e2-d054c3ec63a5-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 893,
+            "total_tokens": 57504
+          }
+        },
+        {
+          "file": "editorial-repair_brief_02-1792125294416-45a765a3-c0a3-46dd-8565-b302e9fd26ad-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2410,
+            "total_tokens": 56874
+          }
+        },
+        {
+          "file": "editorial-repair_brief_02-1792125312843-8de28ac1-239f-436c-91a1-fb9a5a6f8f8c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 2420,
+            "total_tokens": 57119
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124769789-7c0b5cc3-a799-4c65-aaa8-6234742cf708-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 837,
+            "total_tokens": 38786
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124782393-da897304-e381-4721-8ae8-dca1a34600a8-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1219,
+            "total_tokens": 39513
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124800787-03fd1349-edfc-45e8-869f-e5409c913cc3-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1038,
+            "total_tokens": 41503
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124817031-c263c9fe-1c11-4edf-9258-fdd16ac3c45b-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 974,
+            "total_tokens": 12936
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124831972-8f96c4da-4c01-4284-b517-c0f0b3f754e1-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1298,
+            "total_tokens": 16025
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124851937-e8156132-758a-456b-9e94-dff6bfb43ca2-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1113,
+            "total_tokens": 14506
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124869510-b159f6c2-b93f-443e-97c6-128322136b8c-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 811,
+            "total_tokens": 5038
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124882026-fefdc16e-b458-4422-b4e0-e0d5f67eb30a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 935,
+            "total_tokens": 5374
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124895380-1cf10cb0-3cdb-49de-bf22-bf6744616e6f-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 752,
+            "total_tokens": 6260
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124905599-5c2c12ac-1254-431a-a064-28151406783b-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1007,
+            "total_tokens": 5236
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124924208-800f6170-a8dd-43bc-9034-8458436a581a-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 924,
+            "total_tokens": 20038
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124939897-79eb0856-c1bc-4551-abd3-3f77ce65b1bc-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1286,
+            "total_tokens": 24073
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124960111-2d780dbf-3b13-4568-96ea-0a3773bec9cc-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1359,
+            "total_tokens": 18867
+          }
+        },
+        {
+          "file": "editorial-select_items-1792124980527-ced5ac09-f4fc-42e7-a621-1264fa1725bb-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 1297,
+            "total_tokens": 62701
+          }
+        },
+        {
+          "file": "editorial-select_items-1792125002608-cce6b93a-f512-44d1-9379-b3ec67070d14-response.json",
+          "model": "claude-sonnet-4-6",
+          "usage": {
+            "prompt_tokens": 3,
+            "completion_tokens": 343,
+            "total_tokens": 17435
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) records additional qualifications concerning run dates, update evidence, cost estimates and final verification. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube uploads submitted with unlisted visibility.** The personal reflection is complete. A separate technical demonstration recording remains pending. The repository is public. The [requirement audit](docs/FINAL_AUDIT.md) preserves execution-date and media-review qualifications. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
@@ -36,7 +36,7 @@ bash run.sh
 
 The complete suite passes **25 tests**. See [setup](docs/SETUP.md) and [verification](docs/TEST_RESULTS.md).
 
-MIT Parley supplies the AI stages at `https://parley.api.mit.edu/v1`, with `claude-sonnet-4-6` pinned in config/ai.json. Supply PARLEY_API_KEY in an ignored private environment file or environment variable. Never submit the key. Existing credits were used; no credits were purchased. Requests retain provider-reported token usage; per-run dollar costs remain unknown.
+MIT Parley supplies the AI stages at `https://parley.api.mit.edu/v1`, with `claude-sonnet-4-6` pinned in config/ai.json. Supply PARLEY_API_KEY in an ignored private environment file or environment variable. Never submit the key. Existing credits were used; no credits were purchased. Requests retain provider-reported token usage; actual Parley charges remain unknown; [list-price estimates and uncertainty](docs/COST_ESTIMATE.md) are provided.
 
 Topic, sources, policy and four prompt files are configured separately and snapshotted into each run. Source text is untrusted evidence. Exact actual model payloads, including component-added constraints, are retained without credentials under each run's ai directory.
 
@@ -76,7 +76,7 @@ Replace RUN_ID with the approved run. The packaging component reruns checks and 
 | A: live collection, later editorial recovery | October 15, 2026 UTC and New York | [Summary](runs/2026-10-15T19-13-20-785Z-6ccecf24/summary.json) | About 9h25m start-to-recovery wall time; pauses included; dollars unknown |
 | B: live collection, later editorial recovery | October 16, 2026 UTC and New York | [Summary](runs/2026-10-16T04-24-58-255Z-ee63f048/summary.json) | About 18m45s start-to-recovery wall time; dollars unknown |
 
-Both original entry-point attempts failed; downstream recovery is separately recorded. Run A completed recovery on October 16. These are different-day starts with recovery, not two uninterrupted full completions on different dates. Exact assignment-week boundaries remain unconfirmed.
+Both original entry-point attempts failed; downstream recovery is separately recorded. Run A completed recovery on October 16. These are different-day starts with recovery, not two uninterrupted full completions on different dates. The student reports the deadline was extended to October 17, 2026 (America/New_York); exact assignment-week start remains unconfirmed.
 
 Run B retains 57 eligible items: 53 written, two YouTube and two podcast items, across six publisher identities. It found three new observations, six changed versions and 42 unchanged observations. Five changed versions were layout/sidebar noise rather than new article content. See [actual comparison and limitations](docs/RUN_COMPARISON.md). An earlier [same-day replay](runs/2026-10-15T13-59-38-909Z-90051c10/changes.jsonl) demonstrates 44 unchanged observations.
 

@@ -1,0 +1,21 @@
+{
+  "run_id": "withheld-replay-2026-10-17T01-49-34-074Z",
+  "started_at": "2026-10-17T01:49:34.074Z",
+  "as_of_date": "2026-10-16",
+  "mode": "replay",
+  "previous_run_id": "2026-10-16T04-24-58-255Z-ee63f048",
+  "note": "Historical evidence-date replay; execution time is actual. Deno withheld only from isolated baseline. No new AI decisions or publication generated.",
+  "finished_at": "2026-10-17T01:49:36.128Z",
+  "baseline_count": 56,
+  "introduction": {
+    "unchanged": 56,
+    "new": 1
+  },
+  "duplicate_replay": {
+    "unchanged": 57
+  },
+  "eligible_after": 57,
+  "ai_calls": 0,
+  "incremental_model_cost_usd": 0,
+  "production_store_modified": false
+}
