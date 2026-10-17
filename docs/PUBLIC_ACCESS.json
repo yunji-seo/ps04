@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-10-17T01:50:32.051Z",
+  "checked_at": "2026-10-17T20:40:14.788Z",
   "method": "Unauthenticated HTTP requests, no cookies or credentials. HTML availability is not a full playback or paywall test.",
   "results": [
     {
-      "url": "https://github.com/yunji-seo/ps04-agent-engineering-brief",
-      "final_url": "https://github.com/yunji-seo/ps04-agent-engineering-brief",
+      "url": "https://github.com/yunji-seo/ps04",
+      "final_url": "https://github.com/yunji-seo/ps04",
       "status": 200,
-      "title": "GitHub - yunji-seo/ps04-agent-engineering-brief: PS04: Repeatable RSS, YouTube, and podcast intelligence pipeline with evidence-grounded editorial outputs. · GitHub",
+      "title": "GitHub - yunji-seo/ps04: PS04: Repeatable RSS, YouTube, and podcast intelligence pipeline with evidence-grounded editorial outputs. · GitHub",
       "contains_expected_youtube_id": null,
-      "bytes": 360549
+      "bytes": 354422
     },
     {
       "url": "https://yunjiseo1.substack.com/p/the-infrastructure-underneath-your",
@@ -16,7 +16,7 @@
       "status": 200,
       "title": "The Infrastructure Underneath Your Agent: What Providers Are Rebuilding and Why It Matters",
       "contains_expected_youtube_id": null,
-      "bytes": 135757
+      "bytes": 135725
     },
     {
       "url": "https://youtu.be/zVci2_C2zSg",
@@ -24,7 +24,7 @@
       "status": 200,
       "title": "AI Coding Agents: What Providers Are Rebuilding and What You Still Need to Check - YouTube",
       "contains_expected_youtube_id": true,
-      "bytes": 1250670
+      "bytes": 1271314
     },
     {
       "url": "https://yunjiseo1.substack.com/p/green-lights-empty-boxes-what-the",
@@ -32,7 +32,7 @@
       "status": 200,
       "title": "Green Lights, Empty Boxes: What the Evidence Actually Shows About AI Agent Verification",
       "contains_expected_youtube_id": null,
-      "bytes": 125053
+      "bytes": 125021
     },
     {
       "url": "https://youtu.be/H4e4VRAvDE8",
@@ -40,7 +40,7 @@
       "status": 200,
       "title": "AI Agent Verification: What a Success Signal Actually Proves - YouTube",
       "contains_expected_youtube_id": true,
-      "bytes": 1255040
+      "bytes": 1257157
     },
     {
       "url": "https://yunjiseo1.substack.com/p/a-small-team-adoption-plan-verify",
@@ -48,7 +48,7 @@
       "status": 200,
       "title": "A Small-Team Adoption Plan: Verify One Task, Budget the Controls, Watch the Roadmap",
       "contains_expected_youtube_id": null,
-      "bytes": 127346
+      "bytes": 127314
     },
     {
       "url": "https://youtu.be/tXzF3HVnM0U",
@@ -56,7 +56,7 @@
       "status": 200,
       "title": "Adopting AI Coding Agents: A Practical Plan for Small Teams - YouTube",
       "contains_expected_youtube_id": true,
-      "bytes": 1242378
+      "bytes": 1286083
     }
   ]
 }

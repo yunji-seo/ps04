@@ -18,7 +18,7 @@ Reconciled against the course README.md and ARCHITECTURE.md and retained artifac
 | Three videos, approximately 3–5 minutes each | 4:02 / 3:52 / 3:45; Google Vids production with documented local finishing; unlisted YouTube status observed |
 | Cross-links and AI presentation disclosure | Article/video links saved; video descriptions include sources and production disclosure. YouTube external URLs require channel verification to become clickable, but can be copied |
 | Reflection | Student-supplied observations edited into English in SUBMISSION.md |
-| Repository access | GitHub Public status verified; no collaborator invitation needed |
+| Repository | [ps04](https://github.com/yunji-seo/ps04) |
 | Setup, diagram, commands and claim trace | SUBMISSION.md, SETUP.md, DESIGN.md and CLAIM_TRACE.md |
 | Credentials | See AUDIT_RESULT.json for the latest exact configured-key scan count and zero-match result. This is not a general secret detector |
 

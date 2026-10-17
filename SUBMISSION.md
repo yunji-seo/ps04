@@ -1,9 +1,9 @@
 # Problem Set 4 Student Submission
 
-**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The technical demonstration is linked below. The repository is public. The [submission checklist](docs/FINAL_AUDIT.md) links the deliverables to their supporting records. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
+**Status: three Substack articles published; three YouTube videos published with unlisted visibility.** The personal reflection is complete. The technical demonstration is linked below. The [submission checklist](docs/FINAL_AUDIT.md) links the deliverables to their supporting records. A [withheld-item replay](docs/WITHHELD_REPLAY.md), [cost estimate](docs/COST_ESTIMATE.md), and [anonymous access check](docs/PUBLIC_ACCESS.json) are now provided. See [publication results](production/publication-results.json).
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
-**GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
+**GitHub repository:** https://github.com/yunji-seo/ps04  
 **Technical demonstration:** [Watch the technical demo](https://youtu.be/ZTmZNClf8_k).
 
 ## Topic and audience

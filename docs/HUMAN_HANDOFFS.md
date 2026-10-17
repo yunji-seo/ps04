@@ -10,7 +10,7 @@ The production package records that approval boundary. A future run requires its
 
 Three videos were produced with Google Vids. Local finishing retained its English synthetic narration and replaced delayed scene entrances with the approved visual assets. The production method, AI disclosure and caption limitations are documented in [production record](../production/README.md).
 
-Three free-access Substack articles and three unlisted YouTube videos are published and cross-linked. Actual URLs appear in [SUBMISSION.md](../SUBMISSION.md) and the package publication_links.json. The repository is public. [Anonymous HTTP checks](PUBLIC_ACCESS.json) confirmed expected page titles and successful responses; those checks do not certify full playback or caption synchronization.
+Three free-access Substack articles and three unlisted YouTube videos are published and cross-linked. Actual URLs appear in [SUBMISSION.md](../SUBMISSION.md) and the package publication_links.json. [Anonymous HTTP checks](PUBLIC_ACCESS.json) confirmed expected page titles and successful responses; those checks do not certify full playback or caption synchronization.
 
 ## Technical demonstration
 
