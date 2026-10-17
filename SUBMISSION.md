@@ -4,7 +4,7 @@
 
 **Student:** Yunji Seo (GitHub: yunji-seo)  
 **GitHub repository:** https://github.com/yunji-seo/ps04-agent-engineering-brief (public; accessible without a collaborator invitation)  
-**Separate 4–6 minute technical demonstration:** Not recorded; [script and shot list](docs/TECHNICAL_DEMO.md)
+**Separate 4–6 minute technical demonstration:** Recording URL pending; to be added by Yunji Seo.
 
 ## Topic and audience
 

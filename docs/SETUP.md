@@ -1,6 +1,6 @@
 # Local setup and execution
 
-All sixteen component entry points have implementations, including MIT Parley selection, briefs, articles and video scripts. Live collection runs started on October 15 and 16, 2026; failed editorial stages were subsequently recovered. The current corpus contains 57 eligible items, including two YouTube videos and two podcasts. Article approval, video production and publication remain separate human handoffs; see STATUS.md for the current deliverables.
+All sixteen component entry points have implementations, including MIT Parley selection, briefs, articles and video scripts. Live collection runs started on October 15 and 16, 2026; failed editorial stages were subsequently recovered. The current corpus contains 57 eligible items, including two YouTube videos and two podcasts. Article approval, video production and publication remain separate human handoffs; see SUBMISSION.md for the current deliverables.
 
 ## Dependencies
 

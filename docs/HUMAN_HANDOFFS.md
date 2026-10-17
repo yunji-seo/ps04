@@ -1,6 +1,6 @@
 # Student review and publication handoffs
 
-Status: the student supplied six selection judgments and the policy revision on October 16, 2026. See [actual student review](STUDENT_EDITORIAL_REVIEW.md). Article/script approval was supplied on October 16 and the production package is prepared. Rendered videos, publication authorization/links and personal reflection remain pending.
+Status: the student supplied six selection judgments, a policy revision, content approval and publication approval. Three article/video pairs are published and the reflection is included in SUBMISSION.md. The separate technical recording URL remains pending.
 
 ## Review sample
 
@@ -36,7 +36,7 @@ Publish the article on Substack without a paid access requirement. Upload its vi
 | 4:00–4:40 | Explain your policy revision and a factual correction if one occurred | Before/after policy and your review notes |
 | 4:40–5:00 | Explain one design tradeoff and next improvement | Storage boundary or transcript/update limitations |
 
-This is an outline, not a completed narrated recording. The [prepared narration and detailed shot list](TECHNICAL_DEMO.md) now use actual run records and the [Deno claim trace](CLAIM_TRACE.md). Before the final recording, replace the draft view with the actual published article. Do not claim a correction occurred if none did.
+The technical demonstration is a separate 4–6 minute narrated recording. It must show the actual system, execution records and a source-to-publication trace; see [Deno claim trace](CLAIM_TRACE.md). Its URL will be recorded in SUBMISSION.md.
 
 ## Reflection prompts
 
